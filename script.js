@@ -1,13 +1,13 @@
-function add() {
+function add(firstNumber, secondNumber) {
   return "+";
 }
-function subtract() {
+function subtract(firstNumber, secondNum) {
   return "-";
 }
-function multiply() {
+function multiply(firstNumber, secondNum) {
   return "*";
 }
-function divide() {
+function divide(firstNumber, secondNum) {
   return "/";
 }
 
