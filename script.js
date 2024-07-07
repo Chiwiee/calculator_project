@@ -10,3 +10,8 @@ function multiply() {
 function divide() {
   return "/";
 }
+
+console.log(add());
+console.log(subtract());
+console.log(multiply());
+console.log(divide());
