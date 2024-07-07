@@ -19,4 +19,4 @@ console.log(firstNumber);
 console.log(operator);
 console.log(secondNumber);
 
-function operate() {}
+function operate(firstNumber, operator, secondNumber) {}
