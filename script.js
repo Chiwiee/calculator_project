@@ -1,14 +1,14 @@
 function add(firstNumber, secondNumber) {
-  return "+";
+  return firstNumber + secondNumber;
 }
 function subtract(firstNumber, secondNum) {
-  return "-";
+  return firstNumber - secondNumber;
 }
 function multiply(firstNumber, secondNum) {
-  return "*";
+  return firstNumber * secondNumber;
 }
 function divide(firstNumber, secondNum) {
-  return "/";
+  return firstNumber / secondNumber;
 }
 
 console.log(add());
