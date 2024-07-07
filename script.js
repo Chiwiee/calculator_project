@@ -18,3 +18,4 @@ console.log(divide());
 
 const firstNumber = prompt("Enter a Number");
 const operator = prompt("Operator: +, -, *, /");
+const secondNumber = prompt("Enter a Number");
