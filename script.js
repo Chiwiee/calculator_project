@@ -19,5 +19,8 @@ console.log(firstNumber);
 console.log(operator);
 console.log(secondNumber);
 
-function operate(firstNumber, operator, secondNumber) {}
+function operate(firstNumber, operator, secondNumber) {
+  switch (operator) {
+  }
+}
 operate(firstNumber, operator, secondNumber);
