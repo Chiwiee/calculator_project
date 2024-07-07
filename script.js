@@ -23,6 +23,8 @@ function operate(firstNumber, operator, secondNumber) {
   switch (operator) {
     case "+":
       return add(firstNumber, secondNumber);
+    case "-":
+      return subtract(firstNumber, secondNumber);
   }
 }
 operate(firstNumber, operator, secondNumber);
