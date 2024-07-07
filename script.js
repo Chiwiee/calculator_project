@@ -23,3 +23,5 @@ const secondNumber = prompt("Enter a Number");
 console.log(firstNumber);
 console.log(operator);
 console.log(secondNumber);
+
+function operate() {}
