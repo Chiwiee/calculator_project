@@ -20,3 +20,4 @@ console.log(operator);
 console.log(secondNumber);
 
 function operate(firstNumber, operator, secondNumber) {}
+operate(firstNumber, operator, secondNumber);
