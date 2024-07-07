@@ -31,4 +31,5 @@ function operate(firstNumber, operator, secondNumber) {
       return divide(firstNumber, secondNumber);
   }
 }
-operate(firstNumber, operator, secondNumber);
+let operateSum = operate(firstNumber, operator, secondNumber);
+console.log(operateSum);
