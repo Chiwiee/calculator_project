@@ -33,3 +33,7 @@ function operate(firstNumber, operator, secondNumber) {
 }
 let operateSum = operate(firstNumber, operator, secondNumber);
 console.log(operateSum);
+
+function displayTextContent(firstNumber, operator, secondNumber) {}
+
+let textContent = displayTextContent(firstNumber, operator, secondNumber);
