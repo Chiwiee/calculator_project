@@ -11,11 +11,6 @@ function divide(firstNumber, secondNumber) {
   return firstNumber / secondNumber;
 }
 
-console.log(add());
-console.log(subtract());
-console.log(multiply());
-console.log(divide());
-
 const firstNumber = prompt("Enter a Number");
 const operator = prompt("Operator: +, -, *, /");
 const secondNumber = prompt("Enter a Number");
