@@ -25,6 +25,8 @@ function operate(firstNumber, operator, secondNumber) {
       return add(firstNumber, secondNumber);
     case "-":
       return subtract(firstNumber, secondNumber);
+    case "*":
+      return multiply(firstNumber, secondNumber);
   }
 }
 operate(firstNumber, operator, secondNumber);
