@@ -15,3 +15,5 @@ console.log(add());
 console.log(subtract());
 console.log(multiply());
 console.log(divide());
+
+const firstNumber = prompt("Enter a Number");
