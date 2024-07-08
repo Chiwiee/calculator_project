@@ -11,15 +11,15 @@ function divide(firstNumber, secondNumber) {
   return firstNumber / secondNumber;
 }
 
-// const firstNumber = prompt("Enter a Number");
-// const operator = prompt("Operator: +, -, *, /");
-// const secondNumber = prompt("Enter a Number");
-
 // console.log(firstNumber);
 // console.log(operator);
 // console.log(secondNumber);
 
 function operate(firstNumber, operator, secondNumber) {
+  const firstNumber = prompt("Enter a Number");
+  const operator = prompt("Operator: +, -, *, /");
+  const secondNumber = prompt("Enter a Number");
+
   switch (operator) {
     case "+":
       return add(firstNumber, secondNumber);
