@@ -11,13 +11,13 @@ function divide(firstNumber, secondNumber) {
   return firstNumber / secondNumber;
 }
 
-const firstNumber = prompt("Enter a Number");
-const operator = prompt("Operator: +, -, *, /");
-const secondNumber = prompt("Enter a Number");
+// const firstNumber = prompt("Enter a Number");
+// const operator = prompt("Operator: +, -, *, /");
+// const secondNumber = prompt("Enter a Number");
 
-console.log(firstNumber);
-console.log(operator);
-console.log(secondNumber);
+// console.log(firstNumber);
+// console.log(operator);
+// console.log(secondNumber);
 
 function operate(firstNumber, operator, secondNumber) {
   switch (operator) {
@@ -34,6 +34,11 @@ function operate(firstNumber, operator, secondNumber) {
 // let operateSum = operate(firstNumber, operator, secondNumber);
 // console.log(operateSum);
 
-function displayTextContent(firstNumber, operator, secondNumber) {}
-
-let textContent = displayTextContent(firstNumber, operator, secondNumber);
+function displayTextContent(firstNumber, operator, secondNumber) {
+  let buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log(button.id);
+    });
+  });
+}
