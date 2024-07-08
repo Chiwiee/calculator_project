@@ -41,6 +41,9 @@ function displayTextContent() {
       let content = document.querySelector("span");
       switch (button.id) {
         case "num0":
+          const zero = document.createElement("span");
+          zero.textContent = "0";
+          content.appendChild(zero);
           break;
         case "num1":
           break;
