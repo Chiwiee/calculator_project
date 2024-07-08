@@ -78,7 +78,7 @@ function displayTextContent() {
         case "num7":
           const seven = document.createElement("span");
           seven.textContent = "7";
-          content.appendChild(zero);
+          content.appendChild(seven);
           break;
         case "num8":
           const eight = document.createElement("span");
