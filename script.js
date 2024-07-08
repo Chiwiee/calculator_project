@@ -31,8 +31,8 @@ function operate() {
       return divide(firstNumber, secondNumber);
   }
 }
-const operateSum = operate();
-console.log(operateSum);
+// const operateSum = operate();
+// console.log(operateSum);
 
 function displayTextContent() {
   let buttons = document.querySelectorAll("button");
@@ -74,6 +74,7 @@ function displayTextContent() {
         case "equal":
           break;
       }
+      console.log(button.id);
     });
   });
 }
