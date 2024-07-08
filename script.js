@@ -98,6 +98,9 @@ function displayTextContent() {
           content.appendChild(plus);
           break;
         case "minus":
+          const minus = document.createElement("span");
+          minus.textContent = " - ";
+          content.appendChild(minus);
           break;
         case "times":
           break;
