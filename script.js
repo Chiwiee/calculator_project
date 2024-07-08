@@ -72,12 +72,12 @@ function displayTextContent() {
           break;
         case "num6":
           const six = document.createElement("span");
-          six.textContent = "0";
+          six.textContent = "6";
           content.appendChild(six);
           break;
         case "num7":
           const seven = document.createElement("span");
-          seven.textContent = "0";
+          seven.textContent = "7";
           content.appendChild(zero);
           break;
         case "num8":
