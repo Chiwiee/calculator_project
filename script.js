@@ -108,6 +108,9 @@ function displayTextContent() {
           content.appendChild(times);
           break;
         case "divide":
+          const divide = document.createElement("span");
+          divide.textContent = " ÷ ";
+          content.appendChild(divide);
           break;
         case "equal":
           break;
