@@ -34,7 +34,7 @@ function operate() {
 const operateSum = operate();
 console.log(operateSum);
 
-function displayTextContent(firstNumber, operator, secondNumber) {
+function displayTextContent() {
   let buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
