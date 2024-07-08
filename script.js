@@ -71,6 +71,9 @@ function displayTextContent() {
           content.appendChild(five);
           break;
         case "num6":
+          const six = document.createElement("span");
+          six.textContent = "0";
+          content.appendChild(six);
           break;
         case "num7":
           break;
