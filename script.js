@@ -46,6 +46,9 @@ function displayTextContent() {
           content.appendChild(zero);
           break;
         case "num1":
+          const one = document.createElement("span");
+          one.textContent = "1";
+          content.appendChild(one);
           break;
         case "num2":
           break;
