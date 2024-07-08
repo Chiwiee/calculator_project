@@ -103,6 +103,9 @@ function displayTextContent() {
           content.appendChild(minus);
           break;
         case "times":
+          const times = document.createElement("span");
+          times.textContent = " × ";
+          content.appendChild(times);
           break;
         case "divide":
           break;
