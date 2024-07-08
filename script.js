@@ -42,3 +42,4 @@ function displayTextContent() {
     });
   });
 }
+displayTextContent();
