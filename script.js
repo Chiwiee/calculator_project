@@ -90,8 +90,6 @@ function displayTextContent() {
           nine.textContent = "9";
           content.appendChild(nine);
           break;
-        case "num0":
-          break;
         case "clear":
           break;
         case "plus":
