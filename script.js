@@ -31,8 +31,8 @@ function operate(firstNumber, operator, secondNumber) {
       return divide(firstNumber, secondNumber);
   }
 }
-let operateSum = operate(firstNumber, operator, secondNumber);
-console.log(operateSum);
+// let operateSum = operate(firstNumber, operator, secondNumber);
+// console.log(operateSum);
 
 function displayTextContent(firstNumber, operator, secondNumber) {}
 
