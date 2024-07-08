@@ -93,6 +93,9 @@ function displayTextContent() {
         case "clear":
           break;
         case "plus":
+          const plus = document.createElement("span");
+          plus.textContent = " + ";
+          content.appendChild(plus);
           break;
         case "minus":
           break;
