@@ -11,7 +11,7 @@ function divide(firstNumber, secondNumber) {
   return firstNumber / secondNumber;
 }
 
-function operate(firstNumber, operator, secondNumber) {
+function operate() {
   const firstNumber = prompt("Enter a Number");
   const operator = prompt("Operator: +, -, *, /");
   const secondNumber = prompt("Enter a Number");
@@ -31,8 +31,8 @@ function operate(firstNumber, operator, secondNumber) {
       return divide(firstNumber, secondNumber);
   }
 }
-// let operateSum = operate(firstNumber, operator, secondNumber);
-// console.log(operateSum);
+const operateSum = operate();
+console.log(operateSum);
 
 function displayTextContent(firstNumber, operator, secondNumber) {
   let buttons = document.querySelectorAll("button");
