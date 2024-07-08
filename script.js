@@ -86,6 +86,9 @@ function displayTextContent() {
           content.appendChild(eight);
           break;
         case "num9":
+          const nine = document.createElement("span");
+          nine.textContent = "9";
+          content.appendChild(nine);
           break;
         case "num0":
           break;
