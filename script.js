@@ -33,10 +33,9 @@ function operate() {
 }
 // const operateSum = operate();
 // console.log(operateSum);
+const num = [];
 
 function displayTextContent() {
-  const num = [];
-
   let buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -128,8 +127,8 @@ function displayTextContent() {
           break;
       }
       console.log(button.id);
+      console.table(num);
     });
   });
-  console.table(num);
 }
 displayTextContent();
