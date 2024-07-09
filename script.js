@@ -35,6 +35,8 @@ function operate() {
 // console.log(operateSum);
 
 function displayTextContent() {
+  const num = [];
+
   let buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -44,51 +46,61 @@ function displayTextContent() {
           const zero = document.createElement("span");
           zero.textContent = "0";
           content.appendChild(zero);
+          num.push(0);
           break;
         case "num1":
           const one = document.createElement("span");
           one.textContent = "1";
           content.appendChild(one);
+          num.push(1);
           break;
         case "num2":
           const two = document.createElement("span");
           two.textContent = "2";
           content.appendChild(two);
+          num.push(2);
           break;
         case "num3":
           const three = document.createElement("span");
           three.textContent = "3";
           content.appendChild(three);
+          num.push(3);
           break;
         case "num4":
           const four = document.createElement("span");
           four.textContent = "4";
           content.appendChild(four);
+          num.push(4);
           break;
         case "num5":
           const five = document.createElement("span");
           five.textContent = "5";
           content.appendChild(five);
+          num.push(5);
           break;
         case "num6":
           const six = document.createElement("span");
           six.textContent = "6";
           content.appendChild(six);
+          num.push(6);
           break;
         case "num7":
           const seven = document.createElement("span");
           seven.textContent = "7";
           content.appendChild(seven);
+          num.push(7);
           break;
         case "num8":
           const eight = document.createElement("span");
           eight.textContent = "8";
           content.appendChild(eight);
+          num.push(8);
           break;
         case "num9":
           const nine = document.createElement("span");
           nine.textContent = "9";
           content.appendChild(nine);
+          num.push(9);
           break;
         case "clear":
           break;
@@ -118,5 +130,6 @@ function displayTextContent() {
       console.log(button.id);
     });
   });
+  console.table(num);
 }
 displayTextContent();
