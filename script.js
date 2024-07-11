@@ -201,3 +201,8 @@ function displayTextContent() {
   });
 }
 displayTextContent();
+
+const clearButton = document.querySelector("#clear");
+clearButton.addEventListener("click", () => {
+  return displayTextContent();
+});
