@@ -11,7 +11,7 @@ function divide(firstNumber, secondNumber) {
   return firstNumber / secondNumber;
 }
 
-function operate() {
+function operate(num1, operator, num2) {
   console.log(firstNumber);
   console.log(operator);
   console.log(secondNumber);
@@ -116,7 +116,7 @@ function displayTextContent() {
           operator = "divide";
           break;
         case "equal":
-          operate();
+          operate(firstNumber, operator, secondNumber);
           break;
       }
       if (button.id == "0" && operator == "") {
