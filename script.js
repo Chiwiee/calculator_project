@@ -118,55 +118,60 @@ function displayTextContent() {
         case "equal":
           break;
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "0" && operator == "") {
+        num1.push(0);
+      } else if (button.id == "0" && operator != "") {
+        num2.push(0);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "1" && operator == "") {
+        num1.push(1);
+      } else if (button.id == "1" && operator != "") {
+        num2.push(1);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "2" && operator == "") {
+        num1.push(2);
+      } else if (button.id == "2" && operator != "") {
+        num2.push(2);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "3" && operator == "") {
+        num1.push(3);
+      } else if (button.id == "3" && operator != "") {
+        num2.push(3);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "4" && operator == "") {
+        num1.push(4);
+      } else if (button.id == "4" && operator != "") {
+        num2.push(4);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "4" && operator == "") {
+        num1.push(4);
+      } else if (button.id == "4" && operator != "") {
+        num2.push(4);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "5" && operator == "") {
+        num1.push(5);
+      } else if (button.id == "5" && operator != "") {
+        num2.push(5);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "6" && operator == "") {
+        num1.push(6);
+      } else if (button.id == "6" && operator != "") {
+        num2.push(6);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "7" && operator == "") {
+        num1.push(7);
+      } else if (button.id == "7" && operator != "") {
+        num2.push(7);
       }
-      if (button.id == "" && operator == "") {
-        num1.push();
-      } else if (button.id == "" && operator != "") {
-        num2.push();
+      if (button.id == "8" && operator == "") {
+        num1.push(8);
+      } else if (button.id == "8" && operator != "") {
+        num2.push(8);
+      }
+      if (button.id == "9" && operator == "") {
+        num1.push(9);
+      } else if (button.id == "9" && operator != "") {
+        num2.push(9);
       }
 
       console.log(button.id);
