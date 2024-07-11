@@ -12,10 +12,6 @@ function divide(firstNumber, secondNumber) {
 }
 
 function operate() {
-  const firstNumber = prompt("Enter a Number");
-  const operator = prompt("Operator: +, -, *, /");
-  const secondNumber = prompt("Enter a Number");
-
   console.log(firstNumber);
   console.log(operator);
   console.log(secondNumber);
