@@ -23,8 +23,9 @@ function operate(num1, operator, num2) {
     }, "");
   }
 
-  let firstNum = reduceNum1(num1);
-  let secondNum = reduceNum2(num2);
+  let firstNumber = reduceNum1(num1);
+  let secondNumber = reduceNum2(num2);
+
   console.log(firstNumber);
   console.log(operator);
   console.log(secondNumber);
