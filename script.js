@@ -35,6 +35,7 @@ function operate() {
 // console.log(operateSum);
 const num1 = [];
 const num2 = [];
+let operator = "";
 
 function displayTextContent() {
   let buttons = document.querySelectorAll("button");
