@@ -159,43 +159,41 @@ function displayTextContent() {
         }
       }
 
-      // Operator Switch Case
-      switch (button.id) {
-        case "clear":
-          content.textContent = "";
-          operator = "";
-          firstNumber.splice(0, firstNumber.length);
-          secondNumber.splice(0, secondNumber.length);
-          break;
-        case "plus":
-          const plus = document.createElement("span");
-          plus.textContent = " + ";
-          content.appendChild(plus);
-          operator = "plus";
-          break;
-        case "minus":
-          const minus = document.createElement("span");
-          minus.textContent = " - ";
-          content.appendChild(minus);
-          operator = "minus";
-          break;
-        case "times":
-          const times = document.createElement("span");
-          times.textContent = " × ";
-          content.appendChild(times);
-          operator = "times";
-          break;
-        case "divide":
-          const divide = document.createElement("span");
-          divide.textContent = " ÷ ";
-          content.appendChild(divide);
-          operator = "divide";
-          break;
-        case "equal":
-          let sum = operate(firstNumber, operator, secondNumber);
-          content.textContent = `${sum}`;
-          break;
+      if (button.id == "clear") {
+        content.textContent = "";
+        operator = "";
+        firstNumber.splice(0, firstNumber.length);
+        secondNumber.splice(0, secondNumber.length);
       }
+      if (button.id == "plus") {
+        const plus = document.createElement("span");
+        plus.textContent = " + ";
+        content.appendChild(plus);
+        operator = "plus";
+      }
+      if (button.id == "minus") {
+        const minus = document.createElement("span");
+        minus.textContent = " - ";
+        content.appendChild(minus);
+        operator = "minus";
+      }
+      if (button.id == "times") {
+        const times = document.createElement("span");
+        times.textContent = " × ";
+        content.appendChild(times);
+        operator = "times";
+      }
+      if (button.id == "divide") {
+        const divide = document.createElement("span");
+        divide.textContent = " ÷ ";
+        content.appendChild(divide);
+        operator = "divide";
+      }
+      if (button.id == "equal") {
+        let sum = operate(firstNumber, operator, secondNumber);
+        content.textContent = `${sum}`;
+      }
+
       console.log(firstNumber);
       console.log(secondNumber);
       console.log(operator);
