@@ -163,7 +163,7 @@ function displayTextContent() {
       switch (button.id) {
         case "clear":
           content.textContent = "";
-          operator = "0";
+          operator = "";
           firstNumber.splice(0, firstNumber.length);
           secondNumber.splice(0, secondNumber.length);
           break;
