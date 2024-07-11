@@ -99,21 +99,25 @@ function displayTextContent() {
           const plus = document.createElement("span");
           plus.textContent = " + ";
           content.appendChild(plus);
+          operator = "plus";
           break;
         case "minus":
           const minus = document.createElement("span");
           minus.textContent = " - ";
           content.appendChild(minus);
+          operator = "minus";
           break;
         case "times":
           const times = document.createElement("span");
           times.textContent = " × ";
           content.appendChild(times);
+          operator = "times";
           break;
         case "divide":
           const divide = document.createElement("span");
           divide.textContent = " ÷ ";
           content.appendChild(divide);
+          operator = "divide";
           break;
         case "equal":
           break;
