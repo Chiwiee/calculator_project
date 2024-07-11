@@ -118,8 +118,60 @@ function displayTextContent() {
         case "equal":
           break;
       }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+      if (button.id == "" && operator == "") {
+        num1.push();
+      } else if (button.id == "" && operator != "") {
+        num2.push();
+      }
+
       console.log(button.id);
-      console.table(num);
+      console.log(num1);
+      console.log(num2);
     });
   });
 }
