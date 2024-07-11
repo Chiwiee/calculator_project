@@ -196,5 +196,5 @@ function reduceNum2(num) {
     return parseFloat(acc) + parseFloat(current);
   }, "");
 }
-reduceNum1(num1);
-reduceNum2(num2);
+const firstNumber = reduceNum1(num1);
+const secondNumber = reduceNum2(num2);
