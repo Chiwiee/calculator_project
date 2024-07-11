@@ -23,8 +23,8 @@ function operate(num1, operator, num2) {
     }, "");
   }
 
-  let firstNumber = reduceNum1(num1);
-  let secondNumber = reduceNum2(num2);
+  let firstNumber = parseFloat(reduceNum1(num1));
+  let secondNumber = parseFloat(reduceNum2(num2));
 
   console.log(firstNumber);
   console.log(operator);
@@ -130,7 +130,7 @@ function displayTextContent() {
           operator = "divide";
           break;
         case "equal":
-          operate(firstNumber, operator, secondNumber);
+          alert(operate(firstNumber, operator, secondNumber));
           break;
       }
       if (button.id == "0" && operator == "") {
