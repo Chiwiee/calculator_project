@@ -1,3 +1,4 @@
+// Function that Calculate the Values from Operate Function
 function add(firstNumber, secondNumber) {
   return firstNumber + secondNumber;
 }
@@ -10,7 +11,7 @@ function multiply(firstNumber, secondNumber) {
 function divide(firstNumber, secondNumber) {
   return firstNumber / secondNumber;
 }
-
+// Operate Function that Converts and Calls Functions to Calculate
 function operate(num1, operator, num2) {
   function reduceNum1(num) {
     return num.reduce((acc, current) => {
@@ -26,10 +27,6 @@ function operate(num1, operator, num2) {
   let firstNumber = parseFloat(reduceNum1(num1));
   let secondNumber = parseFloat(reduceNum2(num2));
 
-  console.log(firstNumber);
-  console.log(operator);
-  console.log(secondNumber);
-
   switch (operator) {
     case "plus":
       return add(firstNumber, secondNumber);
@@ -41,12 +38,12 @@ function operate(num1, operator, num2) {
       return divide(firstNumber, secondNumber);
   }
 }
-// const operateSum = operate();
-// console.log(operateSum);
+// Store Values
 const firstNumber = [];
 const secondNumber = [];
 let operator = "";
 
+// Functions that Display Text Content and Push Value to an Array
 function displayTextContent() {
   let buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
@@ -133,6 +130,8 @@ function displayTextContent() {
           alert(operate(firstNumber, operator, secondNumber));
           break;
       }
+
+      // If Statement for Pushing Values into an Array firstNumber and SecondNumber
       if (button.id == "0" && operator == "") {
         firstNumber.push(0);
       } else if (button.id == "0" && operator != "") {
@@ -188,10 +187,6 @@ function displayTextContent() {
       } else if (button.id == "9" && operator != "") {
         secondNumber.push(9);
       }
-
-      console.log(button.id);
-      console.log(firstNumber);
-      console.log(secondNumber);
     });
   });
 }
