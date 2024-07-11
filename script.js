@@ -29,8 +29,8 @@ function operate() {
 }
 // const operateSum = operate();
 // console.log(operateSum);
-const num1 = [];
-const num2 = [];
+const firstNumber = [];
+const secondNumber = [];
 let operator = "";
 
 function displayTextContent() {
