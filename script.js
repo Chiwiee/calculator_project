@@ -31,13 +31,13 @@ function operate(num1, operator, num2) {
   console.log(secondNumber);
 
   switch (operator) {
-    case "+":
+    case "plus":
       return add(firstNumber, secondNumber);
-    case "-":
+    case "minus":
       return subtract(firstNumber, secondNumber);
-    case "*":
+    case "times":
       return multiply(firstNumber, secondNumber);
-    case "/":
+    case "divide":
       return divide(firstNumber, secondNumber);
   }
 }
