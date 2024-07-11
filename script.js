@@ -165,12 +165,7 @@ function displayTextContent() {
         }
       }
       // Operator, Equal and Clear
-      if (button.id == "clear") {
-        content.textContent = "";
-        operator = "";
-        firstNumber.splice(0, firstNumber.length);
-        secondNumber.splice(0, secondNumber.length);
-      }
+
       if (button.id == "plus") {
         if (operator == "") {
           const plus = document.createElement("span");
@@ -263,6 +258,13 @@ function displayTextContent() {
         firstNumber.splice(0, firstNumber.length);
         secondNumber.splice(0, secondNumber.length);
         calculatedValue.splice(0, calculatedValue.length - 1);
+      }
+      if (button.id == "clear") {
+        content.textContent = "";
+        operator = "";
+        firstNumber.splice(0, firstNumber.length);
+        secondNumber.splice(0, secondNumber.length);
+        calculatedValue.splice(0, calculatedValue.length);
       }
 
       console.log(" ");
