@@ -186,6 +186,10 @@ function displayTextContent() {
           );
           content.textContent = `${sum}`;
           calculatedValue.push(sum);
+          operator = "";
+          firstNumber.splice(0, firstNumber.length);
+          secondNumber.splice(0, secondNumber.length);
+          calculatedValue.splice(0, calculatedValue.length - 1);
         }
       }
       if (button.id == "minus") {
@@ -194,6 +198,19 @@ function displayTextContent() {
           minus.textContent = " - ";
           content.appendChild(minus);
           operator = "minus";
+        } else if (operator != "") {
+          let sum = operate(
+            firstNumber,
+            calculatedValue,
+            operator,
+            secondNumber
+          );
+          content.textContent = `${sum}`;
+          calculatedValue.push(sum);
+          operator = "";
+          firstNumber.splice(0, firstNumber.length);
+          secondNumber.splice(0, secondNumber.length);
+          calculatedValue.splice(0, calculatedValue.length - 1);
         }
       }
       if (button.id == "times") {
@@ -211,6 +228,10 @@ function displayTextContent() {
           );
           content.textContent = `${sum}`;
           calculatedValue.push(sum);
+          operator = "";
+          firstNumber.splice(0, firstNumber.length);
+          secondNumber.splice(0, secondNumber.length);
+          calculatedValue.splice(0, calculatedValue.length - 1);
         }
       }
       if (button.id == "divide") {
@@ -228,6 +249,10 @@ function displayTextContent() {
           );
           content.textContent = `${sum}`;
           calculatedValue.push(sum);
+          operator = "";
+          firstNumber.splice(0, firstNumber.length);
+          secondNumber.splice(0, secondNumber.length);
+          calculatedValue.splice(0, calculatedValue.length - 1);
         }
       }
       if (button.id == "equal") {
