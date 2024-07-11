@@ -1,18 +1,18 @@
 // Function that Calculate the Values from Operate Function
-function add(firstNumber, secondNumber) {
-  return firstNumber + secondNumber;
+function add(firstNumber, sum, secondNumber) {
+  return firstNumber + secondNumber || sum + secondNumber;
 }
-function subtract(firstNumber, secondNumber) {
-  return firstNumber - secondNumber;
+function subtract(firstNumber, sum, secondNumber) {
+  return firstNumber - secondNumber || sum - secondNumber;
 }
-function multiply(firstNumber, secondNumber) {
-  return firstNumber * secondNumber;
+function multiply(firstNumber, sum, secondNumber) {
+  return firstNumber * secondNumber || sum * secondNumber;
 }
-function divide(firstNumber, secondNumber) {
-  return firstNumber / secondNumber;
+function divide(firstNumber, sum, secondNumber) {
+  return firstNumber / secondNumber || sum / secondNumber;
 }
 // Operate Function that Converts and Calls Functions to Calculate
-function operate(num1, operator, num2) {
+function operate(num1, sum, operator, num2) {
   function reduceNum1(num) {
     return num.reduce((acc, current) => {
       return acc + current;
@@ -23,24 +23,30 @@ function operate(num1, operator, num2) {
       return acc + current;
     }, "");
   }
-
+  function reduceSum(sum) {
+    return sum.reduce((acc, current) => {
+      return acc + current;
+    }, "");
+  }
   let firstNumber = parseFloat(reduceNum1(num1));
   let secondNumber = parseFloat(reduceNum2(num2));
+  let sumValue = parseFloat(reduceSum(calculatedValue));
 
   switch (operator) {
     case "plus":
-      return add(firstNumber, secondNumber);
+      return add(firstNumber, sumValue, secondNumber);
     case "minus":
-      return subtract(firstNumber, secondNumber);
+      return subtract(firstNumber, sumValue, secondNumber);
     case "times":
-      return multiply(firstNumber, secondNumber);
+      return multiply(firstNumber, sumValue, secondNumber);
     case "divide":
-      return divide(firstNumber, secondNumber);
+      return divide(firstNumber, sumValue, secondNumber);
   }
 }
 // Store Values
 const firstNumber = [];
 const secondNumber = [];
+const calculatedValue = [];
 let operator = "";
 
 // Functions that Display Text Content and Push Value to an Array
@@ -50,7 +56,7 @@ function displayTextContent() {
     button.addEventListener("click", () => {
       let content = document.querySelector("span");
 
-      // If Statement for Pushing Values into an Array firstNumber and SecondNumber
+      // If Statement for TextContent and to Push Values to an Array
       if (button.id == "0") {
         const zero = document.createElement("span");
         zero.textContent = "0";
@@ -158,7 +164,7 @@ function displayTextContent() {
           secondNumber.push(9);
         }
       }
-
+      // Operator, Equal and Clear
       if (button.id == "clear") {
         content.textContent = "";
         operator = "";
@@ -190,23 +196,24 @@ function displayTextContent() {
         operator = "divide";
       }
       if (button.id == "equal") {
-        let sum = operate(firstNumber, operator, secondNumber);
+        let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
         content.textContent = `${sum}`;
+        calculatedValue.push(sum);
+        operator = "";
+        firstNumber.splice(0, firstNumber.length);
+        secondNumber.splice(0, secondNumber.length);
+        calculatedValue.splice(0, calculatedValue.length - 1);
       }
 
-      console.log(firstNumber);
-      console.log(secondNumber);
-      console.log(operator);
-      console.log(button.id);
+      console.log(" ");
+      console.log(`firstNumber: ${firstNumber}`);
+      console.log(`secondNumber: ${secondNumber}`);
+      console.log(`calculatedValue ${calculatedValue}`);
+      console.log(`operator: ${operator}`);
     });
   });
 }
 displayTextContent();
 
-const clearButton = document.querySelector("#clear");
-clearButton.addEventListener("click", () => {
-  return displayTextContent();
-});
-
-// add if statement in operators to only add 2 numbers (firstNumber + secondNumber)
+// create new variable for sum value then create new function to calculate the sum value to the new number
 // add splice + if statement show => "..." in show content to only show latest number
