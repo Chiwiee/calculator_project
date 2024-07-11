@@ -49,42 +49,6 @@ function displayTextContent() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       let content = document.querySelector("span");
-      switch (button.id) {
-        case "clear":
-          content.textContent = "";
-          operator = "0";
-          firstNumber.splice(0, firstNumber.length);
-          secondNumber.splice(0, secondNumber.length);
-          break;
-        case "plus":
-          const plus = document.createElement("span");
-          plus.textContent = " + ";
-          content.appendChild(plus);
-          operator = "plus";
-          break;
-        case "minus":
-          const minus = document.createElement("span");
-          minus.textContent = " - ";
-          content.appendChild(minus);
-          operator = "minus";
-          break;
-        case "times":
-          const times = document.createElement("span");
-          times.textContent = " × ";
-          content.appendChild(times);
-          operator = "times";
-          break;
-        case "divide":
-          const divide = document.createElement("span");
-          divide.textContent = " ÷ ";
-          content.appendChild(divide);
-          operator = "divide";
-          break;
-        case "equal":
-          let sum = operate(firstNumber, operator, secondNumber);
-          content.textContent = `${sum}`;
-          break;
-      }
 
       // If Statement for Pushing Values into an Array firstNumber and SecondNumber
       if (button.id == "0") {
@@ -195,6 +159,43 @@ function displayTextContent() {
         }
       }
 
+      // Operator Switch Case
+      switch (button.id) {
+        case "clear":
+          content.textContent = "";
+          operator = "0";
+          firstNumber.splice(0, firstNumber.length);
+          secondNumber.splice(0, secondNumber.length);
+          break;
+        case "plus":
+          const plus = document.createElement("span");
+          plus.textContent = " + ";
+          content.appendChild(plus);
+          operator = "plus";
+          break;
+        case "minus":
+          const minus = document.createElement("span");
+          minus.textContent = " - ";
+          content.appendChild(minus);
+          operator = "minus";
+          break;
+        case "times":
+          const times = document.createElement("span");
+          times.textContent = " × ";
+          content.appendChild(times);
+          operator = "times";
+          break;
+        case "divide":
+          const divide = document.createElement("span");
+          divide.textContent = " ÷ ";
+          content.appendChild(divide);
+          operator = "divide";
+          break;
+        case "equal":
+          let sum = operate(firstNumber, operator, secondNumber);
+          content.textContent = `${sum}`;
+          break;
+      }
       console.log(firstNumber);
       console.log(secondNumber);
       console.log(operator);
