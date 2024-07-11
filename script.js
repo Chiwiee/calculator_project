@@ -132,6 +132,7 @@ function displayTextContent() {
           break;
         case "equal":
           let sum = operate(firstNumber, operator, secondNumber);
+          content.textContent = `${sum}`;
           break;
       }
 
