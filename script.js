@@ -208,3 +208,4 @@ clearButton.addEventListener("click", () => {
 });
 
 // add if statement in operators to only add 2 numbers (firstNumber + secondNumber)
+// add splice + if statement show => "..." in show content to only show latest number
