@@ -172,28 +172,63 @@ function displayTextContent() {
         secondNumber.splice(0, secondNumber.length);
       }
       if (button.id == "plus") {
-        const plus = document.createElement("span");
-        plus.textContent = " + ";
-        content.appendChild(plus);
-        operator = "plus";
+        if (operator == "") {
+          const plus = document.createElement("span");
+          plus.textContent = " + ";
+          content.appendChild(plus);
+          operator = "plus";
+        } else if (operator != "") {
+          let sum = operate(
+            firstNumber,
+            calculatedValue,
+            operator,
+            secondNumber
+          );
+          content.textContent = `${sum}`;
+          calculatedValue.push(sum);
+        }
       }
       if (button.id == "minus") {
-        const minus = document.createElement("span");
-        minus.textContent = " - ";
-        content.appendChild(minus);
-        operator = "minus";
+        if (operator == "") {
+          const minus = document.createElement("span");
+          minus.textContent = " - ";
+          content.appendChild(minus);
+          operator = "minus";
+        }
       }
       if (button.id == "times") {
-        const times = document.createElement("span");
-        times.textContent = " × ";
-        content.appendChild(times);
-        operator = "times";
+        if (operator == "") {
+          const times = document.createElement("span");
+          times.textContent = " × ";
+          content.appendChild(times);
+          operator = "times";
+        } else if (operator != "") {
+          let sum = operate(
+            firstNumber,
+            calculatedValue,
+            operator,
+            secondNumber
+          );
+          content.textContent = `${sum}`;
+          calculatedValue.push(sum);
+        }
       }
       if (button.id == "divide") {
-        const divide = document.createElement("span");
-        divide.textContent = " ÷ ";
-        content.appendChild(divide);
-        operator = "divide";
+        if (operator == "") {
+          const divide = document.createElement("span");
+          divide.textContent = " ÷ ";
+          content.appendChild(divide);
+          operator = "divide";
+        } else if (operator != "") {
+          let sum = operate(
+            firstNumber,
+            calculatedValue,
+            operator,
+            secondNumber
+          );
+          content.textContent = `${sum}`;
+          calculatedValue.push(sum);
+        }
       }
       if (button.id == "equal") {
         let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
