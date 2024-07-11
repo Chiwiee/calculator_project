@@ -136,62 +136,62 @@ function displayTextContent() {
       if (button.id == "0" && operator == "") {
         firstNumber.push(0);
       } else if (button.id == "0" && operator != "") {
-        num2.push(0);
+        secondNumber.push(0);
       }
       if (button.id == "1" && operator == "") {
         firstNumber.push(1);
       } else if (button.id == "1" && operator != "") {
-        num2.push(1);
+        secondNumber.push(1);
       }
       if (button.id == "2" && operator == "") {
         firstNumber.push(2);
       } else if (button.id == "2" && operator != "") {
-        num2.push(2);
+        secondNumber.push(2);
       }
       if (button.id == "3" && operator == "") {
         firstNumber.push(3);
       } else if (button.id == "3" && operator != "") {
-        num2.push(3);
+        secondNumber.push(3);
       }
       if (button.id == "4" && operator == "") {
         firstNumber.push(4);
       } else if (button.id == "4" && operator != "") {
-        num2.push(4);
+        secondNumber.push(4);
       }
       if (button.id == "4" && operator == "") {
         firstNumber.push(4);
       } else if (button.id == "4" && operator != "") {
-        num2.push(4);
+        secondNumber.push(4);
       }
       if (button.id == "5" && operator == "") {
         firstNumber.push(5);
       } else if (button.id == "5" && operator != "") {
-        num2.push(5);
+        secondNumber.push(5);
       }
       if (button.id == "6" && operator == "") {
         firstNumber.push(6);
       } else if (button.id == "6" && operator != "") {
-        num2.push(6);
+        secondNumber.push(6);
       }
       if (button.id == "7" && operator == "") {
         firstNumber.push(7);
       } else if (button.id == "7" && operator != "") {
-        num2.push(7);
+        secondNumber.push(7);
       }
       if (button.id == "8" && operator == "") {
         firstNumber.push(8);
       } else if (button.id == "8" && operator != "") {
-        num2.push(8);
+        secondNumber.push(8);
       }
       if (button.id == "9" && operator == "") {
         firstNumber.push(9);
       } else if (button.id == "9" && operator != "") {
-        num2.push(9);
+        secondNumber.push(9);
       }
 
       console.log(button.id);
       console.log(firstNumber);
-      console.log(num2);
+      console.log(secondNumber);
     });
   });
 }
