@@ -120,6 +120,7 @@ function displayTextContent() {
           operator = "divide";
           break;
         case "equal":
+          operate();
           break;
       }
       if (button.id == "0" && operator == "") {
@@ -198,3 +199,4 @@ function reduceNum2(num) {
 }
 const firstNumber = reduceNum1(num1);
 const secondNumber = reduceNum2(num2);
+console.log(firstNumber, secondNumber);
