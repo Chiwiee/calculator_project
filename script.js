@@ -33,7 +33,8 @@ function operate() {
 }
 // const operateSum = operate();
 // console.log(operateSum);
-const num = [];
+const num1 = [];
+const num2 = [];
 
 function displayTextContent() {
   let buttons = document.querySelectorAll("button");
