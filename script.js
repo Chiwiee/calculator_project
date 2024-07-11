@@ -41,52 +41,52 @@ function displayTextContent() {
     button.addEventListener("click", () => {
       let content = document.querySelector("span");
       switch (button.id) {
-        case "num0":
+        case "0":
           const zero = document.createElement("span");
           zero.textContent = "0";
           content.appendChild(zero);
           break;
-        case "num1":
+        case "1":
           const one = document.createElement("span");
           one.textContent = "1";
           content.appendChild(one);
           break;
-        case "num2":
+        case "2":
           const two = document.createElement("span");
           two.textContent = "2";
           content.appendChild(two);
           break;
-        case "num3":
+        case "3":
           const three = document.createElement("span");
           three.textContent = "3";
           content.appendChild(three);
           break;
-        case "num4":
+        case "4":
           const four = document.createElement("span");
           four.textContent = "4";
           content.appendChild(four);
           break;
-        case "num5":
+        case "5":
           const five = document.createElement("span");
           five.textContent = "5";
           content.appendChild(five);
           break;
-        case "num6":
+        case "6":
           const six = document.createElement("span");
           six.textContent = "6";
           content.appendChild(six);
           break;
-        case "num7":
+        case "7":
           const seven = document.createElement("span");
           seven.textContent = "7";
           content.appendChild(seven);
           break;
-        case "num8":
+        case "8":
           const eight = document.createElement("span");
           eight.textContent = "8";
           content.appendChild(eight);
           break;
-        case "num9":
+        case "9":
           const nine = document.createElement("span");
           nine.textContent = "9";
           content.appendChild(nine);
