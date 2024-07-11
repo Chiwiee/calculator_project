@@ -134,63 +134,63 @@ function displayTextContent() {
           break;
       }
       if (button.id == "0" && operator == "") {
-        num1.push(0);
+        firstNumber.push(0);
       } else if (button.id == "0" && operator != "") {
         num2.push(0);
       }
       if (button.id == "1" && operator == "") {
-        num1.push(1);
+        firstNumber.push(1);
       } else if (button.id == "1" && operator != "") {
         num2.push(1);
       }
       if (button.id == "2" && operator == "") {
-        num1.push(2);
+        firstNumber.push(2);
       } else if (button.id == "2" && operator != "") {
         num2.push(2);
       }
       if (button.id == "3" && operator == "") {
-        num1.push(3);
+        firstNumber.push(3);
       } else if (button.id == "3" && operator != "") {
         num2.push(3);
       }
       if (button.id == "4" && operator == "") {
-        num1.push(4);
+        firstNumber.push(4);
       } else if (button.id == "4" && operator != "") {
         num2.push(4);
       }
       if (button.id == "4" && operator == "") {
-        num1.push(4);
+        firstNumber.push(4);
       } else if (button.id == "4" && operator != "") {
         num2.push(4);
       }
       if (button.id == "5" && operator == "") {
-        num1.push(5);
+        firstNumber.push(5);
       } else if (button.id == "5" && operator != "") {
         num2.push(5);
       }
       if (button.id == "6" && operator == "") {
-        num1.push(6);
+        firstNumber.push(6);
       } else if (button.id == "6" && operator != "") {
         num2.push(6);
       }
       if (button.id == "7" && operator == "") {
-        num1.push(7);
+        firstNumber.push(7);
       } else if (button.id == "7" && operator != "") {
         num2.push(7);
       }
       if (button.id == "8" && operator == "") {
-        num1.push(8);
+        firstNumber.push(8);
       } else if (button.id == "8" && operator != "") {
         num2.push(8);
       }
       if (button.id == "9" && operator == "") {
-        num1.push(9);
+        firstNumber.push(9);
       } else if (button.id == "9" && operator != "") {
         num2.push(9);
       }
 
       console.log(button.id);
-      console.log(num1);
+      console.log(firstNumber);
       console.log(num2);
     });
   });
