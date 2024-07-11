@@ -17,6 +17,11 @@ function operate(num1, operator, num2) {
       return acc + current;
     }, "");
   }
+  function reduceNum2(num) {
+    return num.reduce((acc, current) => {
+      return acc + current;
+    }, "");
+  }
   console.log(firstNumber);
   console.log(operator);
   console.log(secondNumber);
