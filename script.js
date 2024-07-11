@@ -186,7 +186,15 @@ function displayTextContent() {
 }
 displayTextContent();
 
-function reduceNum1(num) {}
+function reduceNum1(num) {
+  return num.reduce((acc, current) => {
+    return parseFloat(acc) + parseFloat(current);
+  }, "");
+}
+function reduceNum2(num) {
+  return num.reduce((acc, current) => {
+    return parseFloat(acc) + parseFloat(current);
+  }, "");
+}
 reduceNum1(num1);
-function reduceNum2(num) {}
 reduceNum2(num2);
