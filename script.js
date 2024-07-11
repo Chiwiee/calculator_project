@@ -182,17 +182,3 @@ function displayTextContent() {
   });
 }
 displayTextContent();
-
-function reduceNum1(num) {
-  return num.reduce((acc, current) => {
-    return parseFloat(acc) + parseFloat(current);
-  }, "");
-}
-function reduceNum2(num) {
-  return num.reduce((acc, current) => {
-    return parseFloat(acc) + parseFloat(current);
-  }, "");
-}
-const firstNumber = reduceNum1(num1);
-const secondNumber = reduceNum2(num2);
-console.log(firstNumber, secondNumber);
