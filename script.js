@@ -185,3 +185,8 @@ function displayTextContent() {
   });
 }
 displayTextContent();
+
+function reduceNum1(num) {}
+reduceNum1(num1);
+function reduceNum2(num) {}
+reduceNum2(num2);
