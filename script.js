@@ -9,6 +9,9 @@ function multiply(firstNumber, sum, secondNumber) {
   return firstNumber * secondNumber || sum * secondNumber;
 }
 function divide(firstNumber, sum, secondNumber) {
+  if (firstNumber == 0 || sum == 0 || secondNumber == 0) {
+    return "ERROR: ÷ 0";
+  }
   return firstNumber / secondNumber || sum / secondNumber;
 }
 // Operate Function that Converts and Calls Functions to Calculate
