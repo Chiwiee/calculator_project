@@ -206,3 +206,5 @@ const clearButton = document.querySelector("#clear");
 clearButton.addEventListener("click", () => {
   return displayTextContent();
 });
+
+// add if statement in operators to only add 2 numbers (firstNumber + secondNumber)
