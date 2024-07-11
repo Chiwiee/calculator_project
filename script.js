@@ -131,7 +131,7 @@ function displayTextContent() {
           operator = "divide";
           break;
         case "equal":
-          alert(operate(firstNumber, operator, secondNumber));
+          let sum = operate(firstNumber, operator, secondNumber);
           break;
       }
 
