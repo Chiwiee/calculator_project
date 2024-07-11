@@ -12,6 +12,11 @@ function divide(firstNumber, secondNumber) {
 }
 
 function operate(num1, operator, num2) {
+  function reduceNum1(num) {
+    return num.reduce((acc, current) => {
+      return acc + current;
+    }, "");
+  }
   console.log(firstNumber);
   console.log(operator);
   console.log(secondNumber);
