@@ -101,6 +101,10 @@ function displayTextContent() {
           content.appendChild(nine);
           break;
         case "clear":
+          content.textContent = "";
+          operator = "0";
+          firstNumber.splice(0, firstNumber.length);
+          secondNumber.splice(0, secondNumber.length);
           break;
         case "plus":
           const plus = document.createElement("span");
@@ -187,6 +191,11 @@ function displayTextContent() {
       } else if (button.id == "9" && operator != "") {
         secondNumber.push(9);
       }
+
+      console.log(firstNumber);
+      console.log(secondNumber);
+      console.log(operator);
+      console.log(button.id);
     });
   });
 }
