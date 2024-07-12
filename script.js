@@ -168,13 +168,20 @@ function displayTextContent() {
         }
       }
       if (button.id == "dot") {
-        const dot = document.createElement("span");
-        dot.textContent = ".";
-        content.appendChild(dot);
-        if (button.id == "dot" && operator == "") {
-          firstNumber.push(".");
-        } else if (button.id == "dot" && operator != "") {
-          secondNumber.push(".");
+        if (
+          firstNumber.lenght == 0 &&
+          secondNumber.lenght == 0 &&
+          calculatedValue.lenght == 0
+        ) {
+          const dot = document.createElement("span");
+          dot.textContent = ".";
+          content.appendChild(dot);
+
+          if (button.id == "dot" && operator == "") {
+            firstNumber.push(".");
+          } else if (button.id == "dot" && operator != "") {
+            secondNumber.push(".");
+          }
         }
       }
       // Operator, Equal and Clear
@@ -296,3 +303,6 @@ displayTextContent();
 
 // create new variable for sum value then create new function to calculate the sum value to the new number
 // add splice + if statement show => "..." in show content to only show latest number
+
+//everytime you created a span add class id that use array.length/
+//backspace removeChild using array.length targeting the span
