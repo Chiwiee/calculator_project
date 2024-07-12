@@ -37,7 +37,6 @@ body {
 }
 #previous-result {
   display: flex;
-  flex-direction: column;
   flex: 1 1 33.333333333%;
 }
 #result {
