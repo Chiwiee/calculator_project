@@ -74,17 +74,30 @@ body {
 }
 #backspace {
   color: rgb(171, 0, 250);
-  font-size: 10px;
+  font-size: 15px;
 }
 #divide {
   color: rgb(171, 0, 250);
+  font-size: 28px;
 }
 #times {
   color: rgb(171, 0, 250);
 }
 #minus {
   color: rgb(171, 0, 250);
+  font-size: 40px;
 }
 #plus {
   color: rgb(171, 0, 250);
+  font-size: 30px;
+}
+#equal {
+  font-size: 40px;
+}
+#dot {
+  font-size: 30px;
+}
+button {
+  font-size: 22px;
+  color: white;
 }
