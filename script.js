@@ -167,6 +167,16 @@ function displayTextContent() {
           secondNumber.push(9);
         }
       }
+      if (button.id == "dot") {
+        const dot = document.createElement("span");
+        dot.textContent = ".";
+        content.appendChild(dot);
+        if (button.id == "dot" && operator == "") {
+          firstNumber.push(".");
+        } else if (button.id == "dot" && operator != "") {
+          secondNumber.push(".");
+        }
+      }
       // Operator, Equal and Clear
 
       if (button.id == "plus") {
@@ -274,7 +284,6 @@ function displayTextContent() {
         secondNumber.splice(0, secondNumber.length);
         calculatedValue.splice(0, calculatedValue.length);
       }
-
       console.log(" ");
       console.log(`firstNumber: ${firstNumber}`);
       console.log(`secondNumber: ${secondNumber}`);
