@@ -38,13 +38,18 @@ body {
 #previous-result {
   display: flex;
   flex: 1 1 33.333333333%;
+  color: rgb(133, 132, 132);
+  font-size: 22px;
+  font-weight: 600;
 }
 #result {
   display: flex;
   justify-content: flex-end;
   flex: 1 1 33.333333333%;
+  font-size: 60px;
 }
 #text-content {
   display: flex;
   flex: 1 1 33.333333333%;
+  font-size: 25px;
 }
