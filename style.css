@@ -33,6 +33,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   flex: 1 1 50%;
+  padding: 12px;
 }
 #previous-result {
   display: flex;
