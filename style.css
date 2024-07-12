@@ -62,12 +62,29 @@ body {
   flex: 1 1 25%;
   background-color: transparent;
   border: none;
-  color: white;
-  font-size: 22px;
 }
 #button-container > #equal {
   flex: 2 1 50%;
 }
 #button-container > #three {
   margin-right: 82px;
+}
+#clear {
+  color: rgb(171, 0, 250);
+}
+#backspace {
+  color: rgb(171, 0, 250);
+  font-size: 10px;
+}
+#divide {
+  color: rgb(171, 0, 250);
+}
+#times {
+  color: rgb(171, 0, 250);
+}
+#minus {
+  color: rgb(171, 0, 250);
+}
+#plus {
+  color: rgb(171, 0, 250);
 }
