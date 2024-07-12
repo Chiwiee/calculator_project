@@ -169,9 +169,9 @@ function displayTextContent() {
       }
       if (button.id == "dot") {
         if (
-          firstNumber.lenght == 0 &&
-          secondNumber.lenght == 0 &&
-          calculatedValue.lenght == 0
+          firstNumber.length == 0 &&
+          secondNumber.length == 0 &&
+          calculatedValue.length == 0
         ) {
           const dot = document.createElement("span");
           dot.textContent = ".";
