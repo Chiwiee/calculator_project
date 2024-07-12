@@ -34,3 +34,8 @@ body {
   align-items: flex-end;
   flex: 1 1 50%;
 }
+#previous-result {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 33.333333333%;
+}
