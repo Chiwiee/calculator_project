@@ -60,110 +60,110 @@ function displayTextContent() {
       let content = document.querySelector("span");
 
       // If Statement for TextContent and to Push Values to an Array
-      if (button.id == "0") {
+      if (button.id == "zero") {
         const zero = document.createElement("span");
         zero.textContent = "0";
         content.appendChild(zero);
-        if (button.id && operator == "") {
+        if (button.id == "zero" && operator == "") {
           firstNumber.push(0);
-        } else if (button.id == "0" && operator != "") {
+        } else if (button.id == "zero" && operator != "") {
           secondNumber.push(0);
         }
       }
-      if (button.id == "1") {
+      if (button.id == "one") {
         const one = document.createElement("span");
         one.textContent = "1";
         content.appendChild(one);
-        if (button.id == "1" && operator == "") {
+        if (button.id == "one" && operator == "") {
           firstNumber.push(1);
-        } else if (button.id == "1" && operator != "") {
+        } else if (button.id == "one" && operator != "") {
           secondNumber.push(1);
         }
       }
-      if (button.id == "2") {
+      if (button.id == "two") {
         const two = document.createElement("span");
         two.textContent = "2";
         content.appendChild(two);
-        if (button.id == "2" && operator == "") {
+        if (button.id == "two" && operator == "") {
           firstNumber.push(2);
-        } else if (button.id == "2" && operator != "") {
+        } else if (button.id == "two" && operator != "") {
           secondNumber.push(2);
         }
       }
 
-      if (button.id == "3") {
+      if (button.id == "three") {
         const three = document.createElement("span");
         three.textContent = "3";
         content.appendChild(three);
-        if (button.id == "3" && operator == "") {
+        if (button.id == "three" && operator == "") {
           firstNumber.push(3);
-        } else if (button.id == "3" && operator != "") {
+        } else if (button.id == "three" && operator != "") {
           secondNumber.push(3);
         }
       }
 
-      if (button.id == "4") {
+      if (button.id == "four") {
         const four = document.createElement("span");
         four.textContent = "4";
         content.appendChild(four);
-        if (button.id == "4" && operator == "") {
+        if (button.id == "four" && operator == "") {
           firstNumber.push(4);
-        } else if (button.id == "4" && operator != "") {
+        } else if (button.id == "four" && operator != "") {
           secondNumber.push(4);
         }
       }
 
-      if (button.id == "5") {
+      if (button.id == "five") {
         const five = document.createElement("span");
         five.textContent = "5";
         content.appendChild(five);
-        if (button.id == "5" && operator == "") {
+        if (button.id == "five" && operator == "") {
           firstNumber.push(5);
-        } else if (button.id == "5" && operator != "") {
+        } else if (button.id == "five" && operator != "") {
           secondNumber.push(5);
         }
       }
 
-      if (button.id == "6") {
+      if (button.id == "six") {
         const six = document.createElement("span");
         six.textContent = "6";
         content.appendChild(six);
-        if (button.id == "6" && operator == "") {
+        if (button.id == "six" && operator == "") {
           firstNumber.push(6);
-        } else if (button.id == "6" && operator != "") {
+        } else if (button.id == "six" && operator != "") {
           secondNumber.push(6);
         }
       }
 
-      if (button.id == "7") {
+      if (button.id == "seven") {
         const seven = document.createElement("span");
         seven.textContent = "7";
         content.appendChild(seven);
-        if (button.id == "7" && operator == "") {
+        if (button.id == "seven" && operator == "") {
           firstNumber.push(7);
-        } else if (button.id == "7" && operator != "") {
+        } else if (button.id == "seven" && operator != "") {
           secondNumber.push(7);
         }
       }
 
-      if (button.id == "8") {
+      if (button.id == "eight") {
         const eight = document.createElement("span");
         eight.textContent = "8";
         content.appendChild(eight);
-        if (button.id == "8" && operator == "") {
+        if (button.id == "eight" && operator == "") {
           firstNumber.push(8);
-        } else if (button.id == "8" && operator != "") {
+        } else if (button.id == "eight" && operator != "") {
           secondNumber.push(8);
         }
       }
 
-      if (button.id == "9") {
+      if (button.id == "nine") {
         const nine = document.createElement("span");
         nine.textContent = "9";
         content.appendChild(nine);
-        if (button.id == "9" && operator == "") {
+        if (button.id == "nine" && operator == "") {
           firstNumber.push(9);
-        } else if (button.id == "9" && operator != "") {
+        } else if (button.id == "nine" && operator != "") {
           secondNumber.push(9);
         }
       }
