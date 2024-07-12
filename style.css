@@ -97,7 +97,8 @@ button {
 }
 #equal {
   font-size: 40px;
-  border-radius: 10px;
+  border: none;
+  border-radius: 25px;
   background-color: rgb(171, 0, 250);
 }
 button {
