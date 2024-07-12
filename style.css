@@ -44,3 +44,7 @@ body {
   justify-content: flex-end;
   flex: 1 1 33.333333333%;
 }
+#text-content {
+  display: flex;
+  flex: 1 1 33.333333333%;
+}
