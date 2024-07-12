@@ -66,5 +66,8 @@ body {
   font-size: 22px;
 }
 #button-container > #equal {
-  flex: 2 1 25%;
+  flex: 2 1 50%;
+}
+#button-container > #three {
+  margin-right: 82px;
 }
