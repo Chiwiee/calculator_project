@@ -55,9 +55,9 @@ let operator = "";
 // For Backspace Targeting
 function lengthTotal(firstNumber, secondNumber, operator) {
   if (operator != "") {
-    return 1 + firstNumber.length + secondNumber.length + 1;
+    return firstNumber.length + secondNumber.length + 1;
   } else {
-    return 1 + firstNumber.length + secondNumber.length;
+    return firstNumber.length + secondNumber.length;
   }
 }
 
@@ -69,7 +69,7 @@ function displayTextContent() {
       let content = document.querySelector(".text");
       let result = document.querySelector(".result");
       let previous = document.querySelector(".previous");
-      let textContent = document.querySelector("#text-content");
+      let textContainer = document.querySelector("#text-content");
       let number = lengthTotal(firstNumber, secondNumber, operator);
       // If Statement for TextContent and to Push Values to an Array
       if (button.id == "zero") {
@@ -320,8 +320,7 @@ function displayTextContent() {
         secondNumber.splice(0, secondNumber.length);
         calculatedValue.splice(0, calculatedValue.length);
       }
-      if (button.id == "backspace") {
-      }
+
       console.log(" ");
       console.log(`firstNumber: ${firstNumber}`);
       console.log(`secondNumber: ${secondNumber}`);
