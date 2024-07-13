@@ -168,10 +168,11 @@ function displayTextContent() {
         }
       }
       if (button.id == "dot") {
-        const dot = document.createElement("span");
-        dot.textContent = ".";
-        content.appendChild(dot);
-
+        if (firstNumber.slice(-1) != ".") {
+          const dot = document.createElement("span");
+          dot.textContent = ".";
+          content.appendChild(dot);
+        }
         if (button.id == "dot" && operator == "") {
           firstNumber.push(".");
         } else if (button.id == "dot" && operator != "") {
