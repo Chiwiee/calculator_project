@@ -59,6 +59,7 @@ function displayTextContent() {
     button.addEventListener("click", () => {
       let content = document.querySelector(".text");
       let result = document.querySelector(".result");
+      let previous = document.querySelector(".previous");
       let number = firstNumber.length + secondNumber.length;
 
       // If Statement for TextContent and to Push Values to an Array
