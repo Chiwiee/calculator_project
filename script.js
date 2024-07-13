@@ -52,11 +52,12 @@ const secondNumber = [];
 const calculatedValue = [];
 let operator = "";
 
+// For Backspace Targeting
 function lengthTotal(firstNumber, secondNumber, operator) {
   if (operator != "") {
-    return firstNumber.length + secondNumber.length + 1;
+    return 1 + firstNumber.length + secondNumber.length + 1;
   } else {
-    return firstNumber.length + secondNumber.length;
+    return 1 + firstNumber.length + secondNumber.length;
   }
 }
 
@@ -317,6 +318,8 @@ function displayTextContent() {
         firstNumber.splice(0, firstNumber.length);
         secondNumber.splice(0, secondNumber.length);
         calculatedValue.splice(0, calculatedValue.length);
+      }
+      if (button.id == "backspace") {
       }
       console.log(" ");
       console.log(`firstNumber: ${firstNumber}`);
