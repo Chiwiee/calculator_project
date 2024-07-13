@@ -64,6 +64,7 @@ function displayTextContent() {
       if (button.id == "zero") {
         const zero = document.createElement("span");
         zero.textContent = "0";
+        zero.classList = `num${number}`;
         content.appendChild(zero);
         if (button.id == "zero" && operator == "") {
           firstNumber.push(0);
@@ -74,6 +75,7 @@ function displayTextContent() {
       if (button.id == "one") {
         const one = document.createElement("span");
         one.textContent = "1";
+        one.classList = `num${number}`;
         content.appendChild(one);
         if (button.id == "one" && operator == "") {
           firstNumber.push(1);
@@ -84,6 +86,7 @@ function displayTextContent() {
       if (button.id == "two") {
         const two = document.createElement("span");
         two.textContent = "2";
+        two.classList = `num${number}`;
         content.appendChild(two);
         if (button.id == "two" && operator == "") {
           firstNumber.push(2);
@@ -95,6 +98,7 @@ function displayTextContent() {
       if (button.id == "three") {
         const three = document.createElement("span");
         three.textContent = "3";
+        three.classList = `num${number}`;
         content.appendChild(three);
         if (button.id == "three" && operator == "") {
           firstNumber.push(3);
@@ -106,6 +110,7 @@ function displayTextContent() {
       if (button.id == "four") {
         const four = document.createElement("span");
         four.textContent = "4";
+        four.classList = `num${number}`;
         content.appendChild(four);
         if (button.id == "four" && operator == "") {
           firstNumber.push(4);
@@ -117,6 +122,7 @@ function displayTextContent() {
       if (button.id == "five") {
         const five = document.createElement("span");
         five.textContent = "5";
+        five.classList = `num${number}`;
         content.appendChild(five);
         if (button.id == "five" && operator == "") {
           firstNumber.push(5);
@@ -128,6 +134,7 @@ function displayTextContent() {
       if (button.id == "six") {
         const six = document.createElement("span");
         six.textContent = "6";
+        six.classList = `num${number}`;
         content.appendChild(six);
         if (button.id == "six" && operator == "") {
           firstNumber.push(6);
@@ -139,6 +146,7 @@ function displayTextContent() {
       if (button.id == "seven") {
         const seven = document.createElement("span");
         seven.textContent = "7";
+        seven.classList = `num${number}`;
         content.appendChild(seven);
         if (button.id == "seven" && operator == "") {
           firstNumber.push(7);
@@ -150,6 +158,7 @@ function displayTextContent() {
       if (button.id == "eight") {
         const eight = document.createElement("span");
         eight.textContent = "8";
+        eight.classList = `num${number}`;
         content.appendChild(eight);
         if (button.id == "eight" && operator == "") {
           firstNumber.push(8);
@@ -161,6 +170,7 @@ function displayTextContent() {
       if (button.id == "nine") {
         const nine = document.createElement("span");
         nine.textContent = "9";
+        nine.classList = `num${number}`;
         content.appendChild(nine);
         if (button.id == "nine" && operator == "") {
           firstNumber.push(9);
@@ -172,6 +182,7 @@ function displayTextContent() {
         if (firstNumber.slice(-1) != ".") {
           const dot = document.createElement("span");
           dot.textContent = ".";
+          dot.classList = `num${number}`;
           content.appendChild(dot);
           if (button.id == "dot" && operator == "") {
             firstNumber.push(".");
@@ -179,6 +190,7 @@ function displayTextContent() {
         } else if (secondNumber.slice(-1) != "." && operator != "") {
           const dot = document.createElement("span");
           dot.textContent = ".";
+          dot.classList = `num${number}`;
           content.appendChild(dot);
           if (button.id == "dot" && operator != "") {
             secondNumber.push(".");
@@ -191,6 +203,7 @@ function displayTextContent() {
         if (operator == "") {
           const plus = document.createElement("span");
           plus.textContent = " + ";
+          plus.classList = `num${number}`;
           content.appendChild(plus);
           operator = "plus";
         } else if (operator != "") {
@@ -212,6 +225,7 @@ function displayTextContent() {
         if (operator == "") {
           const minus = document.createElement("span");
           minus.textContent = " - ";
+          minus.classList = `num${number}`;
           content.appendChild(minus);
           operator = "minus";
         } else if (operator != "") {
@@ -233,6 +247,7 @@ function displayTextContent() {
         if (operator == "") {
           const times = document.createElement("span");
           times.textContent = " × ";
+          times.classList = `num${number}`;
           content.appendChild(times);
           operator = "times";
         } else if (operator != "") {
@@ -254,6 +269,7 @@ function displayTextContent() {
         if (operator == "") {
           const divide = document.createElement("span");
           divide.textContent = " ÷ ";
+          divide.classList = `num${number}`;
           content.appendChild(divide);
           operator = "divide";
         } else if (operator != "") {
