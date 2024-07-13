@@ -42,7 +42,7 @@ body {
   font-weight: 600;
   justify-content: flex-end;
 }
-#result {
+#result-content {
   display: flex;
   justify-content: flex-end;
   font-size: 60px;
