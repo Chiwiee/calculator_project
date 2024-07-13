@@ -214,7 +214,7 @@ function displayTextContent() {
             calculatedValue,
             operator,
             secondNumber
-          ).toFixed(1);
+          );
           content.textContent = `${sum}`;
           result.textContent = `${sum}`;
 
@@ -238,7 +238,7 @@ function displayTextContent() {
             calculatedValue,
             operator,
             secondNumber
-          ).toFixed(1);
+          );
           content.textContent = `${sum}`;
           result.textContent = `${sum}`;
           calculatedValue.push(sum);
@@ -261,7 +261,7 @@ function displayTextContent() {
             calculatedValue,
             operator,
             secondNumber
-          ).toFixed(1);
+          );
           content.textContent = `${sum}`;
           result.textContent = `${sum}`;
           calculatedValue.push(sum);
@@ -284,7 +284,7 @@ function displayTextContent() {
             calculatedValue,
             operator,
             secondNumber
-          ).toFixed(1);
+          );
           content.textContent = `${sum}`;
           result.textContent = `${sum}`;
           calculatedValue.push(sum);
@@ -295,12 +295,7 @@ function displayTextContent() {
         }
       }
       if (button.id == "equal") {
-        let sum = operate(
-          firstNumber,
-          calculatedValue,
-          operator,
-          secondNumber
-        ).toFixed(1);
+        let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
         content.textContent = `${sum}`;
         result.textContent = `${sum}`;
         calculatedValue.push(sum);
