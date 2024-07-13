@@ -203,7 +203,7 @@ function displayTextContent() {
         if (operator == "") {
           const plus = document.createElement("span");
           plus.textContent = " + ";
-          plus.classList = `num${number}`;
+          plus.classList = `plus`;
           content.appendChild(plus);
           operator = "plus";
         } else if (operator != "") {
@@ -225,7 +225,7 @@ function displayTextContent() {
         if (operator == "") {
           const minus = document.createElement("span");
           minus.textContent = " - ";
-          minus.classList = `num${number}`;
+          minus.classList = `minus`;
           content.appendChild(minus);
           operator = "minus";
         } else if (operator != "") {
@@ -247,7 +247,7 @@ function displayTextContent() {
         if (operator == "") {
           const times = document.createElement("span");
           times.textContent = " × ";
-          times.classList = `num${number}`;
+          times.classList = `times`;
           content.appendChild(times);
           operator = "times";
         } else if (operator != "") {
@@ -269,7 +269,7 @@ function displayTextContent() {
         if (operator == "") {
           const divide = document.createElement("span");
           divide.textContent = " ÷ ";
-          divide.classList = `num${number}`;
+          divide.classList = `divide`;
           content.appendChild(divide);
           operator = "divide";
         } else if (operator != "") {
