@@ -57,7 +57,7 @@ function displayTextContent() {
   let buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      let content = document.querySelector("span");
+      let content = document.querySelector(".text");
       let result = document.querySelector("#result");
       let number = firstNumber.length + secondNumber.length;
 
