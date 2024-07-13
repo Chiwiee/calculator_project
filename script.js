@@ -58,6 +58,7 @@ function displayTextContent() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       let content = document.querySelector("span");
+      let number = firstNumber.length + secondNumber.length;
 
       // If Statement for TextContent and to Push Values to an Array
       if (button.id == "zero") {
@@ -296,6 +297,7 @@ function displayTextContent() {
       console.log(`secondNumber: ${secondNumber}`);
       console.log(`calculatedValue ${calculatedValue}`);
       console.log(`operator: ${operator}`);
+      console.log(`Numbers Length: ${number}`);
     });
   });
 }
