@@ -311,6 +311,7 @@ function displayTextContent() {
       }
       if (button.id == "clear") {
         content.textContent = "";
+        result.textContent = "";
         operator = "";
         firstNumber.splice(0, firstNumber.length);
         secondNumber.splice(0, secondNumber.length);
