@@ -52,6 +52,14 @@ const secondNumber = [];
 const calculatedValue = [];
 let operator = "";
 
+function lengthTotal(firstNumber, secondNumber, operator) {
+  if (operator != "") {
+    return firstNumber.length + secondNumber.length + 1;
+  } else {
+    return firstNumber.length + secondNumber.length;
+  }
+}
+
 // Functions that Display Text Content and Push Value to an Array
 function displayTextContent() {
   let buttons = document.querySelectorAll("button");
@@ -61,7 +69,6 @@ function displayTextContent() {
       let result = document.querySelector(".result");
       let previous = document.querySelector(".previous");
       let number = firstNumber.length + secondNumber.length;
-
       // If Statement for TextContent and to Push Values to an Array
       if (button.id == "zero") {
         const zero = document.createElement("span");
