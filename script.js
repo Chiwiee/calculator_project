@@ -304,17 +304,17 @@ function displayTextContent(id) {
   console.log(`Numbers Length: ${number}`);
 }
 
-// // Functions that Display Text Content and Push Value to an Array
-// function buttonEvents() {
-//   let buttons = document.querySelectorAll("button");
-//   buttons.forEach((button) => {
-//     button.addEventListener("click", () => {
-//       let id = button.id;
-//       displayTextContent(id);
-//     });
-//   });
-// }
-// buttonEvents();
+// Functions that Display Text Content and Push Value to an Array
+function buttonEvents() {
+  let buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      let id = button.id;
+      displayTextContent(id);
+    });
+  });
+}
+buttonEvents();
 
 // create new variable for sum value then create new function to calculate the sum value to the new number
 // add splice + if statement show => "..." in show content to only show latest number
