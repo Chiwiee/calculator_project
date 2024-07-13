@@ -68,7 +68,7 @@ function displayTextContent() {
       let content = document.querySelector(".text");
       let result = document.querySelector(".result");
       let previous = document.querySelector(".previous");
-      let number = firstNumber.length + secondNumber.length;
+      let number = lengthTotal(firstNumber, secondNumber, operator);
       // If Statement for TextContent and to Push Values to an Array
       if (button.id == "zero") {
         const zero = document.createElement("span");
