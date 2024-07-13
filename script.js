@@ -216,6 +216,8 @@ function displayTextContent() {
             secondNumber
           ).toFixed(1);
           content.textContent = `${sum}`;
+          result.textContent = `${sum}`;
+
           calculatedValue.push(sum);
           operator = "";
           firstNumber.splice(0, firstNumber.length);
@@ -238,6 +240,7 @@ function displayTextContent() {
             secondNumber
           ).toFixed(1);
           content.textContent = `${sum}`;
+          result.textContent = `${sum}`;
           calculatedValue.push(sum);
           operator = "";
           firstNumber.splice(0, firstNumber.length);
@@ -260,6 +263,7 @@ function displayTextContent() {
             secondNumber
           ).toFixed(1);
           content.textContent = `${sum}`;
+          result.textContent = `${sum}`;
           calculatedValue.push(sum);
           operator = "";
           firstNumber.splice(0, firstNumber.length);
@@ -282,6 +286,7 @@ function displayTextContent() {
             secondNumber
           ).toFixed(1);
           content.textContent = `${sum}`;
+          result.textContent = `${sum}`;
           calculatedValue.push(sum);
           operator = "";
           firstNumber.splice(0, firstNumber.length);
@@ -297,6 +302,7 @@ function displayTextContent() {
           secondNumber
         ).toFixed(1);
         content.textContent = `${sum}`;
+        result.textContent = `${sum}`;
         calculatedValue.push(sum);
         operator = "";
         firstNumber.splice(0, firstNumber.length);
