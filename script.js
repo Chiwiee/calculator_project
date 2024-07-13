@@ -172,9 +172,9 @@ function displayTextContent() {
           const dot = document.createElement("span");
           dot.textContent = ".";
           content.appendChild(dot);
-        }
-        if (button.id == "dot" && operator == "") {
-          firstNumber.push(".");
+          if (button.id == "dot" && operator == "") {
+            firstNumber.push(".");
+          }
         } else if (button.id == "dot" && operator != "") {
           secondNumber.push(".");
         }
