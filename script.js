@@ -168,20 +168,14 @@ function displayTextContent() {
         }
       }
       if (button.id == "dot") {
-        if (
-          firstNumber.length == 0 &&
-          secondNumber.length == 0 &&
-          calculatedValue.length == 0
-        ) {
-          const dot = document.createElement("span");
-          dot.textContent = ".";
-          content.appendChild(dot);
+        const dot = document.createElement("span");
+        dot.textContent = ".";
+        content.appendChild(dot);
 
-          if (button.id == "dot" && operator == "") {
-            firstNumber.push(".");
-          } else if (button.id == "dot" && operator != "") {
-            secondNumber.push(".");
-          }
+        if (button.id == "dot" && operator == "") {
+          firstNumber.push(".");
+        } else if (button.id == "dot" && operator != "") {
+          secondNumber.push(".");
         }
       }
       // Operator, Equal and Clear
