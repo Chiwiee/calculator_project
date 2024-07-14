@@ -74,9 +74,10 @@ function displayTextContent(id, code) {
     zero.textContent = "0";
     zero.classList = `num${number}`;
     content.appendChild(zero);
-    if (id == "zero" && operator == "") {
+
+    if (operator == "") {
       firstNumber.push(0);
-    } else if (id == "zero" && operator != "") {
+    } else if (operator != "") {
       secondNumber.push(0);
     }
   }
@@ -85,10 +86,10 @@ function displayTextContent(id, code) {
     one.textContent = "1";
     one.classList = `num${number}`;
     content.appendChild(one);
-    if (id == "one" && operator == "") {
-      firstNumber.push(1);
-    } else if (id == "one" && operator != "") {
-      secondNumber.push(1);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
   if (id == "two" || code == "Numpad2") {
@@ -96,10 +97,10 @@ function displayTextContent(id, code) {
     two.textContent = "2";
     two.classList = `num${number}`;
     content.appendChild(two);
-    if (id == "two" && operator == "") {
-      firstNumber.push(2);
-    } else if (id == "two" && operator != "") {
-      secondNumber.push(2);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
 
@@ -108,10 +109,10 @@ function displayTextContent(id, code) {
     three.textContent = "3";
     three.classList = `num${number}`;
     content.appendChild(three);
-    if (id == "three" && operator == "") {
-      firstNumber.push(3);
-    } else if (id == "three" && operator != "") {
-      secondNumber.push(3);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
 
@@ -120,10 +121,10 @@ function displayTextContent(id, code) {
     four.textContent = "4";
     four.classList = `num${number}`;
     content.appendChild(four);
-    if (id == "four" && operator == "") {
-      firstNumber.push(4);
-    } else if (id == "four" && operator != "") {
-      secondNumber.push(4);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
 
@@ -132,10 +133,10 @@ function displayTextContent(id, code) {
     five.textContent = "5";
     five.classList = `num${number}`;
     content.appendChild(five);
-    if (id == "five" && operator == "") {
-      firstNumber.push(5);
-    } else if (id == "five" && operator != "") {
-      secondNumber.push(5);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
 
@@ -144,10 +145,10 @@ function displayTextContent(id, code) {
     six.textContent = "6";
     six.classList = `num${number}`;
     content.appendChild(six);
-    if (id == "six" && operator == "") {
-      firstNumber.push(6);
-    } else if (id == "six" && operator != "") {
-      secondNumber.push(6);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
 
@@ -156,10 +157,10 @@ function displayTextContent(id, code) {
     seven.textContent = "7";
     seven.classList = `num${number}`;
     content.appendChild(seven);
-    if (id == "seven" && operator == "") {
-      firstNumber.push(7);
-    } else if (id == "seven" && operator != "") {
-      secondNumber.push(7);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
 
@@ -168,10 +169,10 @@ function displayTextContent(id, code) {
     eight.textContent = "8";
     eight.classList = `num${number}`;
     content.appendChild(eight);
-    if (id == "eight" && operator == "") {
-      firstNumber.push(8);
-    } else if (id == "eight" && operator != "") {
-      secondNumber.push(8);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
 
@@ -180,10 +181,10 @@ function displayTextContent(id, code) {
     nine.textContent = "9";
     nine.classList = `num${number}`;
     content.appendChild(nine);
-    if (id == "nine" && operator == "") {
-      firstNumber.push(9);
-    } else if (id == "nine" && operator != "") {
-      secondNumber.push(9);
+    if (operator == "") {
+      firstNumber.push(0);
+    } else if (operator != "") {
+      secondNumber.push(0);
     }
   }
   if (id == "dot" || code == "NumpadDecimal") {
@@ -192,10 +193,10 @@ function displayTextContent(id, code) {
       dot.textContent = ".";
       dot.classList = `num${number}`;
       content.appendChild(dot);
-      if (id == "dot" && operator == "") {
-        firstNumber.push(".");
-      } else if (id == "dot" && operator != "") {
-        secondNumber.push(".");
+      if (operator == "") {
+        firstNumber.push(0);
+      } else if (operator != "") {
+        secondNumber.push(0);
       }
     } else if (secondNumber.slice(-1) != "." && operator != "") {
       const dot = document.createElement("span");
