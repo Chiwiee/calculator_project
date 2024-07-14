@@ -65,7 +65,7 @@ function checkDecimal() {
       calculatedValue,
       operator,
       secondNumber
-    ).toFixed(3);
+    ).toFixed(1);
   } else {
     return operate(firstNumber, calculatedValue, operator, secondNumber);
   }
