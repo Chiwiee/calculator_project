@@ -305,15 +305,19 @@ function displayTextContent(id) {
 }
 
 // Functions that Display Text Content and Push Value to an Array
-function mouseEvents() {
-  let buttons = document.querySelectorAll("button");
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      let id = button.id;
-      displayTextContent(id);
+function buttonEvents() {
+  function mouseEvents() {
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        let id = button.id;
+        displayTextContent(id);
+      });
     });
-  });
+  }
+  mouseEvents();
 }
+
 buttonEvents();
 
 // create new variable for sum value then create new function to calculate the sum value to the new number
