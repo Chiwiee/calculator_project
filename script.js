@@ -77,6 +77,20 @@ function removeFirstChild() {
     parent.removeChild(child);
   }
 }
+function limitResultText() {
+  const result = document.querySelector(".result");
+  if (calculatedValue.toString().length <= 10) {
+    result.setAttribute("style", "font-size: 60px");
+  } else if (calculatedValue.toString().length <= 15) {
+    result.setAttribute("style", "font-size: 42px");
+  } else if (calculatedValue.toString().length <= 20) {
+    result.setAttribute("style", "font-size: 30px");
+  } else if (calculatedValue.toString().length <= 30) {
+    result.setAttribute("style", "font-size: 28px");
+  } else if (calculatedValue.toString().length > 30) {
+    result.setAttribute("style", "font-size: 15px");
+  }
+}
 
 // For Backspace Targeting
 function lengthTotal(firstNumber, secondNumber, operator) {
@@ -349,10 +363,10 @@ function displayTextContent(id, code) {
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
   console.log(`Numbers Length: ${number}`);
-  console.log(Boolean(document.querySelector(".num22")));
+  console.log(calculatedValue.toString().length);
   console.log(text);
-
   removeFirstChild();
+  limitResultText();
 }
 
 // Functions that Display Text Content and Push Value to an Array
