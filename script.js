@@ -69,7 +69,7 @@ function displayTextContent(id, code) {
   let textContainer = document.querySelector("#text-content");
   let number = lengthTotal(firstNumber, secondNumber, operator);
   // If Statement for TextContent and to Push Values to an Array
-  if (id == "zero") {
+  if (id == "zero" || code == "Numpad") {
     const zero = document.createElement("span");
     zero.textContent = "0";
     zero.classList = `num${number}`;
@@ -80,7 +80,7 @@ function displayTextContent(id, code) {
       secondNumber.push(0);
     }
   }
-  if (id == "one") {
+  if (id == "one" || code == "Numpad") {
     const one = document.createElement("span");
     one.textContent = "1";
     one.classList = `num${number}`;
@@ -91,7 +91,7 @@ function displayTextContent(id, code) {
       secondNumber.push(1);
     }
   }
-  if (id == "two") {
+  if (id == "two" || code == "Numpad") {
     const two = document.createElement("span");
     two.textContent = "2";
     two.classList = `num${number}`;
@@ -103,7 +103,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "three") {
+  if (id == "three" || code == "Numpad") {
     const three = document.createElement("span");
     three.textContent = "3";
     three.classList = `num${number}`;
@@ -115,7 +115,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "four") {
+  if (id == "four" || code == "Numpad") {
     const four = document.createElement("span");
     four.textContent = "4";
     four.classList = `num${number}`;
@@ -127,7 +127,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "five") {
+  if (id == "five" || code == "Numpad") {
     const five = document.createElement("span");
     five.textContent = "5";
     five.classList = `num${number}`;
@@ -139,7 +139,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "six") {
+  if (id == "six" || code == "Numpad") {
     const six = document.createElement("span");
     six.textContent = "6";
     six.classList = `num${number}`;
@@ -151,7 +151,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "seven") {
+  if (id == "seven" || code == "Numpad") {
     const seven = document.createElement("span");
     seven.textContent = "7";
     seven.classList = `num${number}`;
@@ -163,7 +163,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "eight") {
+  if (id == "eight" || code == "Numpad") {
     const eight = document.createElement("span");
     eight.textContent = "8";
     eight.classList = `num${number}`;
@@ -175,7 +175,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "nine") {
+  if (id == "nine" || code == "Numpad") {
     const nine = document.createElement("span");
     nine.textContent = "9";
     nine.classList = `num${number}`;
@@ -186,7 +186,7 @@ function displayTextContent(id, code) {
       secondNumber.push(9);
     }
   }
-  if (id == "dot") {
+  if (id == "dot" || code == "Numpad") {
     if (firstNumber.slice(-1) != ".") {
       const dot = document.createElement("span");
       dot.textContent = ".";
@@ -206,7 +206,7 @@ function displayTextContent(id, code) {
   }
   // Operator, Equal and Clear
 
-  if (id == "plus") {
+  if (id == "plus" || code == "Numpad") {
     if (operator == "") {
       const plus = document.createElement("span");
       plus.textContent = " + ";
@@ -225,7 +225,7 @@ function displayTextContent(id, code) {
       calculatedValue.splice(0, calculatedValue.length - 1);
     }
   }
-  if (id == "minus") {
+  if (id == "minus" || code == "Numpad") {
     if (operator == "") {
       const minus = document.createElement("span");
       minus.textContent = " - ";
@@ -243,7 +243,7 @@ function displayTextContent(id, code) {
       calculatedValue.splice(0, calculatedValue.length - 1);
     }
   }
-  if (id == "times") {
+  if (id == "times" || code == "Numpad") {
     if (operator == "") {
       const times = document.createElement("span");
       times.textContent = " × ";
@@ -261,7 +261,7 @@ function displayTextContent(id, code) {
       calculatedValue.splice(0, calculatedValue.length - 1);
     }
   }
-  if (id == "divide") {
+  if (id == "divide" || code == "Numpad") {
     if (operator == "") {
       const divide = document.createElement("span");
       divide.textContent = " ÷ ";
@@ -279,7 +279,7 @@ function displayTextContent(id, code) {
       calculatedValue.splice(0, calculatedValue.length - 1);
     }
   }
-  if (id == "equal") {
+  if (id == "equal" || code == "Numpad") {
     let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
     content.textContent = `${sum}`;
     result.textContent = `${sum}`;
@@ -289,7 +289,7 @@ function displayTextContent(id, code) {
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length - 1);
   }
-  if (id == "clear") {
+  if (id == "clear" || code == "Escape") {
     content.textContent = "";
     result.textContent = "";
     operator = "";
