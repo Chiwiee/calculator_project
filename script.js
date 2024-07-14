@@ -308,8 +308,10 @@ function displayTextContent(id, code) {
     console.log(text);
     if (operator == "") {
       firstNumber.splice(number - 1, 1);
-    } else if (operator != "") {
+    } else if (operator != "" && secondNumber.length == "0") {
       operator = "";
+    } else if (operator != "") {
+      secondNumber.splice(secondNumber.length - 1, 1);
     }
     // Testing
   }
