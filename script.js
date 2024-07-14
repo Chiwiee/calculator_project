@@ -10,7 +10,7 @@ function multiply(firstNumber, sum, secondNumber) {
 }
 function divide(firstNumber, sum, secondNumber) {
   if (firstNumber == 0 || sum == 0 || secondNumber == 0) {
-    return "ERROR: ÷ 0";
+    return "You can't divide by 0";
   }
   return firstNumber / secondNumber || sum / secondNumber;
 }
