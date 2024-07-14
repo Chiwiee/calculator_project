@@ -339,7 +339,6 @@ function displayTextContent(id, code) {
     } else if (operator != "") {
       secondNumber.splice(secondNumber.length - 1, 1);
     }
-    // Testing
   }
   console.log(" ");
   console.log(`firstNumber: ${firstNumber}`);
@@ -347,7 +346,6 @@ function displayTextContent(id, code) {
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
   console.log(`Numbers Length: ${number}`);
-  console.log(`firstNumber last item: ${firstNumber.slice(-1) != "."}`);
   console.log(text);
 }
 
