@@ -309,21 +309,18 @@ function displayTextContent(id, code) {
 
 // Functions that Display Text Content and Push Value to an Array
 function buttonEvents() {
-  let id = "";
-
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
-        id = button.id;
-        displayTextContent(id);
+        displayTextContent(button.id);
       });
     });
   }
   mouseEvents();
   function keyboardEvents() {
     window.addEventListener("keydown", (event) => {
-      displayTextContent(id, event.code);
+      displayTextContent((id = ""), event.code);
     });
   }
   keyboardEvents();
