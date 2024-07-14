@@ -86,6 +86,8 @@ function displayTextContent(id, code) {
   const result = document.querySelector(".result");
   const previous = document.querySelector(".previous");
   const textContainer = document.querySelector("#text-content");
+  const firstDot = firstNumber.slice(-1) != ".";
+  const secondDot = secondNumber.slice(-1) != ".";
   let number = lengthTotal(firstNumber, secondNumber, operator);
   const text = document.querySelector(".text");
   const textChildren =
@@ -210,23 +212,23 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "dot" || code == "NumpadDecimal") {
-    if (firstNumber.slice(-1) != ".") {
-      const dot = document.createElement("span");
-      dot.textContent = ".";
-      dot.classList = `num${number}`;
-      content.appendChild(dot);
-      if (operator == "") {
+    const dot = document.createElement("span");
+    dot.textContent = ".";
+    dot.classList = `num${number}`;
+
+    if (operator == "") {
+      if (firstDot == true) {
         firstNumber.push(".");
-      } else if (operator != "") {
-        secondNumber.push(".");
+        content.appendChild(dot);
       }
-    } else if (secondNumber.slice(-1) != "." && operator != "") {
-      const dot = document.createElement("span");
-      dot.textContent = ".";
-      dot.classList = `num${number}`;
-      content.appendChild(dot);
+    } else if (operator != "") {
+      if (secondDot == true) {
+        secondNumber.push(".");
+        content.appendChild(dot);
+      }
     }
   }
+
   // Operator, Equal and Clear
 
   if (id == "plus" || code == "NumpadAdd") {
@@ -345,6 +347,7 @@ function displayTextContent(id, code) {
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
   console.log(`Numbers Length: ${number}`);
+  console.log(`firstNumber last item: ${firstNumber.slice(-1) != "."}`);
   console.log(text);
 }
 
