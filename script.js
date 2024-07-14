@@ -63,11 +63,15 @@ function lengthTotal(firstNumber, secondNumber, operator) {
 function displayTextContent(id, code) {
   console.log(" ");
   console.log(code);
-  let content = document.querySelector(".text");
-  let result = document.querySelector(".result");
-  let previous = document.querySelector(".previous");
-  let textContainer = document.querySelector("#text-content");
+  const content = document.querySelector(".text");
+  const result = document.querySelector(".result");
+  const previous = document.querySelector(".previous");
+  const textContainer = document.querySelector("#text-content");
   let number = lengthTotal(firstNumber, secondNumber, operator);
+  const text = document.querySelector(".text");
+  const textChildren =
+    document.querySelector(".text").children[`${number - 1}`];
+
   // If Statement for TextContent and to Push Values to an Array
   if (id == "zero" || code == "Numpad0") {
     const zero = document.createElement("span");
@@ -298,7 +302,12 @@ function displayTextContent(id, code) {
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length);
   }
+  if (id == "backspace" || code == "Backspace") {
+    // Testing
 
+    a.removeChild(b);
+    console.log(a);
+  }
   console.log(" ");
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
@@ -333,9 +342,3 @@ buttonEvents();
 
 //everytime you created a span add class id that use array.length/
 //backspace removeChild using array.length targeting the span
-
-// Testing
-// const a = document.querySelector(".text");
-// const b = document.querySelector(".text").children[5];
-// a.removeChild(b);
-// console.log(b);
