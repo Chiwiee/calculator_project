@@ -303,10 +303,12 @@ function displayTextContent(id, code) {
     calculatedValue.splice(0, calculatedValue.length);
   }
   if (id == "backspace" || code == "Backspace") {
+    if (operator == "") {
+      firstNumber.splice(number - 1, 1);
+    }
     // Testing
-
-    a.removeChild(b);
-    console.log(a);
+    text.removeChild(textChildren);
+    console.log(text);
   }
   console.log(" ");
   console.log(`firstNumber: ${firstNumber}`);
