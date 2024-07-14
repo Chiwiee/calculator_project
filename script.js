@@ -103,13 +103,17 @@ function lengthTotal(firstNumber, secondNumber, operator) {
   }
 }
 
-function calcCOntent() {
+function calcCOntent(num) {
   const previous = document.querySelector(".previous");
-  const children = document.createElement("li");
-  children.textContent = "Awoooooooo";
-  children.classList = `${number}`;
-  previous.appendChild(children);
+  const children = document.querySelector(".previous").children[0];
+  const list = document.createElement("li");
+  list.textContent = "Awoooooooo";
+  list.classList = `${number}`;
+  previous.appendChild(list);
   number++;
+  if (num > 5) {
+    previous.removeChild(children);
+  }
 }
 
 function displayTextContent(id, code) {
@@ -411,7 +415,7 @@ function displayTextContent(id, code) {
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
   console.log(`Text Content: ${textContent}`);
   console.log(`Number: ${number}`);
-  console.log(`Calc Content: ${calcCOntent()}`);
+  console.log(`Calc Content: ${calcCOntent(number)}`);
   console.log(document.querySelector(".previous"));
   console.log(text);
   removeFirstChild();
