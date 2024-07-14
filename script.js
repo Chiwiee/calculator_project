@@ -318,7 +318,19 @@ function buttonEvents() {
   mouseEvents();
   function keyboardEvents() {
     window.addEventListener("keydown", (event) => {
-      console.log(event.code);
+      function convert(code) {
+        if ((code == "ShiftLeft") + (code == "Equal") == 1) {
+          return "plus";
+        } else if (code == "Minus") {
+          return "minus";
+        } else if ((code == "ShiftLeft") + (code == "Digit8") == 1) {
+          return "times";
+        } else if (code == "Slash") {
+          return "divide";
+        }
+      }
+
+      console.log(convert(event.code));
     });
   }
   keyboardEvents();
