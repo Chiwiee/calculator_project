@@ -113,7 +113,7 @@ function displayTextContent(id, code) {
     document.querySelector(".text").children[`${number - 1}`];
 
   // If Statement for TextContent and to Push Values to an Array
-  if (id == "zero" || code == "Numpad0") {
+  if (id == "zero" || code == "Numpad0" || code == "Digit0") {
     const zero = document.createElement("span");
     zero.textContent = "0";
     zero.classList = `num${number}`;
@@ -124,7 +124,7 @@ function displayTextContent(id, code) {
       secondNumber.push(0);
     }
   }
-  if (id == "one" || code == "Numpad1") {
+  if (id == "one" || code == "Numpad1" || code == "Digit1") {
     const one = document.createElement("span");
     one.textContent = "1";
     one.classList = `num${number}`;
@@ -135,7 +135,7 @@ function displayTextContent(id, code) {
       secondNumber.push(1);
     }
   }
-  if (id == "two" || code == "Numpad2") {
+  if (id == "two" || code == "Numpad2" || code == "Digit2") {
     const two = document.createElement("span");
     two.textContent = "2";
     two.classList = `num${number}`;
@@ -147,7 +147,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "three" || code == "Numpad3") {
+  if (id == "three" || code == "Numpad3" || code == "Digit3") {
     const three = document.createElement("span");
     three.textContent = "3";
     three.classList = `num${number}`;
@@ -159,7 +159,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "four" || code == "Numpad4") {
+  if (id == "four" || code == "Numpad4" || code == "Digit4") {
     const four = document.createElement("span");
     four.textContent = "4";
     four.classList = `num${number}`;
@@ -171,7 +171,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "five" || code == "Numpad5") {
+  if (id == "five" || code == "Numpad5" || code == "Digit5") {
     const five = document.createElement("span");
     five.textContent = "5";
     five.classList = `num${number}`;
@@ -183,7 +183,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "six" || code == "Numpad6") {
+  if (id == "six" || code == "Numpad6" || code == "Digit6") {
     const six = document.createElement("span");
     six.textContent = "6";
     six.classList = `num${number}`;
@@ -195,7 +195,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "seven" || code == "Numpad7") {
+  if (id == "seven" || code == "Numpad7" || code == "Digit7") {
     const seven = document.createElement("span");
     seven.textContent = "7";
     seven.classList = `num${number}`;
@@ -207,7 +207,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "eight" || code == "Numpad8") {
+  if (id == "eight" || code == "Numpad8" || code == "Digit8") {
     const eight = document.createElement("span");
     eight.textContent = "8";
     eight.classList = `num${number}`;
@@ -219,7 +219,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "nine" || code == "Numpad9") {
+  if (id == "nine" || code == "Numpad9" || code == "Digit9") {
     const nine = document.createElement("span");
     nine.textContent = "9";
     nine.classList = `num${number}`;
