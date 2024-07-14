@@ -102,13 +102,14 @@ function lengthTotal(firstNumber, secondNumber, operator) {
   }
 }
 function displayTextContent(id, code) {
+  let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
+  let number = lengthTotal(firstNumber, secondNumber, operator);
   const content = document.querySelector(".text");
   const result = document.querySelector(".result");
   const previous = document.querySelector(".previous");
   const textContainer = document.querySelector("#text-content");
   const firstDot = firstNumber.slice(-1) != ".";
   const secondDot = secondNumber.slice(-1) != ".";
-  let number = lengthTotal(firstNumber, secondNumber, operator);
   const text = document.querySelector(".text");
   const textChildren =
     document.querySelector(".text").children[`${number - 1}`];
@@ -347,7 +348,6 @@ function displayTextContent(id, code) {
       textContent += " ÷ ";
       textContent += `${sum}`;
     } else if (operator != "") {
-      let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
       textContent = "";
