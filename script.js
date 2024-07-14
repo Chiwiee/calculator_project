@@ -284,16 +284,14 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "equal" || code == "NumpadEnter") {
-    function equal() {
-      let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
-      if (sum == undefined) {
-        result.textContent = "0";
-      } else if (sum != undefined) {
-        result.textContent = `${sum}`;
-        content.textContent = `${sum}`;
-      }
+    let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
+    if (sum == undefined) {
+      result.textContent = "0";
+    } else if (sum != undefined) {
+      result.textContent = `${sum}`;
+      content.textContent = `${sum}`;
     }
-    equal();
+
     calculatedValue.push(sum);
     operator = "";
     firstNumber.splice(0, firstNumber.length);
