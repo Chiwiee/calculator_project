@@ -231,19 +231,21 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "dot" || code == "NumpadDecimal") {
-    const dot = document.createElement("span");
-    dot.textContent = ".";
-    dot.classList = `num${number}`;
+    if (firstNumber.length != "0") {
+      const dot = document.createElement("span");
+      dot.textContent = ".";
+      dot.classList = `num${number}`;
 
-    if (operator == "") {
-      if (firstDot == true) {
-        firstNumber.push(".");
-        content.appendChild(dot);
-      }
-    } else if (operator != "") {
-      if (secondDot == true) {
-        secondNumber.push(".");
-        content.appendChild(dot);
+      if (operator == "") {
+        if (firstDot == true) {
+          firstNumber.push(".");
+          content.appendChild(dot);
+        }
+      } else if (operator != "" && secondNumber.length != "0") {
+        if (secondDot == true) {
+          secondNumber.push(".");
+          content.appendChild(dot);
+        }
       }
     }
   }
