@@ -46,11 +46,30 @@ function operate(num1, sum, operator, num2) {
       return divide(firstNumber, sumValue, secondNumber);
   }
 }
+
 // Store Values
 const firstNumber = [];
 const secondNumber = [];
 const calculatedValue = [];
 let operator = "";
+
+// Checking if there's a decimal point in Arrays
+function checkDecimal() {
+  if (
+    firstNumber.includes(".") ||
+    secondNumber.includes(".") ||
+    calculatedValue.includes(".")
+  ) {
+    return operate(
+      firstNumber,
+      calculatedValue,
+      operator,
+      secondNumber
+    ).toFixed(3);
+  } else {
+    return operate(firstNumber, calculatedValue, operator, secondNumber);
+  }
+}
 
 // For Backspace Targeting
 function lengthTotal(firstNumber, secondNumber, operator) {
@@ -284,7 +303,8 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "equal" || code == "NumpadEnter") {
-    let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
+    let sum = checkDecimal();
+
     if (sum == undefined) {
       result.textContent = "0";
     } else if (sum != undefined) {
