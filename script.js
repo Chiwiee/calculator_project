@@ -298,17 +298,20 @@ function displayTextContent(id, code) {
     content.textContent = "";
     result.textContent = "";
     operator = "";
+    number = "0";
     firstNumber.splice(0, firstNumber.length);
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length);
   }
   if (id == "backspace" || code == "Backspace") {
-    if (operator == "") {
-      firstNumber.splice(number - 1, 1);
-    }
-    // Testing
     text.removeChild(textChildren);
     console.log(text);
+    if (operator == "") {
+      firstNumber.splice(number - 1, 1);
+    } else if (operator != "") {
+      operator = "";
+    }
+    // Testing
   }
   console.log(" ");
   console.log(`firstNumber: ${firstNumber}`);
@@ -316,6 +319,7 @@ function displayTextContent(id, code) {
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
   console.log(`Numbers Length: ${number}`);
+  console.log(text);
 }
 
 // Functions that Display Text Content and Push Value to an Array
