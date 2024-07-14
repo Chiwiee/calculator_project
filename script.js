@@ -316,6 +316,12 @@ function buttonEvents() {
     });
   }
   mouseEvents();
+  function keyboardEvents() {
+    window.addEventListener("keydown", (event) => {
+      console.log(event.code);
+    });
+  }
+  keyboardEvents();
 }
 
 buttonEvents();
