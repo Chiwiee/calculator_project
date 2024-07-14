@@ -4,6 +4,7 @@ const secondNumber = [];
 const calculatedValue = [];
 let operator = "";
 let textContent = "";
+let number = 0;
 
 // Function that Calculate the Values from Operate Function
 function add(firstNumber, sum, secondNumber) {
@@ -101,13 +102,21 @@ function lengthTotal(firstNumber, secondNumber, operator) {
     return firstNumber.length + secondNumber.length;
   }
 }
+
+function calcCOntent() {
+  const previous = document.querySelector(".previous");
+  const children = document.createElement("li");
+  children.textContent = "Awoooooooo";
+  children.classList = `${number}`;
+  previous.appendChild(children);
+  number++;
+}
+
 function displayTextContent(id, code) {
   let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
   let number = lengthTotal(firstNumber, secondNumber, operator);
   const content = document.querySelector(".text");
   const result = document.querySelector(".result");
-  const previous = document.querySelector(".previous");
-  const textContainer = document.querySelector("#text-content");
   const firstDot = firstNumber.slice(-1) != ".";
   const secondDot = secondNumber.slice(-1) != ".";
   const text = document.querySelector(".text");
@@ -401,6 +410,9 @@ function displayTextContent(id, code) {
   console.log(`Numbers Length: ${number}`);
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
   console.log(`Text Content: ${textContent}`);
+  console.log(`Number: ${number}`);
+  console.log(`Calc Content: ${calcCOntent()}`);
+  console.log(document.querySelector(".previous"));
   console.log(text);
   removeFirstChild();
   limitResultText();
