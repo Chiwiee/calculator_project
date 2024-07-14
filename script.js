@@ -326,11 +326,8 @@ function displayTextContent(id, code) {
   if (id == "equal" || code == "NumpadEnter") {
     let sum = checkDecimal();
 
-    if (sum == undefined) {
-      result.textContent = "0";
-      content.textContent = `${sum}`;
-    }
-
+    result.textContent = `${sum}`;
+    content.textContent = `${sum}`;
     calculatedValue.push(sum);
     operator = "";
     firstNumber.splice(0, firstNumber.length);
