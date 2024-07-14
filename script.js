@@ -3,6 +3,7 @@ const firstNumber = [];
 const secondNumber = [];
 const calculatedValue = [];
 let operator = "";
+let textContent = "";
 
 // Function that Calculate the Values from Operate Function
 function add(firstNumber, sum, secondNumber) {
@@ -120,8 +121,10 @@ function displayTextContent(id, code) {
     content.appendChild(zero);
     if (operator == "") {
       firstNumber.push(0);
+      textContent += 0;
     } else if (operator != "") {
       secondNumber.push(0);
+      textContent += 0;
     }
   }
   if (id == "one" || code == "Numpad1" || code == "Digit1") {
@@ -131,8 +134,10 @@ function displayTextContent(id, code) {
     content.appendChild(one);
     if (operator == "") {
       firstNumber.push(1);
+      textContent += 1;
     } else if (operator != "") {
       secondNumber.push(1);
+      textContent += 1;
     }
   }
   if (id == "two" || code == "Numpad2" || code == "Digit2") {
@@ -142,8 +147,10 @@ function displayTextContent(id, code) {
     content.appendChild(two);
     if (operator == "") {
       firstNumber.push(2);
+      textContent += 2;
     } else if (operator != "") {
       secondNumber.push(2);
+      textContent += 2;
     }
   }
 
@@ -154,8 +161,10 @@ function displayTextContent(id, code) {
     content.appendChild(three);
     if (operator == "") {
       firstNumber.push(3);
+      textContent += 3;
     } else if (operator != "") {
       secondNumber.push(3);
+      textContent += 3;
     }
   }
 
@@ -166,8 +175,10 @@ function displayTextContent(id, code) {
     content.appendChild(four);
     if (operator == "") {
       firstNumber.push(4);
+      textContent += 4;
     } else if (operator != "") {
       secondNumber.push(4);
+      textContent += 4;
     }
   }
 
@@ -178,8 +189,10 @@ function displayTextContent(id, code) {
     content.appendChild(five);
     if (operator == "") {
       firstNumber.push(5);
+      textContent += 5;
     } else if (operator != "") {
       secondNumber.push(5);
+      textContent += 5;
     }
   }
 
@@ -190,8 +203,10 @@ function displayTextContent(id, code) {
     content.appendChild(six);
     if (operator == "") {
       firstNumber.push(6);
+      textContent += 6;
     } else if (operator != "") {
       secondNumber.push(6);
+      textContent += 6;
     }
   }
 
@@ -202,8 +217,10 @@ function displayTextContent(id, code) {
     content.appendChild(seven);
     if (operator == "") {
       firstNumber.push(7);
+      textContent += 7;
     } else if (operator != "") {
       secondNumber.push(7);
+      textContent += 7;
     }
   }
 
@@ -214,8 +231,10 @@ function displayTextContent(id, code) {
     content.appendChild(eight);
     if (operator == "") {
       firstNumber.push(8);
+      textContent += 8;
     } else if (operator != "") {
       secondNumber.push(8);
+      textContent += 8;
     }
   }
 
@@ -226,8 +245,10 @@ function displayTextContent(id, code) {
     content.appendChild(nine);
     if (operator == "") {
       firstNumber.push(9);
+      textContent += 9;
     } else if (operator != "") {
       secondNumber.push(9);
+      textContent += 9;
     }
   }
   if (id == "dot" || code == "NumpadDecimal") {
@@ -259,11 +280,13 @@ function displayTextContent(id, code) {
       plus.classList = `num${number}`;
       content.appendChild(plus);
       operator = "plus";
+      textContent += " + ";
     } else if (operator != "") {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
-
+      textContent = "";
+      textContent += `${sum}`;
       calculatedValue.push(sum);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
@@ -278,10 +301,13 @@ function displayTextContent(id, code) {
       minus.classList = `num${number}`;
       content.appendChild(minus);
       operator = "minus";
+      textContent += " - ";
     } else if (operator != "") {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
+      textContent = "";
+      textContent += `${sum}`;
       calculatedValue.push(sum);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
@@ -296,10 +322,14 @@ function displayTextContent(id, code) {
       times.classList = `num${number}`;
       content.appendChild(times);
       operator = "times";
+      textContent += " × ";
+      textContent += `${sum}`;
     } else if (operator != "") {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
+      textContent = "";
+      textContent += `${sum}`;
       calculatedValue.push(sum);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
@@ -314,10 +344,14 @@ function displayTextContent(id, code) {
       divide.classList = `num${number}`;
       content.appendChild(divide);
       operator = "divide";
+      textContent += " ÷ ";
+      textContent += `${sum}`;
     } else if (operator != "") {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
+      textContent = "";
+      textContent += `${sum}`;
       calculatedValue.push(sum);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
@@ -332,6 +366,8 @@ function displayTextContent(id, code) {
     content.textContent = `${sum}`;
     calculatedValue.push(sum);
     operator = "";
+    textContent = "";
+    textContent += `${sum}`;
     firstNumber.splice(0, firstNumber.length);
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length - 1);
@@ -341,6 +377,7 @@ function displayTextContent(id, code) {
     result.textContent = "0";
     operator = "";
     number = "0";
+    textContent = "";
     firstNumber.splice(0, firstNumber.length);
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length);
@@ -362,7 +399,8 @@ function displayTextContent(id, code) {
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
   console.log(`Numbers Length: ${number}`);
-  console.log(calculatedValue.toString().length);
+  console.log(`Sum Length: ${calculatedValue.toString().length}`);
+  console.log(`Text Content: ${textContent}`);
   console.log(text);
   removeFirstChild();
   limitResultText();
