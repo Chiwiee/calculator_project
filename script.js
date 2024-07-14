@@ -107,7 +107,7 @@ function calcCOntent(num) {
   const previous = document.querySelector(".previous");
   const children = document.querySelector(".previous").children[0];
   const list = document.createElement("li");
-  list.textContent = "Awoooooooo";
+  list.textContent = `${textContent}`;
   list.classList = `${number}`;
   previous.appendChild(list);
   number++;
@@ -379,6 +379,7 @@ function displayTextContent(id, code) {
     content.textContent = `${sum}`;
     calculatedValue.push(sum);
     operator = "";
+    calcCOntent(number);
     textContent = "";
     textContent += `${sum}`;
     firstNumber.splice(0, firstNumber.length);
@@ -415,7 +416,6 @@ function displayTextContent(id, code) {
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
   console.log(`Text Content: ${textContent}`);
   console.log(`Number: ${number}`);
-  console.log(`Calc Content: ${calcCOntent(number)}`);
   console.log(document.querySelector(".previous"));
   console.log(text);
   removeFirstChild();
