@@ -306,6 +306,9 @@ function displayTextContent(id) {
 
 // Functions that Display Text Content and Push Value to an Array
 function buttonEvents() {
+  let id = "";
+  let code = "";
+
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
