@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../Desktop"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "calculator_project",
+    "editor.tabSize": 2
+  }
+}
