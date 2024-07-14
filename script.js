@@ -87,9 +87,9 @@ function displayTextContent(id, code) {
     one.classList = `num${number}`;
     content.appendChild(one);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(1);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(1);
     }
   }
   if (id == "two" || code == "Numpad2") {
@@ -98,9 +98,9 @@ function displayTextContent(id, code) {
     two.classList = `num${number}`;
     content.appendChild(two);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(2);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(2);
     }
   }
 
@@ -110,9 +110,9 @@ function displayTextContent(id, code) {
     three.classList = `num${number}`;
     content.appendChild(three);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(3);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(3);
     }
   }
 
@@ -122,9 +122,9 @@ function displayTextContent(id, code) {
     four.classList = `num${number}`;
     content.appendChild(four);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(4);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(4);
     }
   }
 
@@ -134,9 +134,9 @@ function displayTextContent(id, code) {
     five.classList = `num${number}`;
     content.appendChild(five);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(5);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(5);
     }
   }
 
@@ -146,9 +146,9 @@ function displayTextContent(id, code) {
     six.classList = `num${number}`;
     content.appendChild(six);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(6);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(6);
     }
   }
 
@@ -158,9 +158,9 @@ function displayTextContent(id, code) {
     seven.classList = `num${number}`;
     content.appendChild(seven);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(7);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(7);
     }
   }
 
@@ -170,9 +170,9 @@ function displayTextContent(id, code) {
     eight.classList = `num${number}`;
     content.appendChild(eight);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(8);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(8);
     }
   }
 
@@ -182,9 +182,9 @@ function displayTextContent(id, code) {
     nine.classList = `num${number}`;
     content.appendChild(nine);
     if (operator == "") {
-      firstNumber.push(0);
+      firstNumber.push(9);
     } else if (operator != "") {
-      secondNumber.push(0);
+      secondNumber.push(9);
     }
   }
   if (id == "dot" || code == "NumpadDecimal") {
@@ -194,9 +194,9 @@ function displayTextContent(id, code) {
       dot.classList = `num${number}`;
       content.appendChild(dot);
       if (operator == "") {
-        firstNumber.push(0);
+        firstNumber.push(".");
       } else if (operator != "") {
-        secondNumber.push(0);
+        secondNumber.push(".");
       }
     } else if (secondNumber.slice(-1) != "." && operator != "") {
       const dot = document.createElement("span");
