@@ -1,3 +1,9 @@
+// Store Values
+const firstNumber = [];
+const secondNumber = [];
+const calculatedValue = [];
+let operator = "";
+
 // Function that Calculate the Values from Operate Function
 function add(firstNumber, sum, secondNumber) {
   return firstNumber + secondNumber || sum + secondNumber;
@@ -46,12 +52,6 @@ function operate(num1, sum, operator, num2) {
       return divide(firstNumber, sumValue, secondNumber);
   }
 }
-
-// Store Values
-const firstNumber = [];
-const secondNumber = [];
-const calculatedValue = [];
-let operator = "";
 
 // Checking if there's a decimal point in Arrays
 function checkDecimal() {
