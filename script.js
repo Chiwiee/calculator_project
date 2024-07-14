@@ -60,7 +60,9 @@ function lengthTotal(firstNumber, secondNumber, operator) {
     return firstNumber.length + secondNumber.length;
   }
 }
-function displayTextContent(id) {
+function displayTextContent(id, code) {
+  console.log(" ");
+  console.log(code);
   let content = document.querySelector(".text");
   let result = document.querySelector(".result");
   let previous = document.querySelector(".previous");
@@ -307,13 +309,12 @@ function displayTextContent(id) {
 // Functions that Display Text Content and Push Value to an Array
 function buttonEvents() {
   let id = "";
-  let code = "";
 
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
-        let id = button.id;
+        id = button.id;
         displayTextContent(id);
       });
     });
@@ -321,19 +322,7 @@ function buttonEvents() {
   mouseEvents();
   function keyboardEvents() {
     window.addEventListener("keydown", (event) => {
-      function convert(code) {
-        if ((code == "ShiftLeft") + (code == "Equal") == 1) {
-          return "plus";
-        } else if (code == "Minus") {
-          return "minus";
-        } else if ((code == "ShiftLeft") + (code == "Digit8") == 1) {
-          return "times";
-        } else if (code == "Slash") {
-          return "divide";
-        }
-      }
-
-      console.log(convert(event.code));
+      displayTextContent(id, event.code);
     });
   }
   keyboardEvents();
