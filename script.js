@@ -78,7 +78,6 @@ function displayTextContent(id, code) {
     zero.textContent = "0";
     zero.classList = `num${number}`;
     content.appendChild(zero);
-
     if (operator == "") {
       firstNumber.push(0);
     } else if (operator != "") {
