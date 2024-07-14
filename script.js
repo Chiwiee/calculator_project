@@ -336,3 +336,9 @@ buttonEvents();
 
 //everytime you created a span add class id that use array.length/
 //backspace removeChild using array.length targeting the span
+
+// Testing
+// const a = document.querySelector(".text");
+// const b = document.querySelector(".text").children[5];
+// a.removeChild(b);
+// console.log(b);
