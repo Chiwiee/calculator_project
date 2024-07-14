@@ -35,6 +35,7 @@ body {
 }
 #previous-result {
   display: flex;
+
   color: rgb(133, 132, 132);
   font-size: 22px;
   font-weight: 600;

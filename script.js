@@ -336,7 +336,7 @@ function displayTextContent(id, code) {
   }
   if (id == "clear" || code == "Escape") {
     content.textContent = "";
-    result.textContent = "";
+    result.textContent = "0";
     operator = "";
     number = "0";
     firstNumber.splice(0, firstNumber.length);
