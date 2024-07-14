@@ -35,10 +35,13 @@ body {
 #previous-result {
   display: flex;
 
-  color: rgb(133, 132, 132);
+  color: rgb(228, 65, 0);
   font-size: 22px;
   font-weight: 600;
   justify-content: flex-end;
+}
+.previous {
+  list-style-type: none;
 }
 #result-content {
   display: flex;
