@@ -70,6 +70,13 @@ function checkDecimal() {
     return operate(firstNumber, calculatedValue, operator, secondNumber);
   }
 }
+function removeFirstChild() {
+  if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
+    let parent = document.querySelector(".text");
+    let child = document.querySelector(".text").children[0];
+    parent.removeChild(child);
+  }
+}
 
 // For Backspace Targeting
 function lengthTotal(firstNumber, secondNumber, operator) {
@@ -80,8 +87,6 @@ function lengthTotal(firstNumber, secondNumber, operator) {
   }
 }
 function displayTextContent(id, code) {
-  console.log(" ");
-  console.log(code);
   const content = document.querySelector(".text");
   const result = document.querySelector(".result");
   const previous = document.querySelector(".previous");
@@ -309,8 +314,6 @@ function displayTextContent(id, code) {
 
     if (sum == undefined) {
       result.textContent = "0";
-    } else if (sum != undefined) {
-      result.textContent = `${sum}`;
       content.textContent = `${sum}`;
     }
 
@@ -346,7 +349,10 @@ function displayTextContent(id, code) {
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
   console.log(`Numbers Length: ${number}`);
+  console.log(Boolean(document.querySelector(".num22")));
   console.log(text);
+
+  removeFirstChild();
 }
 
 // Functions that Display Text Content and Push Value to an Array
