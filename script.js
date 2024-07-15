@@ -302,6 +302,7 @@ function displayTextContent(id, code) {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
+      calcCOntent(numberIncrement);
       textContent = "";
       textContent += `${sum}`;
       calculatedValue.push(sum);
@@ -323,6 +324,7 @@ function displayTextContent(id, code) {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
+      calcCOntent(numberIncrement);
       textContent = "";
       textContent += `${sum}`;
       calculatedValue.push(sum);
@@ -343,6 +345,7 @@ function displayTextContent(id, code) {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
+      calcCOntent(numberIncrement);
       textContent = "";
       textContent += `${sum}`;
       calculatedValue.push(sum);
@@ -365,6 +368,7 @@ function displayTextContent(id, code) {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
+      calcCOntent(numberIncrement);
       textContent = "";
       textContent += `${sum}`;
       calculatedValue.push(sum);
