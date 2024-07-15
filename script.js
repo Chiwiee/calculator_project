@@ -143,11 +143,21 @@ function displayTextContent(id, code) {
     document.querySelector(".text").children[`${numberTotal - 1}`];
 
   function operatorsNotEqual() {
-    content.textContent = `${sumValue}`;
-    result.textContent = `${sumValue}`;
+    if (
+      firstNumber.includes(".") ||
+      secondNumber.includes(".") ||
+      calculatedValue.includes(".")
+    ) {
+      content.textContent = `${sumValue.toFixed(3)}`;
+      result.textContent = `${sumValue.toFixed(3)}`;
+      textContent += `${sumValue.toFixed(3)}`;
+    } else {
+      content.textContent = `${sumValue}`;
+      result.textContent = `${sumValue}`;
+      textContent += `${sumValue}`;
+    }
     calcCOntent(numberIncrement);
     textContent = "";
-    textContent += `${sumValue}`;
     calculatedValue.push(sumValue);
     operator = "";
     firstNumber.splice(0, firstNumber.length);
@@ -365,13 +375,25 @@ function displayTextContent(id, code) {
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
     if (Boolean(sumValue != undefined && sumValue != NaN) === true) {
-      result.textContent = `${sumValue}`;
-      content.textContent = `${sumValue}`;
-      calculatedValue.push(sumValue);
+      if (
+        firstNumber.includes(".") ||
+        secondNumber.includes(".") ||
+        calculatedValue.includes(".")
+      ) {
+        result.textContent = `${sumValue.toFixed(3)}`;
+        content.textContent = `${sumValue.toFixed(3)}`;
+        calculatedValue.push(sumValue.toFixed(3));
+        textContent += `${sumValue.toFixed(3)}`;
+      } else {
+        result.textContent = `${sumValue}`;
+        content.textContent = `${sumValue}`;
+        calculatedValue.push(sumValue);
+        textContent += `${sumValue}`;
+      }
+
       operator = "";
       calcCOntent(numberIncrement);
       textContent = "";
-      textContent += `${sumValue}`;
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
       calculatedValue.splice(0, calculatedValue.length - 1);
