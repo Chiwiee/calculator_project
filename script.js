@@ -332,88 +332,84 @@ function displayTextContent(id, code) {
       content.appendChild(minus);
       operator = "minus";
       textContent += " - ";
+    } else if (operator != "") {
+      operatorsNotEqual();
     }
-    else if (operator != "") {
-      operatorsNotEqual()
-    
-  }
-  if (id == "times" || code == "NumpadMultiply") {
-    if (operator == "") {
-      const times = document.createElement("span");
-      times.textContent = " × ";
-      times.classList = `num${numberTotal}`;
-      content.appendChild(times);
-      operator = "times";
+    if (id == "times" || code == "NumpadMultiply") {
+      if (operator == "") {
+        const times = document.createElement("span");
+        times.textContent = " × ";
+        times.classList = `num${numberTotal}`;
+        content.appendChild(times);
+        operator = "times";
+      } else if (operator != "") {
+        operatorsNotEqual();
+      }
     }
-    else if (operator != "") {
-      operatorsNotEqual()
+    if (id == "divide" || code == "NumpadDivide") {
+      if (operator == "") {
+        const divide = document.createElement("span");
+        divide.textContent = " ÷ ";
+        divide.classList = `num${numberTotal}`;
+        content.appendChild(divide);
+        operator = "divide";
+        textContent += " ÷ ";
+      } else if (operator != "") {
+        operatorsNotEqual();
+      }
     }
-  }
-  if (id == "divide" || code == "NumpadDivide") {
-    if (operator == "") {
-      const divide = document.createElement("span");
-      divide.textContent = " ÷ ";
-      divide.classList = `num${numberTotal}`;
-      content.appendChild(divide);
-      operator = "divide";
-      textContent += " ÷ ";
-    }
-    else if (operator != "") {
-      operatorsNotEqual()
-    }
-  }
-  if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
-    let value = checkDecimal();
-    result.textContent = `${value}`;
-    content.textContent = `${value}`;
-    calculatedValue.push(value);
-    operator = "";
-    calcCOntent(numberIncrement);
-    textContent = "";
-    textContent += `${sumValue}`;
-    firstNumber.splice(0, firstNumber.length);
-    secondNumber.splice(0, secondNumber.length);
-    calculatedValue.splice(0, calculatedValue.length - 1);
-  }
-  if (id == "clear" || code == "Escape") {
-    if (Boolean(document.querySelector(".previous").children[0]) == true) {
-      clearContent();
-    } else {
-      content.textContent = "";
-      result.textContent = "0";
+    if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
+      let value = checkDecimal();
+      result.textContent = `${value}`;
+      content.textContent = `${value}`;
+      calculatedValue.push(value);
       operator = "";
+      calcCOntent(numberIncrement);
       textContent = "";
-      numberTotal = 0;
-      numberIncrement = 0;
+      textContent += `${sumValue}`;
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
-      calculatedValue.splice(0, calculatedValue.length);
+      calculatedValue.splice(0, calculatedValue.length - 1);
     }
-  }
-  if (id == "backspace" || code == "Backspace") {
-    text.removeChild(textChildren);
-    console.log(text);
-    if (operator == "") {
-      firstNumber.splice(number - 1, 1);
-    } else if (operator != "" && secondNumber.length == "0") {
-      operator = "";
-    } else if (operator != "") {
-      secondNumber.splice(secondNumber.length - 1, 1);
+    if (id == "clear" || code == "Escape") {
+      if (Boolean(document.querySelector(".previous").children[0]) == true) {
+        clearContent();
+      } else {
+        content.textContent = "";
+        result.textContent = "0";
+        operator = "";
+        textContent = "";
+        numberTotal = 0;
+        numberIncrement = 0;
+        firstNumber.splice(0, firstNumber.length);
+        secondNumber.splice(0, secondNumber.length);
+        calculatedValue.splice(0, calculatedValue.length);
+      }
     }
+    if (id == "backspace" || code == "Backspace") {
+      text.removeChild(textChildren);
+      console.log(text);
+      if (operator == "") {
+        firstNumber.splice(number - 1, 1);
+      } else if (operator != "" && secondNumber.length == "0") {
+        operator = "";
+      } else if (operator != "") {
+        secondNumber.splice(secondNumber.length - 1, 1);
+      }
+    }
+    // FirstNumber, Operator, SecondNumber and CalculatedValue
+    console.log("");
+    console.log("");
+    console.log("");
+    console.log("");
+    console.log("");
+    console.log("Numbers and Operators");
+    console.log(`firstNumber: ${firstNumber}`);
+    console.log(`secondNumber: ${secondNumber}`);
+    console.log(`calculatedValue ${calculatedValue}`);
+    console.log(`operator: ${operator}`);
+    console.log("");
   }
-  // FirstNumber, Operator, SecondNumber and CalculatedValue
-  console.log("");
-  console.log("");
-  console.log("");
-  console.log("");
-  console.log("");
-  console.log("Numbers and Operators");
-  console.log(`firstNumber: ${firstNumber}`);
-  console.log(`secondNumber: ${secondNumber}`);
-  console.log(`calculatedValue ${calculatedValue}`);
-  console.log(`operator: ${operator}`);
-  console.log("");
-
   // Text Content
   console.log(`Text Content: ${textContent}`);
   console.log("");
@@ -442,7 +438,7 @@ function displayTextContent(id, code) {
   limitResultText();
 }
 
-// Functions andEvent Listeners that Calls the displayTextContent with button.id and event.code arguments
+// Functions andEvent Listeners that Calls the displayTextContent with button.id and event.code
 function buttonEvents() {
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
