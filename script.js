@@ -414,6 +414,11 @@ function displayTextContent(id, code) {
     }
   }
   // FirstNumber, Operator, SecondNumber and CalculatedValue
+  console.log("");
+  console.log("");
+  console.log("");
+  console.log("");
+  console.log("");
   console.log("Numbers and Operators");
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
