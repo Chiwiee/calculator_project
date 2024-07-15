@@ -396,8 +396,9 @@ function displayTextContent(id, code) {
     content.textContent = "";
     result.textContent = "0";
     operator = "";
-    number = "0";
     textContent = "";
+    numberTotal = 0;
+    numberIncrement = 0;
     firstNumber.splice(0, firstNumber.length);
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length);
@@ -421,7 +422,7 @@ function displayTextContent(id, code) {
   console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
   console.log(`Text Content: ${textContent}`);
-  console.log(`Number: ${numberIncrement}`);
+  console.log(`Number Increment: ${numberIncrement}`);
   console.log(document.querySelector(".previous"));
   console.log(text);
   removeFirstChild();
