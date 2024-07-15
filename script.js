@@ -118,11 +118,15 @@ function calcCOntent(num) {
 }
 // Remove previous content result
 function clearContent() {
-  for (let i = 0; i < 6; i++) {
-    const previous = document.querySelector(".previous");
-    const children = document.querySelector(".previous").children[0];
-    previous.removeChild(children);
+  const calculationContent = document.querySelector(".text");
+  if (calculationContent.hasChildNodes()) {
+    calculationContent.removeChild(calculationContent.children[0]);
   }
+  const previousList = document.querySelector(".previous");
+  if (previousList.hasChildNodes()) {
+    previousList.removeChild(previousList.children[0]);
+  }
+  document.querySelector(".result").textContent = "";
 }
 
 function displayTextContent(id, code) {
