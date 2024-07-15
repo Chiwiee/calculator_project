@@ -4,7 +4,7 @@ const secondNumber = [];
 const calculatedValue = [];
 let operator = "";
 let textContent = "";
-let number = 0;
+let numberIncrement = 0;
 
 // Function that Calculate the Values from Operate Function
 function add(firstNumber, sum, secondNumber) {
@@ -108,9 +108,9 @@ function calcCOntent(num) {
   const children = document.querySelector(".previous").children[0];
   const list = document.createElement("li");
   list.textContent = `${textContent}`;
-  list.classList = `${number}`;
+  list.classList = `${numberIncrement}`;
   previous.appendChild(list);
-  number++;
+  numberIncrement++;
   if (num > 5) {
     previous.removeChild(children);
   }
@@ -118,24 +118,27 @@ function calcCOntent(num) {
 
 function displayTextContent(id, code) {
   let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
-  let number = lengthTotal(firstNumber, secondNumber, operator);
+  let numberTotal = lengthTotal(firstNumber, secondNumber, operator);
   const content = document.querySelector(".text");
   const result = document.querySelector(".result");
   const firstDot = firstNumber.slice(-1) != ".";
   const secondDot = secondNumber.slice(-1) != ".";
   const text = document.querySelector(".text");
   const textChildren =
-    document.querySelector(".text").children[`${number - 1}`];
+    document.querySelector(".text").children[`${numberTotal - 1}`];
 
   // If Statement for TextContent and to Push Values to an Array
   if (id == "zero" || code == "Numpad0" || code == "Digit0") {
     const zero = document.createElement("span");
     zero.textContent = "0";
-    zero.classList = `num${number}`;
+    zero.classList = `num${numberTotal}`;
     content.appendChild(zero);
     if (operator == "") {
       firstNumber.push(0);
       textContent += 0;
+      if (Boolean(calculatedValue[0]) == true) {
+        alert("Halo");
+      }
     } else if (operator != "") {
       secondNumber.push(0);
       textContent += 0;
@@ -144,7 +147,7 @@ function displayTextContent(id, code) {
   if (id == "one" || code == "Numpad1" || code == "Digit1") {
     const one = document.createElement("span");
     one.textContent = "1";
-    one.classList = `num${number}`;
+    one.classList = `num${numberTotal}`;
     content.appendChild(one);
     if (operator == "") {
       firstNumber.push(1);
@@ -157,7 +160,7 @@ function displayTextContent(id, code) {
   if (id == "two" || code == "Numpad2" || code == "Digit2") {
     const two = document.createElement("span");
     two.textContent = "2";
-    two.classList = `num${number}`;
+    two.classList = `num${numberTotal}`;
     content.appendChild(two);
     if (operator == "") {
       firstNumber.push(2);
@@ -171,7 +174,7 @@ function displayTextContent(id, code) {
   if (id == "three" || code == "Numpad3" || code == "Digit3") {
     const three = document.createElement("span");
     three.textContent = "3";
-    three.classList = `num${number}`;
+    three.classList = `num${numberTotal}`;
     content.appendChild(three);
     if (operator == "") {
       firstNumber.push(3);
@@ -185,7 +188,7 @@ function displayTextContent(id, code) {
   if (id == "four" || code == "Numpad4" || code == "Digit4") {
     const four = document.createElement("span");
     four.textContent = "4";
-    four.classList = `num${number}`;
+    four.classList = `num${numberTotal}`;
     content.appendChild(four);
     if (operator == "") {
       firstNumber.push(4);
@@ -199,7 +202,7 @@ function displayTextContent(id, code) {
   if (id == "five" || code == "Numpad5" || code == "Digit5") {
     const five = document.createElement("span");
     five.textContent = "5";
-    five.classList = `num${number}`;
+    five.classList = `num${numberTotal}`;
     content.appendChild(five);
     if (operator == "") {
       firstNumber.push(5);
@@ -213,7 +216,7 @@ function displayTextContent(id, code) {
   if (id == "six" || code == "Numpad6" || code == "Digit6") {
     const six = document.createElement("span");
     six.textContent = "6";
-    six.classList = `num${number}`;
+    six.classList = `num${numberTotal}`;
     content.appendChild(six);
     if (operator == "") {
       firstNumber.push(6);
@@ -227,7 +230,7 @@ function displayTextContent(id, code) {
   if (id == "seven" || code == "Numpad7" || code == "Digit7") {
     const seven = document.createElement("span");
     seven.textContent = "7";
-    seven.classList = `num${number}`;
+    seven.classList = `num${numberTotal}`;
     content.appendChild(seven);
     if (operator == "") {
       firstNumber.push(7);
@@ -241,7 +244,7 @@ function displayTextContent(id, code) {
   if (id == "eight" || code == "Numpad8" || code == "Digit8") {
     const eight = document.createElement("span");
     eight.textContent = "8";
-    eight.classList = `num${number}`;
+    eight.classList = `num${numberTotal}`;
     content.appendChild(eight);
     if (operator == "") {
       firstNumber.push(8);
@@ -255,7 +258,7 @@ function displayTextContent(id, code) {
   if (id == "nine" || code == "Numpad9" || code == "Digit9") {
     const nine = document.createElement("span");
     nine.textContent = "9";
-    nine.classList = `num${number}`;
+    nine.classList = `num${numberTotal}`;
     content.appendChild(nine);
     if (operator == "") {
       firstNumber.push(9);
@@ -269,7 +272,7 @@ function displayTextContent(id, code) {
     if (firstNumber.length != "0") {
       const dot = document.createElement("span");
       dot.textContent = ".";
-      dot.classList = `num${number}`;
+      dot.classList = `num${numberTotal}`;
 
       if (operator == "") {
         if (firstDot == true) {
@@ -291,7 +294,7 @@ function displayTextContent(id, code) {
     if (operator == "") {
       const plus = document.createElement("span");
       plus.textContent = " + ";
-      plus.classList = `num${number}`;
+      plus.classList = `num${numberTotal}`;
       content.appendChild(plus);
       operator = "plus";
       textContent += " + ";
@@ -312,7 +315,7 @@ function displayTextContent(id, code) {
     if (operator == "") {
       const minus = document.createElement("span");
       minus.textContent = " - ";
-      minus.classList = `num${number}`;
+      minus.classList = `num${numberTotal}`;
       content.appendChild(minus);
       operator = "minus";
       textContent += " - ";
@@ -333,7 +336,7 @@ function displayTextContent(id, code) {
     if (operator == "") {
       const times = document.createElement("span");
       times.textContent = " × ";
-      times.classList = `num${number}`;
+      times.classList = `num${numberTotal}`;
       content.appendChild(times);
       operator = "times";
       textContent += " × ";
@@ -343,9 +346,7 @@ function displayTextContent(id, code) {
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
       textContent = "";
-      textContent += `${sum}`;
-      calculatedValue.push(sum);
-      operator = "";
+      Length;
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
       calculatedValue.splice(0, calculatedValue.length - 1);
@@ -355,7 +356,7 @@ function displayTextContent(id, code) {
     if (operator == "") {
       const divide = document.createElement("span");
       divide.textContent = " ÷ ";
-      divide.classList = `num${number}`;
+      divide.classList = `num${numberTotal}`;
       content.appendChild(divide);
       operator = "divide";
       textContent += " ÷ ";
@@ -372,14 +373,14 @@ function displayTextContent(id, code) {
       calculatedValue.splice(0, calculatedValue.length - 1);
     }
   }
-  if (id == "equal" || code == "NumpadEnter") {
+  if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
     let sum = checkDecimal();
 
     result.textContent = `${sum}`;
     content.textContent = `${sum}`;
     calculatedValue.push(sum);
     operator = "";
-    calcCOntent(number);
+    calcCOntent(numberIncrement);
     textContent = "";
     textContent += `${sum}`;
     firstNumber.splice(0, firstNumber.length);
@@ -412,10 +413,10 @@ function displayTextContent(id, code) {
   console.log(`secondNumber: ${secondNumber}`);
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
-  console.log(`Numbers Length: ${number}`);
+  console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
   console.log(`Text Content: ${textContent}`);
-  console.log(`Number: ${number}`);
+  console.log(`Number: ${numberIncrement}`);
   console.log(document.querySelector(".previous"));
   console.log(text);
   removeFirstChild();

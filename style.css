@@ -42,6 +42,7 @@ body {
 }
 .previous {
   list-style-type: none;
+  justify-content: flex-end;
 }
 #result-content {
   display: flex;
