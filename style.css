@@ -16,10 +16,7 @@ body {
 #main-container {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(
-    rgba(128, 0, 128, 0.764),
-    rgba(249, 100, 7, 0.798)
-  );
+  background-image: linear-gradient(rgb(88, 0, 88), rgb(0, 0, 0));
   height: 740px;
   width: 360px;
   border: 6px solid black;
@@ -35,7 +32,7 @@ body {
 #previous-result {
   display: flex;
 
-  color: rgb(228, 65, 0);
+  color: rgb(143, 40, 0);
   font-size: 22px;
   font-weight: 600;
   justify-content: flex-end;
