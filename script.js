@@ -164,9 +164,6 @@ function displayTextContent(id, code) {
     if (operator == "") {
       firstNumber.push(0);
       textContent += 0;
-      if (Boolean(calculatedValue[0]) == true) {
-        alert("Halo");
-      }
     } else if (operator != "") {
       secondNumber.push(0);
       textContent += 0;
