@@ -435,6 +435,7 @@ function displayTextContent(id, code) {
   console.log("");
   // Text Content
   console.log(`Text Content: ${textContent}`);
+  console.log(`Code: ${code}`);
   console.log("");
   // Numbers
   console.log("Numbers");
@@ -442,7 +443,6 @@ function displayTextContent(id, code) {
   console.log(`Sum Value: ${sumValue}`);
   console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Number Increment: ${numberIncrement}`);
-  console.log(`Code: ${code}`);
   console.log("");
   // QuerySelectors
   console.log("QuerySelectors:");
