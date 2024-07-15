@@ -339,14 +339,14 @@ function displayTextContent(id, code) {
       times.classList = `num${numberTotal}`;
       content.appendChild(times);
       operator = "times";
-      textContent += " × ";
-      textContent += `${sum}`;
     } else if (operator != "") {
       let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
       textContent = "";
-      Length;
+      textContent += `${sum}`;
+      calculatedValue.push(sum);
+      operator = "";
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
       calculatedValue.splice(0, calculatedValue.length - 1);
@@ -362,6 +362,7 @@ function displayTextContent(id, code) {
       textContent += " ÷ ";
       textContent += `${sum}`;
     } else if (operator != "") {
+      let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
       content.textContent = `${sum}`;
       result.textContent = `${sum}`;
       textContent = "";
