@@ -259,7 +259,7 @@ function displayTextContent(id, code) {
   if (id == "times" || code == "NumpadMultiply") {
     if (operator == "") {
       const times = document.createElement("span");
-      times.textContent = " × ";
+      times.textContent = " x ";
       times.classList = `num${numberTotal}`;
       content.appendChild(times);
       operator = "times";
@@ -307,17 +307,16 @@ function displayTextContent(id, code) {
   if (id == "clear" || code == "Escape") {
     if (Boolean(document.querySelector(".previous").children[0]) == true) {
       clearContent();
-    } else {
-      content.textContent = "";
-      result.textContent = "0";
-      operator = "";
-      textContent = "";
-      numberTotal = 0;
-      numberIncrement = 0;
-      firstNumber.splice(0, firstNumber.length);
-      secondNumber.splice(0, secondNumber.length);
-      calculatedValue.splice(0, calculatedValue.length);
     }
+    content.textContent = "";
+    result.textContent = "0";
+    operator = "";
+    textContent = "";
+    numberTotal = 0;
+    numberIncrement = 0;
+    firstNumber.splice(0, firstNumber.length);
+    secondNumber.splice(0, secondNumber.length);
+    calculatedValue.splice(0, calculatedValue.length);
   }
   if (id == "backspace" || code == "Backspace") {
     if (text.hasChildNodes()) {
