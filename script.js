@@ -361,17 +361,18 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
-    let value = checkDecimal();
-    result.textContent = `${value}`;
-    content.textContent = `${value}`;
-    calculatedValue.push(value);
-    operator = "";
-    calcCOntent(numberIncrement);
-    textContent = "";
-    textContent += `${sumValue}`;
-    firstNumber.splice(0, firstNumber.length);
-    secondNumber.splice(0, secondNumber.length);
-    calculatedValue.splice(0, calculatedValue.length - 1);
+    if (Boolean(calcValue != undefined && calcValue != NaN) === true) {
+      result.textContent = `${calcValue}`;
+      content.textContent = `${calcValue}`;
+      calculatedValue.push(calcValue);
+      operator = "";
+      calcCOntent(numberIncrement);
+      textContent = "";
+      textContent += `${calcValue}`;
+      firstNumber.splice(0, firstNumber.length);
+      secondNumber.splice(0, secondNumber.length);
+      calculatedValue.splice(0, calculatedValue.length - 1);
+    }
   }
   if (id == "clear" || code == "Escape") {
     if (Boolean(document.querySelector(".previous").children[0]) == true) {
