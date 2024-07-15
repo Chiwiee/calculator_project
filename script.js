@@ -136,6 +136,19 @@ function displayTextContent(id, code) {
   const textChildren =
     document.querySelector(".text").children[`${numberTotal - 1}`];
 
+  function operatorsNotEqual() {
+    content.textContent = `${sumValue}`;
+    result.textContent = `${sumValue}`;
+    calcCOntent(numberIncrement);
+    textContent = "";
+    textContent += `${sumValue}`;
+    calculatedValue.push(sumValue);
+    operator = "";
+    firstNumber.splice(0, firstNumber.length);
+    secondNumber.splice(0, secondNumber.length);
+    calculatedValue.splice(0, calculatedValue.length - 1);
+  }
+
   // If Statement for TextContent and to Push Values to an Array
   if (id == "zero" || code == "Numpad0" || code == "Digit0") {
     const zero = document.createElement("span");
@@ -307,18 +320,19 @@ function displayTextContent(id, code) {
       content.appendChild(plus);
       operator = "plus";
       textContent += " + ";
-    } else if (operator != "") {
-      content.textContent = `${sumValue}`;
-      result.textContent = `${sumValue}`;
-      calcCOntent(numberIncrement);
-      textContent = "";
-      textContent += `${sumValue}`;
-      calculatedValue.push(sumValue);
-      operator = "";
-      firstNumber.splice(0, firstNumber.length);
-      secondNumber.splice(0, secondNumber.length);
-      calculatedValue.splice(0, calculatedValue.length - 1);
     }
+    // else if (operator != "") {
+    //   content.textContent = `${sumValue}`;
+    //   result.textContent = `${sumValue}`;
+    //   calcCOntent(numberIncrement);
+    //   textContent = "";
+    //   textContent += `${sumValue}`;
+    //   calculatedValue.push(sumValue);
+    //   operator = "";
+    //   firstNumber.splice(0, firstNumber.length);
+    //   secondNumber.splice(0, secondNumber.length);
+    //   calculatedValue.splice(0, calculatedValue.length - 1);
+    // }
   }
   if (id == "minus" || code == "NumpadSubtract") {
     if (operator == "") {
@@ -328,18 +342,19 @@ function displayTextContent(id, code) {
       content.appendChild(minus);
       operator = "minus";
       textContent += " - ";
-    } else if (operator != "") {
-      content.textContent = `${sumValue}`;
-      result.textContent = `${sumValue}`;
-      calcCOntent(numberIncrement);
-      textContent = "";
-      textContent += `${sumValue}`;
-      calculatedValue.push(sumValue);
-      operator = "";
-      firstNumber.splice(0, firstNumber.length);
-      secondNumber.splice(0, secondNumber.length);
-      calculatedValue.splice(0, calculatedValue.length - 1);
     }
+    // else if (operator != "") {
+    //   content.textContent = `${sumValue}`;
+    //   result.textContent = `${sumValue}`;
+    //   calcCOntent(numberIncrement);
+    //   textContent = "";
+    //   textContent += `${sumValue}`;
+    //   calculatedValue.push(sumValue);
+    //   operator = "";
+    //   firstNumber.splice(0, firstNumber.length);
+    //   secondNumber.splice(0, secondNumber.length);
+    //   calculatedValue.splice(0, calculatedValue.length - 1);
+    // }
   }
   if (id == "times" || code == "NumpadMultiply") {
     if (operator == "") {
@@ -348,18 +363,19 @@ function displayTextContent(id, code) {
       times.classList = `num${numberTotal}`;
       content.appendChild(times);
       operator = "times";
-    } else if (operator != "") {
-      content.textContent = `${sumValue}`;
-      result.textContent = `${sumValue}`;
-      calcCOntent(numberIncrement);
-      textContent = "";
-      textContent += `${sumValue}`;
-      calculatedValue.push(sumValue);
-      operator = "";
-      firstNumber.splice(0, firstNumber.length);
-      secondNumber.splice(0, secondNumber.length);
-      calculatedValue.splice(0, calculatedValue.length - 1);
     }
+    // else if (operator != "") {
+    //   content.textContent = `${sumValue}`;
+    //   result.textContent = `${sumValue}`;
+    //   calcCOntent(numberIncrement);
+    //   textContent = "";
+    //   textContent += `${sumValue}`;
+    //   calculatedValue.push(sumValue);
+    //   operator = "";
+    //   firstNumber.splice(0, firstNumber.length);
+    //   secondNumber.splice(0, secondNumber.length);
+    //   calculatedValue.splice(0, calculatedValue.length - 1);
+    // }
   }
   if (id == "divide" || code == "NumpadDivide") {
     if (operator == "") {
@@ -369,18 +385,19 @@ function displayTextContent(id, code) {
       content.appendChild(divide);
       operator = "divide";
       textContent += " ÷ ";
-    } else if (operator != "") {
-      content.textContent = `${sumValue}`;
-      result.textContent = `${sumValue}`;
-      calcCOntent(numberIncrement);
-      textContent = "";
-      textContent += `${sumValue}`;
-      calculatedValue.push(sumValue);
-      operator = "";
-      firstNumber.splice(0, firstNumber.length);
-      secondNumber.splice(0, secondNumber.length);
-      calculatedValue.splice(0, calculatedValue.length - 1);
     }
+    // else if (operator != "") {
+    //   content.textContent = `${sumValue}`;
+    //   result.textContent = `${sumValue}`;
+    //   calcCOntent(numberIncrement);
+    //   textContent = "";
+    //   textContent += `${sumValue}`;
+    //   calculatedValue.push(sumValue);
+    //   operator = "";
+    //   firstNumber.splice(0, firstNumber.length);
+    //   secondNumber.splice(0, secondNumber.length);
+    //   calculatedValue.splice(0, calculatedValue.length - 1);
+    // }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
     let value = checkDecimal();
