@@ -290,16 +290,17 @@ function displayTextContent(id, code) {
         result.textContent = `${sumValue.toFixed(3)}`;
         content.textContent = `${sumValue.toFixed(3)}`;
         calculatedValue.push(sumValue.toFixed(3));
+        textContent = "";
         textContent += `${sumValue.toFixed(3)}`;
       } else {
         result.textContent = `${sumValue}`;
         content.textContent = `${sumValue}`;
         calculatedValue.push(sumValue);
+        textContent = "";
         textContent += `${sumValue}`;
       }
       operator = "";
       calcCOntent(numberIncrement);
-      textContent = "";
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
       calculatedValue.splice(0, calculatedValue.length - 1);
