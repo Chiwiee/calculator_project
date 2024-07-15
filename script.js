@@ -295,15 +295,16 @@ function displayTextContent(id, code) {
       const dot = document.createElement("span");
       dot.textContent = ".";
       dot.classList = `num${numberTotal}`;
-
       if (operator == "") {
         if (firstDot == true) {
           firstNumber.push(".");
+          textContent += ".";
           content.appendChild(dot);
         }
       } else if (operator != "" && secondNumber.length != "0") {
         if (secondDot == true) {
           secondNumber.push(".");
+          textContent += ".";
           content.appendChild(dot);
         }
       }
