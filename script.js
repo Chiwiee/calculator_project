@@ -118,6 +118,9 @@ function calcCOntent(num) {
 }
 // Remove previous content result
 function clearContent() {
+  document.querySelector(".result").textContent = "";
+  document.querySelector(".text").textContent = "";
+
   const calculationContent = document.querySelector(".text");
   if (calculationContent.hasChildNodes()) {
     calculationContent.removeChild(calculationContent.children[0]);
@@ -126,7 +129,6 @@ function clearContent() {
   if (previousList.hasChildNodes()) {
     previousList.removeChild(previousList.children[0]);
   }
-  document.querySelector(".result").textContent = "";
 }
 
 function displayTextContent(id, code) {
@@ -365,14 +367,14 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
-    if (Boolean(calcValue != undefined && calcValue != NaN) === true) {
-      result.textContent = `${calcValue}`;
-      content.textContent = `${calcValue}`;
-      calculatedValue.push(calcValue);
+    if (Boolean(sumValue != undefined && sumValue != NaN) === true) {
+      result.textContent = `${sumValue}`;
+      content.textContent = `${sumValue}`;
+      calculatedValue.push(sumValue);
       operator = "";
       calcCOntent(numberIncrement);
       textContent = "";
-      textContent += `${calcValue}`;
+      textContent += `${sumValue}`;
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
       calculatedValue.splice(0, calculatedValue.length - 1);
@@ -418,7 +420,7 @@ function displayTextContent(id, code) {
   // Numbers
   console.log("Numbers");
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
-  console.log(`Sum Value: ${calcValue}`);
+  console.log(`Sum Value: ${sumValue}`);
   console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Number Increment: ${numberIncrement}`);
   console.log("");
@@ -429,7 +431,7 @@ function displayTextContent(id, code) {
   console.log("");
   //Boolean
   console.log(Boolean(secondNumber[0]) == false);
-  console.log(`Check calcValue: ${calcValue}`);
+  console.log(`Check sumValue: ${sumValue}`);
   console.log("Boolean");
   console.log(
     `QuerySelector Check: ${Boolean(
