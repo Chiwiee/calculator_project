@@ -379,11 +379,10 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
-    let sum = checkDecimal();
-
-    result.textContent = `${sum}`;
-    content.textContent = `${sum}`;
-    calculatedValue.push(sum);
+    let value = checkDecimal();
+    result.textContent = `${value}`;
+    content.textContent = `${value}`;
+    calculatedValue.push(value);
     operator = "";
     calcCOntent(numberIncrement);
     textContent = "";
