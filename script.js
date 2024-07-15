@@ -396,10 +396,11 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "backspace" || code == "Backspace") {
-    text.removeChild(textChildren);
-    console.log(text);
+    if (text.hasChildNodes()) {
+      text.removeChild(textChildren);
+    }
     if (operator == "") {
-      firstNumber.splice(number - 1, 1);
+      firstNumber.splice(numberTotal - 1, 1);
     } else if (operator != "" && secondNumber.length == "0") {
       operator = "";
     } else if (operator != "") {
