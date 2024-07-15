@@ -156,10 +156,10 @@ function displayTextContent(id, code) {
       result.textContent = `${sumValue}`;
       textContent += `${sumValue}`;
     }
-    calcCOntent(numberIncrement);
     textContent = "";
-    calculatedValue.push(sumValue);
     operator = "";
+    calcCOntent(numberIncrement);
+    calculatedValue.push(sumValue);
     firstNumber.splice(0, firstNumber.length);
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length - 1);
@@ -324,7 +324,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  // Operator, Equal and Clear
+  // Operator, Equal, Clear and Backspace
 
   if (id == "plus" || code == "NumpadAdd") {
     if (operator == "") {
@@ -390,7 +390,6 @@ function displayTextContent(id, code) {
         calculatedValue.push(sumValue);
         textContent += `${sumValue}`;
       }
-
       operator = "";
       calcCOntent(numberIncrement);
       textContent = "";
@@ -443,6 +442,7 @@ function displayTextContent(id, code) {
   console.log(`Sum Value: ${sumValue}`);
   console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Number Increment: ${numberIncrement}`);
+  console.log(`Code: ${code}`);
   console.log("");
   // QuerySelectors
   console.log("QuerySelectors:");
