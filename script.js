@@ -102,7 +102,7 @@ function lengthTotal(firstNumber, secondNumber, operator) {
     return firstNumber.length + secondNumber.length;
   }
 }
-
+// Show your calculation history like = 1 + 1 or 100*3218, etc, etc.
 function calcCOntent(num) {
   const previous = document.querySelector(".previous");
   const children = document.querySelector(".previous").children[0];
@@ -115,7 +115,7 @@ function calcCOntent(num) {
     previous.removeChild(children);
   }
 }
-
+// Remove previous content result
 function clearContent() {
   for (let i = 0; i < 6; i++) {
     const previous = document.querySelector(".previous");
