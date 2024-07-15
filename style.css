@@ -50,11 +50,13 @@ body {
   display: flex;
   justify-content: flex-end;
   font-size: 60px;
+  overflow: auto;
 }
 #text-content {
   display: flex;
   font-size: 25px;
   border-bottom: 2px solid rgba(79, 79, 79, 0.484);
+  overflow: auto;
 }
 
 #button-container {

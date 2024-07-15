@@ -143,6 +143,12 @@ function displayTextContent(id, code) {
     document.querySelector(".text").children[`${numberTotal - 1}`];
 
   function operatorsNotEqual() {
+    operator = "";
+    calcCOntent(numberIncrement);
+    calculatedValue.push(sumValue);
+    firstNumber.splice(0, firstNumber.length);
+    secondNumber.splice(0, secondNumber.length);
+    calculatedValue.splice(0, calculatedValue.length - 1);
     if (
       firstNumber.includes(".") ||
       secondNumber.includes(".") ||
@@ -150,19 +156,14 @@ function displayTextContent(id, code) {
     ) {
       content.textContent = `${sumValue.toFixed(3)}`;
       result.textContent = `${sumValue.toFixed(3)}`;
+      textContent = "";
       textContent += `${sumValue.toFixed(3)}`;
     } else {
       content.textContent = `${sumValue}`;
       result.textContent = `${sumValue}`;
+      textContent = "";
       textContent += `${sumValue}`;
     }
-    textContent = "";
-    operator = "";
-    calcCOntent(numberIncrement);
-    calculatedValue.push(sumValue);
-    firstNumber.splice(0, firstNumber.length);
-    secondNumber.splice(0, secondNumber.length);
-    calculatedValue.splice(0, calculatedValue.length - 1);
   }
   //
   function convert() {
