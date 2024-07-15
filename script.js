@@ -408,15 +408,13 @@ function displayTextContent(id, code) {
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
   console.log("");
-
   // Text Content
   console.log(`Text Content: ${textContent}`);
   console.log("");
-
   // Numbers
   console.log("Numbers");
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
-  console.log(`Sum Value: ${sumValue}`);
+  console.log(`Sum Value: ${calcValue}`);
   console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Number Increment: ${numberIncrement}`);
   console.log("");
@@ -426,6 +424,8 @@ function displayTextContent(id, code) {
   console.log(text);
   console.log("");
   //Boolean
+  console.log(Boolean(secondNumber[0]) == false);
+  console.log(`Check calcValue: ${calcValue}`);
   console.log("Boolean");
   console.log(
     `QuerySelector Check: ${Boolean(
