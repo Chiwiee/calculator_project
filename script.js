@@ -442,7 +442,7 @@ function displayTextContent(id, code) {
   limitResultText();
 }
 
-// Functions that Display Text Content and Push Value to an Array
+// Functions andEvent Listeners that Calls the displayTextContent with button.id and event.code arguments
 function buttonEvents() {
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
