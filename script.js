@@ -83,7 +83,7 @@ function removeFirstChild() {
 function limitResultText() {
   const result = document.querySelector(".result");
   if (calculatedValue.toString().length <= 10) {
-    result.setAttribute("style", "font-size: 60px");
+    result.setAttribute("style", "font-size: 60px; overflow: auto;");
   } else if (calculatedValue.toString().length <= 15) {
     result.setAttribute("style", "font-size: 40px");
   } else if (calculatedValue.toString().length <= 20) {
@@ -91,7 +91,7 @@ function limitResultText() {
   } else if (calculatedValue.toString().length <= 30) {
     result.setAttribute("style", "font-size: 26px");
   } else if (calculatedValue.toString().length > 30) {
-    result.setAttribute("style", "font-size: 17px");
+    result.setAttribute("style", "font-size: 17px; overflow: auto;");
   }
 }
 
