@@ -108,7 +108,7 @@ function calcCOntent(num) {
   const children = document.querySelector(".previous").children[0];
   const list = document.createElement("li");
   list.textContent = `${textContent}`;
-  list.classList = `${numberIncrement}`;
+  list.classList = `prev${numberIncrement}`;
   previous.appendChild(list);
   numberIncrement++;
   if (num > 5) {
@@ -116,7 +116,13 @@ function calcCOntent(num) {
   }
 }
 
-//
+function clearContent() {
+  for (let i = 0; i <= 5; i++) {
+    const previous = document.querySelector(".previous");
+    const children = document.querySelector(".previous").children[0];
+    previous.removeChild(children);
+  }
+}
 
 function displayTextContent(id, code) {
   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
@@ -389,6 +395,7 @@ function displayTextContent(id, code) {
     calculatedValue.splice(0, calculatedValue.length - 1);
   }
   if (id == "clear" || code == "Escape") {
+    clearDataAndContent();
     content.textContent = "";
     result.textContent = "0";
     operator = "";
