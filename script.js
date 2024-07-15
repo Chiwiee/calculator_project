@@ -6,17 +6,6 @@ let operator = "";
 let textContent = "";
 let numberIncrement = 0;
 
-//
-let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
-let numberTotal = lengthTotal(firstNumber, secondNumber, operator);
-const content = document.querySelector(".text");
-const result = document.querySelector(".result");
-const firstDot = firstNumber.slice(-1) != ".";
-const secondDot = secondNumber.slice(-1) != ".";
-const text = document.querySelector(".text");
-const textChildren =
-  document.querySelector(".text").children[`${numberTotal - 1}`];
-
 // Function that Calculate the Values from Operate Function
 function add(firstNumber, sum, secondNumber) {
   return firstNumber + secondNumber || sum + secondNumber;
@@ -127,7 +116,19 @@ function calcCOntent(num) {
   }
 }
 
+//
+
 function displayTextContent(id, code) {
+  let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
+  let numberTotal = lengthTotal(firstNumber, secondNumber, operator);
+  const content = document.querySelector(".text");
+  const result = document.querySelector(".result");
+  const firstDot = firstNumber.slice(-1) != ".";
+  const secondDot = secondNumber.slice(-1) != ".";
+  const text = document.querySelector(".text");
+  const textChildren =
+    document.querySelector(".text").children[`${numberTotal - 1}`];
+
   // If Statement for TextContent and to Push Values to an Array
   if (id == "zero" || code == "Numpad0" || code == "Digit0") {
     const zero = document.createElement("span");
@@ -300,13 +301,12 @@ function displayTextContent(id, code) {
       operator = "plus";
       textContent += " + ";
     } else if (operator != "") {
-      let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
-      content.textContent = `${sum}`;
-      result.textContent = `${sum}`;
+      content.textContent = `${sumValue}`;
+      result.textContent = `${sumValue}`;
       calcCOntent(numberIncrement);
       textContent = "";
-      textContent += `${sum}`;
-      calculatedValue.push(sum);
+      textContent += `${sumValue}`;
+      calculatedValue.push(sumValue);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
@@ -322,13 +322,12 @@ function displayTextContent(id, code) {
       operator = "minus";
       textContent += " - ";
     } else if (operator != "") {
-      let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
-      content.textContent = `${sum}`;
-      result.textContent = `${sum}`;
+      content.textContent = `${sumValue}`;
+      result.textContent = `${sumValue}`;
       calcCOntent(numberIncrement);
       textContent = "";
-      textContent += `${sum}`;
-      calculatedValue.push(sum);
+      textContent += `${sumValue}`;
+      calculatedValue.push(sumValue);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
@@ -343,13 +342,12 @@ function displayTextContent(id, code) {
       content.appendChild(times);
       operator = "times";
     } else if (operator != "") {
-      let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
-      content.textContent = `${sum}`;
-      result.textContent = `${sum}`;
+      content.textContent = `${sumValue}`;
+      result.textContent = `${sumValue}`;
       calcCOntent(numberIncrement);
       textContent = "";
-      textContent += `${sum}`;
-      calculatedValue.push(sum);
+      textContent += `${sumValue}`;
+      calculatedValue.push(sumValue);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
@@ -364,15 +362,13 @@ function displayTextContent(id, code) {
       content.appendChild(divide);
       operator = "divide";
       textContent += " ÷ ";
-      textContent += `${sum}`;
     } else if (operator != "") {
-      let sum = operate(firstNumber, calculatedValue, operator, secondNumber);
-      content.textContent = `${sum}`;
-      result.textContent = `${sum}`;
+      content.textContent = `${sumValue}`;
+      result.textContent = `${sumValue}`;
       calcCOntent(numberIncrement);
       textContent = "";
-      textContent += `${sum}`;
-      calculatedValue.push(sum);
+      textContent += `${sumValue}`;
+      calculatedValue.push(sumValue);
       operator = "";
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
@@ -387,7 +383,7 @@ function displayTextContent(id, code) {
     operator = "";
     calcCOntent(numberIncrement);
     textContent = "";
-    textContent += `${sum}`;
+    textContent += `${sumValue}`;
     firstNumber.splice(0, firstNumber.length);
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length - 1);
@@ -434,7 +430,7 @@ function displayTextContent(id, code) {
   // Numbers
   console.log("Numbers");
   console.log(`Sum Length: ${calculatedValue.toString().length}`);
-  console.log(`Sum Value: ${sum}`);
+  console.log(`Sum Value: ${sumValue}`);
   console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Number Increment: ${numberIncrement}`);
   console.log("");
