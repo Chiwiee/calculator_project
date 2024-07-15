@@ -117,7 +117,7 @@ function calcCOntent(num) {
 }
 
 function clearContent() {
-  for (let i = 0; i <= 5; i++) {
+  for (let i = 0; i < 6; i++) {
     const previous = document.querySelector(".previous");
     const children = document.querySelector(".previous").children[0];
     previous.removeChild(children);
@@ -395,16 +395,19 @@ function displayTextContent(id, code) {
     calculatedValue.splice(0, calculatedValue.length - 1);
   }
   if (id == "clear" || code == "Escape") {
-    clearDataAndContent();
-    content.textContent = "";
-    result.textContent = "0";
-    operator = "";
-    textContent = "";
-    numberTotal = 0;
-    numberIncrement = 0;
-    firstNumber.splice(0, firstNumber.length);
-    secondNumber.splice(0, secondNumber.length);
-    calculatedValue.splice(0, calculatedValue.length);
+    if (Boolean(document.querySelector(".previous").children[0]) == true) {
+      clearContent();
+    } else {
+      content.textContent = "";
+      result.textContent = "0";
+      operator = "";
+      textContent = "";
+      numberTotal = 0;
+      numberIncrement = 0;
+      firstNumber.splice(0, firstNumber.length);
+      secondNumber.splice(0, secondNumber.length);
+      calculatedValue.splice(0, calculatedValue.length);
+    }
   }
   if (id == "backspace" || code == "Backspace") {
     text.removeChild(textChildren);
@@ -446,7 +449,13 @@ function displayTextContent(id, code) {
   console.log(document.querySelector(".previous"));
   console.log(text);
   console.log("");
-
+  //Boolean
+  console.log("Boolean");
+  console.log(
+    `QuerySelector Check: ${Boolean(
+      document.querySelector(".previous").children[0]
+    )}`
+  );
   // Function Call
   removeFirstChild();
   limitResultText();
