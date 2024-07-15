@@ -413,17 +413,33 @@ function displayTextContent(id, code) {
       secondNumber.splice(secondNumber.length - 1, 1);
     }
   }
-  console.log(" ");
+  // FirstNumber, Operator, SecondNumber and CalculatedValue
+  console.log("Numbers and Operators");
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
   console.log(`calculatedValue ${calculatedValue}`);
   console.log(`operator: ${operator}`);
-  console.log(`Numbers Total: ${numberTotal}`);
-  console.log(`Sum Length: ${calculatedValue.toString().length}`);
+  console.log("");
+
+  // Text Content
+  console.log("Text Content:");
   console.log(`Text Content: ${textContent}`);
+  console.log("");
+
+  // Numbers
+  console.log("Numbers:");
+  console.log(`Sum Length: ${calculatedValue.toString().length}`);
+  console.log(`Sum Value: ${sum}`);
+  console.log(`Numbers Total: ${numberTotal}`);
   console.log(`Number Increment: ${numberIncrement}`);
+  console.log("");
+  // QuerySelectors
+  console.log("QuerySelectors:");
   console.log(document.querySelector(".previous"));
   console.log(text);
+  console.log("");
+
+  // Function Call
   removeFirstChild();
   limitResultText();
 }
