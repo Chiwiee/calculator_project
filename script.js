@@ -79,6 +79,7 @@ function removeFirstChild() {
     parent.removeChild(child);
   }
 }
+// Change font-size depending on how many text is in Result TextContent
 function limitResultText() {
   const result = document.querySelector(".result");
   if (calculatedValue.toString().length <= 10) {
