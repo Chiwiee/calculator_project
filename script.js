@@ -164,145 +164,190 @@ function displayTextContent(id, code) {
     secondNumber.splice(0, secondNumber.length);
     calculatedValue.splice(0, calculatedValue.length - 1);
   }
+  //
+  function convert() {
+    if (id == "zero" || code == "Numpad0" || code == "Digit0") {
+      return 0;
+    } else if (id == "one" || code == "Numpad1" || code == "Digit1") {
+      return 1;
+    } else if (id == "two" || code == "Numpad2" || code == "Digit2") {
+      return 2;
+    } else if (id == "three" || code == "Numpad3" || code == "Digit3") {
+      return 3;
+    } else if (id == "four" || code == "Numpad4" || code == "Digit4") {
+      return 4;
+    } else if (id == "five" || code == "Numpad5" || code == "Digit5") {
+      return 5;
+    } else if (id == "six" || code == "Numpad6" || code == "Digit6") {
+      return 6;
+    } else if (id == "seven " || code == "Numpad7" || code == "Digit7") {
+      return 7;
+    } else if (id == "eight " || code == "Numpad8" || code == "Digit8") {
+      return 8;
+    } else if (id == "nine" || code == "Numpad9" || code == "Digit9") {
+      return 9;
+    } else {
+      return "";
+    }
+  }
+  let numbers = convert();
 
-  // If Statement for TextContent and to Push Values to an Array
-  if (id == "zero" || code == "Numpad0" || code == "Digit0") {
-    const zero = document.createElement("span");
-    zero.textContent = "0";
-    zero.classList = `num${numberTotal}`;
-    content.appendChild(zero);
-    if (operator == "") {
-      firstNumber.push(0);
-      textContent += 0;
-    } else if (operator != "") {
-      secondNumber.push(0);
-      textContent += 0;
-    }
-  }
-  if (id == "one" || code == "Numpad1" || code == "Digit1") {
-    const one = document.createElement("span");
-    one.textContent = "1";
-    one.classList = `num${numberTotal}`;
-    content.appendChild(one);
-    if (operator == "") {
-      firstNumber.push(1);
-      textContent += 1;
-    } else if (operator != "") {
-      secondNumber.push(1);
-      textContent += 1;
-    }
-  }
-  if (id == "two" || code == "Numpad2" || code == "Digit2") {
-    const two = document.createElement("span");
-    two.textContent = "2";
-    two.classList = `num${numberTotal}`;
-    content.appendChild(two);
-    if (operator == "") {
-      firstNumber.push(2);
-      textContent += 2;
-    } else if (operator != "") {
-      secondNumber.push(2);
-      textContent += 2;
-    }
-  }
-
-  if (id == "three" || code == "Numpad3" || code == "Digit3") {
-    const three = document.createElement("span");
-    three.textContent = "3";
-    three.classList = `num${numberTotal}`;
-    content.appendChild(three);
-    if (operator == "") {
-      firstNumber.push(3);
-      textContent += 3;
-    } else if (operator != "") {
-      secondNumber.push(3);
-      textContent += 3;
+  console.log(numbers);
+  if ((id = id || code == code)) {
+    if (numbers != "") {
+      const contentX = document.createElement("span");
+      contentX.textContent = `${numbers}`;
+      contentX.classList = `num${numberTotal}`;
+      content.appendChild(contentX);
+      if (operator == "") {
+        firstNumber.push(numbers);
+        textContent += numbers;
+      } else if (operator != "") {
+        secondNumber.push(numbers);
+        textContent += numbers;
+      }
     }
   }
 
-  if (id == "four" || code == "Numpad4" || code == "Digit4") {
-    const four = document.createElement("span");
-    four.textContent = "4";
-    four.classList = `num${numberTotal}`;
-    content.appendChild(four);
-    if (operator == "") {
-      firstNumber.push(4);
-      textContent += 4;
-    } else if (operator != "") {
-      secondNumber.push(4);
-      textContent += 4;
-    }
-  }
+  // // If Statement for TextContent and to Push Values to an Array
+  // if (id == "zero" || code == "Numpad0" || code == "Digit0") {
+  //   const zero = document.createElement("span");
+  //   zero.textContent = "0";
+  //   zero.classList = `num${numberTotal}`;
+  //   content.appendChild(zero);
+  //   if (operator == "") {
+  //     firstNumber.push(0);
+  //     textContent += 0;
+  //   } else if (operator != "") {
+  //     secondNumber.push(0);
+  //     textContent += 0;
+  //   }
+  // }
+  // if (id == "one" || code == "Numpad1" || code == "Digit1") {
+  //   const one = document.createElement("span");
+  //   one.textContent = "1";
+  //   one.classList = `num${numberTotal}`;
+  //   content.appendChild(one);
+  //   if (operator == "") {
+  //     firstNumber.push(1);
+  //     textContent += 1;
+  //   } else if (operator != "") {
+  //     secondNumber.push(1);
+  //     textContent += 1;
+  //   }
+  // }
+  // if (id == "two" || code == "Numpad2" || code == "Digit2") {
+  //   const two = document.createElement("span");
+  //   two.textContent = "2";
+  //   two.classList = `num${numberTotal}`;
+  //   content.appendChild(two);
+  //   if (operator == "") {
+  //     firstNumber.push(2);
+  //     textContent += 2;
+  //   } else if (operator != "") {
+  //     secondNumber.push(2);
+  //     textContent += 2;
+  //   }
+  // }
 
-  if (id == "five" || code == "Numpad5" || code == "Digit5") {
-    const five = document.createElement("span");
-    five.textContent = "5";
-    five.classList = `num${numberTotal}`;
-    content.appendChild(five);
-    if (operator == "") {
-      firstNumber.push(5);
-      textContent += 5;
-    } else if (operator != "") {
-      secondNumber.push(5);
-      textContent += 5;
-    }
-  }
+  // if (id == "three" || code == "Numpad3" || code == "Digit3") {
+  //   const three = document.createElement("span");
+  //   three.textContent = "3";
+  //   three.classList = `num${numberTotal}`;
+  //   content.appendChild(three);
+  //   if (operator == "") {
+  //     firstNumber.push(3);
+  //     textContent += 3;
+  //   } else if (operator != "") {
+  //     secondNumber.push(3);
+  //     textContent += 3;
+  //   }
+  // }
 
-  if (id == "six" || code == "Numpad6" || code == "Digit6") {
-    const six = document.createElement("span");
-    six.textContent = "6";
-    six.classList = `num${numberTotal}`;
-    content.appendChild(six);
-    if (operator == "") {
-      firstNumber.push(6);
-      textContent += 6;
-    } else if (operator != "") {
-      secondNumber.push(6);
-      textContent += 6;
-    }
-  }
+  // if (id == "four" || code == "Numpad4" || code == "Digit4") {
+  //   const four = document.createElement("span");
+  //   four.textContent = "4";
+  //   four.classList = `num${numberTotal}`;
+  //   content.appendChild(four);
+  //   if (operator == "") {
+  //     firstNumber.push(4);
+  //     textContent += 4;
+  //   } else if (operator != "") {
+  //     secondNumber.push(4);
+  //     textContent += 4;
+  //   }
+  // }
 
-  if (id == "seven" || code == "Numpad7" || code == "Digit7") {
-    const seven = document.createElement("span");
-    seven.textContent = "7";
-    seven.classList = `num${numberTotal}`;
-    content.appendChild(seven);
-    if (operator == "") {
-      firstNumber.push(7);
-      textContent += 7;
-    } else if (operator != "") {
-      secondNumber.push(7);
-      textContent += 7;
-    }
-  }
+  // if (id == "five" || code == "Numpad5" || code == "Digit5") {
+  //   const five = document.createElement("span");
+  //   five.textContent = "5";
+  //   five.classList = `num${numberTotal}`;
+  //   content.appendChild(five);
+  //   if (operator == "") {
+  //     firstNumber.push(5);
+  //     textContent += 5;
+  //   } else if (operator != "") {
+  //     secondNumber.push(5);
+  //     textContent += 5;
+  //   }
+  // }
 
-  if (id == "eight" || code == "Numpad8" || code == "Digit8") {
-    const eight = document.createElement("span");
-    eight.textContent = "8";
-    eight.classList = `num${numberTotal}`;
-    content.appendChild(eight);
-    if (operator == "") {
-      firstNumber.push(8);
-      textContent += 8;
-    } else if (operator != "") {
-      secondNumber.push(8);
-      textContent += 8;
-    }
-  }
+  // if (id == "six" || code == "Numpad6" || code == "Digit6") {
+  //   const six = document.createElement("span");
+  //   six.textContent = "6";
+  //   six.classList = `num${numberTotal}`;
+  //   content.appendChild(six);
+  //   if (operator == "") {
+  //     firstNumber.push(6);
+  //     textContent += 6;
+  //   } else if (operator != "") {
+  //     secondNumber.push(6);
+  //     textContent += 6;
+  //   }
+  // }
 
-  if (id == "nine" || code == "Numpad9" || code == "Digit9") {
-    const nine = document.createElement("span");
-    nine.textContent = "9";
-    nine.classList = `num${numberTotal}`;
-    content.appendChild(nine);
-    if (operator == "") {
-      firstNumber.push(9);
-      textContent += 9;
-    } else if (operator != "") {
-      secondNumber.push(9);
-      textContent += 9;
-    }
-  }
+  // if (id == "seven" || code == "Numpad7" || code == "Digit7") {
+  //   const seven = document.createElement("span");
+  //   seven.textContent = "7";
+  //   seven.classList = `num${numberTotal}`;
+  //   content.appendChild(seven);
+  //   if (operator == "") {
+  //     firstNumber.push(7);
+  //     textContent += 7;
+  //   } else if (operator != "") {
+  //     secondNumber.push(7);
+  //     textContent += 7;
+  //   }
+  // }
+
+  // if (id == "eight" || code == "Numpad8" || code == "Digit8") {
+  //   const eight = document.createElement("span");
+  //   eight.textContent = "8";
+  //   eight.classList = `num${numberTotal}`;
+  //   content.appendChild(eight);
+  //   if (operator == "") {
+  //     firstNumber.push(8);
+  //     textContent += 8;
+  //   } else if (operator != "") {
+  //     secondNumber.push(8);
+  //     textContent += 8;
+  //   }
+  // }
+
+  // if (id == "nine" || code == "Numpad9" || code == "Digit9") {
+  //   const nine = document.createElement("span");
+  //   nine.textContent = "9";
+  //   nine.classList = `num${numberTotal}`;
+  //   content.appendChild(nine);
+  //   if (operator == "") {
+  //     firstNumber.push(9);
+  //     textContent += 9;
+  //   } else if (operator != "") {
+  //     secondNumber.push(9);
+  //     textContent += 9;
+  //   }
+  // }
+
   if (id == "dot" || code == "NumpadDecimal") {
     if (firstNumber.length != "0") {
       const dot = document.createElement("span");
@@ -426,38 +471,38 @@ function displayTextContent(id, code) {
     }
   }
   // FirstNumber, Operator, SecondNumber and CalculatedValue
-  console.log("");
-  console.log("Numbers and Operators");
-  console.log(`firstNumber: ${firstNumber}`);
-  console.log(`secondNumber: ${secondNumber}`);
-  console.log(`calculatedValue ${calculatedValue}`);
-  console.log(`operator: ${operator}`);
-  console.log("");
-  // Text Content
-  console.log(`Text Content: ${textContent}`);
-  console.log(`Code: ${code}`);
-  console.log("");
-  // Numbers
-  console.log("Numbers");
-  console.log(`Sum Length: ${calculatedValue.toString().length}`);
-  console.log(`Sum Value: ${sumValue}`);
-  console.log(`Numbers Total: ${numberTotal}`);
-  console.log(`Number Increment: ${numberIncrement}`);
-  console.log("");
-  // QuerySelectors
-  console.log("QuerySelectors:");
-  console.log(document.querySelector(".previous"));
-  console.log(text);
-  console.log("");
-  //Boolean
-  console.log(Boolean(secondNumber[0]) == false);
-  console.log(`Check sumValue: ${sumValue}`);
-  console.log("Boolean");
-  console.log(
-    `QuerySelector Check: ${Boolean(
-      document.querySelector(".previous").children[0]
-    )}`
-  );
+  // console.log("");
+  // console.log("Numbers and Operators");
+  // console.log(`firstNumber: ${firstNumber}`);
+  // console.log(`secondNumber: ${secondNumber}`);
+  // console.log(`calculatedValue ${calculatedValue}`);
+  // console.log(`operator: ${operator}`);
+  // console.log("");
+  // // Text Content
+  // console.log(`Text Content: ${textContent}`);
+  // console.log(`Code: ${code}`);
+  // console.log("");
+  // // Numbers
+  // console.log("Numbers");
+  // console.log(`Sum Length: ${calculatedValue.toString().length}`);
+  // console.log(`Sum Value: ${sumValue}`);
+  // console.log(`Numbers Total: ${numberTotal}`);
+  // console.log(`Number Increment: ${numberIncrement}`);
+  // console.log("");
+  // // QuerySelectors
+  // console.log("QuerySelectors:");
+  // console.log(document.querySelector(".previous"));
+  // console.log(text);
+  // console.log("");
+  // //Boolean
+  // console.log(Boolean(secondNumber[0]) == false);
+  // console.log(`Check sumValue: ${sumValue}`);
+  // console.log("Boolean");
+  // console.log(
+  //   `QuerySelector Check: ${Boolean(
+  //     document.querySelector(".previous").children[0]
+  //   )}`
+  // );
   // Function Call
   removeFirstChild();
   limitResultText();
