@@ -263,6 +263,7 @@ function displayTextContent(id, code) {
       times.classList = `num${numberTotal}`;
       content.appendChild(times);
       operator = "times";
+      textContent += " × ";
     } else if (operator != "") {
       operatorsNotEqual();
     }
