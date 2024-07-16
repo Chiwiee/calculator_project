@@ -20,7 +20,9 @@ function divide(firstNumber, sum, secondNumber) {
   if (firstNumber == 0 || sum == 0 || secondNumber == 0) {
     return "You can't divide by 0";
   }
-  return firstNumber / secondNumber || sum / secondNumber;
+  {
+    return firstNumber / secondNumber || sum / secondNumber;
+  }
 }
 // Operate Function that Converts and Calls Functions to Calculate
 function operate(num1, sum, operator, num2) {
@@ -150,9 +152,7 @@ function displayTextContent(id, code) {
   }
   //
   function convertToNumbers() {
-    if (id == "zero" || code == "Numpad0" || code == "Digit0") {
-      return 0;
-    } else if (id == "one" || code == "Numpad1" || code == "Digit1") {
+    if (id == "one" || code == "Numpad1" || code == "Digit1") {
       return 1;
     } else if (id == "two" || code == "Numpad2" || code == "Digit2") {
       return 2;
@@ -170,13 +170,15 @@ function displayTextContent(id, code) {
       return 8;
     } else if (id == "nine" || code == "Numpad9" || code == "Digit9") {
       return 9;
+    } else if (id == "zero" || code == "Numpad0" || code == "Digit0") {
+      return 0;
     } else {
       return "";
     }
   }
   let numbers = convertToNumbers();
 
-  if ((id = id || code == code)) {
+  if (id == id || code == code) {
     if (numbers != "") {
       const contentX = document.createElement("span");
       contentX.textContent = `${numbers}`;
@@ -213,77 +215,71 @@ function displayTextContent(id, code) {
       }
     }
   }
+  // Operators Text Content Function
+  function plusTextContent() {
+    const plus = document.createElement("span");
+    plus.textContent = " + ";
+    plus.classList = `num${numberTotal}`;
+    content.appendChild(plus);
+    operator = "plus";
+    textContent += " + ";
+  }
+  function minusTextContent() {
+    const minus = document.createElement("span");
+    minus.textContent = " - ";
+    minus.classList = `num${numberTotal}`;
+    content.appendChild(minus);
+    operator = "minus";
+    textContent += " - ";
+  }
+  function timesTextContent() {
+    const times = document.createElement("span");
+    times.textContent = " x ";
+    times.classList = `num${numberTotal}`;
+    content.appendChild(times);
+    operator = "times";
+    textContent += " × ";
+  }
+  function divideTextContent() {
+    const divide = document.createElement("span");
+    divide.textContent = " ÷ ";
+    divide.classList = `num${numberTotal}`;
+    content.appendChild(divide);
+    operator = "divide";
+    textContent += " ÷ ";
+  }
 
+  // Operator Statements
   if (id == "plus" || code == "NumpadAdd") {
     if (operator == "") {
-      const plus = document.createElement("span");
-      plus.textContent = " + ";
-      plus.classList = `num${numberTotal}`;
-      content.appendChild(plus);
-      operator = "plus";
-      textContent += " + ";
+      plusTextContent();
     } else if (operate != "") {
       operatorsNotEqual();
-      const plus = document.createElement("span");
-      plus.textContent = " + ";
-      plus.classList = `num${numberTotal}`;
-      content.appendChild(plus);
-      operator = "plus";
-      textContent += " + ";
+      plusTextContent();
     }
   }
   if (id == "minus" || code == "NumpadSubtract") {
     if (operator == "") {
-      const minus = document.createElement("span");
-      minus.textContent = " - ";
-      minus.classList = `num${numberTotal}`;
-      content.appendChild(minus);
-      operator = "minus";
-      textContent += " - ";
+      minusTextContent();
     } else if (operator != "") {
       operatorsNotEqual();
-      const minus = document.createElement("span");
-      minus.textContent = " - ";
-      minus.classList = `num${numberTotal}`;
-      content.appendChild(minus);
-      operator = "minus";
-      textContent += " - ";
+      minusTextContent();
     }
   }
   if (id == "times" || code == "NumpadMultiply") {
     if (operator == "") {
-      const times = document.createElement("span");
-      times.textContent = " x ";
-      times.classList = `num${numberTotal}`;
-      content.appendChild(times);
-      operator = "times";
-      textContent += " × ";
+      timesTextContent();
     } else if (operator != "") {
       operatorsNotEqual();
-      const times = document.createElement("span");
-      times.textContent = " x ";
-      times.classList = `num${numberTotal}`;
-      content.appendChild(times);
-      operator = "times";
-      textContent += " × ";
+      timesTextContent();
     }
   }
   if (id == "divide" || code == "NumpadDivide") {
     if (operator == "") {
-      const divide = document.createElement("span");
-      divide.textContent = " ÷ ";
-      divide.classList = `num${numberTotal}`;
-      content.appendChild(divide);
-      operator = "divide";
-      textContent += " ÷ ";
+      divideTextContent();
     } else if (operator != "") {
       operatorsNotEqual();
-      const divide = document.createElement("span");
-      divide.textContent = " ÷ ";
-      divide.classList = `num${numberTotal}`;
-      content.appendChild(divide);
-      operator = "divide";
-      textContent += " ÷ ";
+      divideTextContent;
     }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
@@ -372,6 +368,7 @@ function displayTextContent(id, code) {
     )}`
   );
   console.log(code);
+  console.log(numbers);
 
   // Function Call
   removeFirstChild();
