@@ -3,6 +3,7 @@ const firstNumber = [];
 const secondNumber = [];
 const calculatedValue = [];
 let operator = "";
+let operatorText = "";
 let textContent = "";
 let numberIncrement = 0;
 
@@ -118,42 +119,10 @@ function clearContent() {
 // Operators Text Content Function
 let numberTotal = operate(firstNumber, calculatedValue, operator, secondNumber);
 const content = document.querySelector(".text");
-//
-function plusTextContent() {
-  const plus = document.createElement("span");
-  plus.textContent = " + ";
-  plus.classList = `num${numberTotal}`;
-  content.appendChild(plus);
-  operator = "plus";
-  textContent += " + ";
-}
-function minusTextContent() {
-  const minus = document.createElement("span");
-  minus.textContent = " - ";
-  minus.classList = `num${numberTotal}`;
-  content.appendChild(minus);
-  operator = "minus";
-  textContent += " - ";
-}
-function timesTextContent() {
-  const times = document.createElement("span");
-  times.textContent = " x ";
-  times.classList = `num${numberTotal}`;
-  content.appendChild(times);
-  operator = "times";
-  textContent += " × ";
-}
-function divideTextContent() {
-  const divide = document.createElement("span");
-  divide.textContent = " ÷ ";
-  divide.classList = `num${numberTotal}`;
-  content.appendChild(divide);
-  operator = "divide";
-  textContent += " ÷ ";
-}
 
 //
 function displayTextContent(id, code) {
+  // Variables
   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
   let numberTotal = lengthTotal(firstNumber, secondNumber, operator);
   const content = document.querySelector(".text");
@@ -163,6 +132,39 @@ function displayTextContent(id, code) {
   const text = document.querySelector(".text");
   const textChildren =
     document.querySelector(".text").children[`${numberTotal - 1}`];
+
+  // Function
+  function operatorsTextContent() {
+    if (id == "plus" || code == "NumpadAdd") {
+      const plus = document.createElement("span");
+      plus.textContent = " + ";
+      plus.classList = `num${numberTotal}`;
+      content.appendChild(plus);
+      operator = "plus";
+      textContent += " + ";
+    } else if (id == "minus" || code == "NumpadSubtract") {
+      const minus = document.createElement("span");
+      minus.textContent = " - ";
+      minus.classList = `num${numberTotal}`;
+      content.appendChild(minus);
+      operator = "minus";
+      textContent += " - ";
+    } else if (id == "times" || code == "NumpadMultiply") {
+      const times = document.createElement("span");
+      times.textContent = " x ";
+      times.classList = `num${numberTotal}`;
+      content.appendChild(times);
+      operator = "times";
+      textContent += " × ";
+    } else if (id == "divide" || code == "NumpadDivide") {
+      const divide = document.createElement("span");
+      divide.textContent = " ÷ ";
+      divide.classList = `num${numberTotal}`;
+      content.appendChild(divide);
+      operator = "divide";
+      textContent += " ÷ ";
+    }
+  }
 
   function operatorsNotEqual() {
     operator = "";
@@ -211,7 +213,7 @@ function displayTextContent(id, code) {
       return "";
     }
   }
-  console.log(`Numbers: ${convertToNumber()}`);
+  // If Statements
 
   // Need to add zero because it returns undefined in convert
   if (id == "zero" || code == "Numpad0" || code == "Digit0") {
@@ -267,34 +269,34 @@ function displayTextContent(id, code) {
   // Operator Statements
   if (id == "plus" || code == "NumpadAdd") {
     if (operator == "") {
-      plusTextContent();
+      operatorsTextContent();
     } else if (operate != "") {
       operatorsNotEqual();
-      plusTextContent();
+      operatorsTextContent();
     }
   }
   if (id == "minus" || code == "NumpadSubtract") {
     if (operator == "") {
-      minusTextContent();
+      operatorsTextContent();
     } else if (operator != "") {
       operatorsNotEqual();
-      minusTextContent();
+      operatorsTextContent();
     }
   }
   if (id == "times" || code == "NumpadMultiply") {
     if (operator == "") {
-      timesTextContent();
+      operatorsTextContent();
     } else if (operator != "") {
       operatorsNotEqual();
-      timesTextContent();
+      operatorsTextContent();
     }
   }
   if (id == "divide" || code == "NumpadDivide") {
     if (operator == "") {
-      divideTextContent();
+      operatorsTextContent();
     } else if (operator != "") {
       operatorsNotEqual();
-      divideTextContent();
+      operatorsTextContent();
     }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
@@ -350,6 +352,10 @@ function displayTextContent(id, code) {
     }
   }
   // FirstNumber, Operator, SecondNumber and CalculatedValue
+  console.log("");
+  console.log("");
+  console.log("");
+  console.log("");
   console.log("");
   console.log("Numbers and Operators");
   console.log(`firstNumber: ${firstNumber}`);
