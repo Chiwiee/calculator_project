@@ -383,7 +383,6 @@ function displayTextContent(id, code) {
     )}`
   );
   console.log(code);
-  console.log(numbers);
 
   // Function Call
   removeFirstChild();
