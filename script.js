@@ -224,6 +224,12 @@ function displayTextContent(id, code) {
       textContent += " + ";
     } else if (operate != "") {
       operatorsNotEqual();
+      const plus = document.createElement("span");
+      plus.textContent = " + ";
+      plus.classList = `num${numberTotal}`;
+      content.appendChild(plus);
+      operator = "plus";
+      textContent += " + ";
     }
   }
   if (id == "minus" || code == "NumpadSubtract") {
@@ -236,6 +242,12 @@ function displayTextContent(id, code) {
       textContent += " - ";
     } else if (operator != "") {
       operatorsNotEqual();
+      const minus = document.createElement("span");
+      minus.textContent = " - ";
+      minus.classList = `num${numberTotal}`;
+      content.appendChild(minus);
+      operator = "minus";
+      textContent += " - ";
     }
   }
   if (id == "times" || code == "NumpadMultiply") {
@@ -248,6 +260,12 @@ function displayTextContent(id, code) {
       textContent += " × ";
     } else if (operator != "") {
       operatorsNotEqual();
+      const times = document.createElement("span");
+      times.textContent = " x ";
+      times.classList = `num${numberTotal}`;
+      content.appendChild(times);
+      operator = "times";
+      textContent += " × ";
     }
   }
   if (id == "divide" || code == "NumpadDivide") {
@@ -260,6 +278,12 @@ function displayTextContent(id, code) {
       textContent += " ÷ ";
     } else if (operator != "") {
       operatorsNotEqual();
+      const divide = document.createElement("span");
+      divide.textContent = " ÷ ";
+      divide.classList = `num${numberTotal}`;
+      content.appendChild(divide);
+      operator = "divide";
+      textContent += " ÷ ";
     }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
