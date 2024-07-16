@@ -193,7 +193,7 @@ function displayTextContent(id, code) {
   }
 
   // Operator, Equal, Clear, Backspace, Decimal
-  if (id == "dot" || code == "NumpadDecimal") {
+  if (id == "dot" || code == "NumpadDecimal" || code == "Period") {
     if (firstNumber.length != "0") {
       const dot = document.createElement("span");
       dot.textContent = ".";
