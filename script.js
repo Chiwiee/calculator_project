@@ -193,6 +193,21 @@ function displayTextContent(id, code) {
       }
     }
   }
+  if (id == "zero" || code == "Numpad0" || code == "Digit0") {
+    if (numbers != "") {
+      const contentX = document.createElement("span");
+      contentX.textContent = `0`;
+      contentX.classList = `num${numberTotal}`;
+      content.appendChild(contentX);
+      if (operator == "") {
+        firstNumber.push(0);
+        textContent += 0;
+      } else if (operator != "") {
+        secondNumber.push(0);
+        textContent += 0;
+      }
+    }
+  }
 
   // Operator, Equal, Clear, Backspace, Decimal
   if (id == "dot" || code == "NumpadDecimal" || code == "Period") {
