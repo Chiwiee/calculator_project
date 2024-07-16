@@ -67,6 +67,11 @@ button {
   background-color: transparent;
   border: none;
 }
+#NA {
+  flex: 1 1 25%;
+  background-color: transparent;
+  border: none;
+}
 #button-container > #equal {
   flex: 2 1 50%;
 }
