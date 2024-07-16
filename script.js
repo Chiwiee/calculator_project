@@ -155,7 +155,9 @@ function displayTextContent(id, code) {
   }
   //
   function convertToNumbers() {
-    if (id == "one" || code == "Numpad1" || code == "Digit1") {
+    if (id == "zero" || code == "Numpad0" || code == "Digit0") {
+      return 0;
+    } else if (id == "one" || code == "Numpad1" || code == "Digit1") {
       return 1;
     } else if (id == "two" || code == "Numpad2" || code == "Digit2") {
       return 2;
@@ -173,8 +175,6 @@ function displayTextContent(id, code) {
       return 8;
     } else if (id == "nine" || code == "Numpad9" || code == "Digit9") {
       return 9;
-    } else if (id == "zero" || code == "Numpad0" || code == "Digit0") {
-      return 0;
     } else {
       return "";
     }
