@@ -348,41 +348,41 @@ function displayTextContent(id, code) {
       secondNumber.splice(secondNumber.length - 1, 1);
     }
   }
-  // // FirstNumber, Operator, SecondNumber and CalculatedValue
-  // console.log("");
-  // console.log("Numbers and Operators");
-  // console.log(`firstNumber: ${firstNumber}`);
-  // console.log(`secondNumber: ${secondNumber}`);
-  // console.log(`calculatedValue ${calculatedValue}`);
-  // console.log(`operator: ${operator}`);
-  // console.log("");
-  // // Text Content
-  // console.log(`Text Content: ${textContent}`);
-  // console.log(`Code: ${code}`);
-  // console.log("");
-  // // Numbers
-  // console.log("Numbers");
-  // console.log(`Sum Length: ${calculatedValue.toString().length}`);
-  // console.log(`Sum Value: ${sumValue}`);
-  // console.log(`Numbers Total: ${numberTotal}`);
-  // console.log(`Number Increment: ${numberIncrement}`);
-  // console.log("");
-  // // QuerySelectors
-  // console.log("QuerySelectors:");
-  // console.log(document.querySelector(".previous"));
-  // console.log(text);
-  // console.log("");
-  // //Boolean
-  // console.log("Boolean");
-  // console.log(Boolean(secondNumber[0]) == false);
-  // console.log(`Check sumValue: ${sumValue}`);
-  // console.log(
-  //   `QuerySelector Check: ${Boolean(
-  //     document.querySelector(".previous").children[0]
-  //   )}`
-  // );
-  // console.log(code);
-  // console.log(numbers);
+  // FirstNumber, Operator, SecondNumber and CalculatedValue
+  console.log("");
+  console.log("Numbers and Operators");
+  console.log(`firstNumber: ${firstNumber}`);
+  console.log(`secondNumber: ${secondNumber}`);
+  console.log(`calculatedValue ${calculatedValue}`);
+  console.log(`operator: ${operator}`);
+  console.log("");
+  // Text Content
+  console.log(`Text Content: ${textContent}`);
+  console.log(`Code: ${code}`);
+  console.log("");
+  // Numbers
+  console.log("Numbers");
+  console.log(`Sum Length: ${calculatedValue.toString().length}`);
+  console.log(`Sum Value: ${sumValue}`);
+  console.log(`Numbers Total: ${numberTotal}`);
+  console.log(`Number Increment: ${numberIncrement}`);
+  console.log("");
+  // QuerySelectors
+  console.log("QuerySelectors:");
+  console.log(document.querySelector(".previous"));
+  console.log(text);
+  console.log("");
+  //Boolean
+  console.log("Boolean");
+  console.log(Boolean(secondNumber[0]) == false);
+  console.log(`Check sumValue: ${sumValue}`);
+  console.log(
+    `QuerySelector Check: ${Boolean(
+      document.querySelector(".previous").children[0]
+    )}`
+  );
+  console.log(code);
+  console.log(numbers);
 
   // Function Call
   removeFirstChild();
