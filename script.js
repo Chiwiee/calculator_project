@@ -166,7 +166,7 @@ function displayTextContent(id, code) {
     }
   }
   //
-  function convert() {
+  function convertToNumbers() {
     if (id == "zero" || code == "Numpad0" || code == "Digit0") {
       return 0;
     } else if (id == "one" || code == "Numpad1" || code == "Digit1") {
