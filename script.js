@@ -174,7 +174,7 @@ function displayTextContent(id, code) {
       return "";
     }
   }
-  let numbers = convert();
+  let numbers = convertToNumbers();
 
   if ((id = id || code == code)) {
     if (numbers != "") {
