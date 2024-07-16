@@ -66,7 +66,7 @@ function removeFirstChild() {
 function limitResultText() {
   const result = document.querySelector(".result");
   if (calculatedValue.toString().length <= 10) {
-    result.setAttribute("style", "font-size: 60px; overflow: auto;");
+    result.setAttribute("style", "font-size: 60px");
   } else if (calculatedValue.toString().length <= 15) {
     result.setAttribute("style", "font-size: 40px");
   } else if (calculatedValue.toString().length <= 20) {
