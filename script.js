@@ -55,23 +55,6 @@ function operate(num1, sum, operator, num2) {
   }
 }
 
-// Checking if there's a decimal point in Arrays
-function checkDecimal() {
-  if (
-    firstNumber.includes(".") ||
-    secondNumber.includes(".") ||
-    calculatedValue.includes(".")
-  ) {
-    return operate(
-      firstNumber,
-      calculatedValue,
-      operator,
-      secondNumber
-    ).toFixed(1);
-  } else {
-    return operate(firstNumber, calculatedValue, operator, secondNumber);
-  }
-}
 function removeFirstChild() {
   if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
     let parent = document.querySelector(".text");
