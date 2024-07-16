@@ -18,7 +18,7 @@ function multiply(firstNumber, sum, secondNumber) {
 }
 function divide(firstNumber, sum, secondNumber) {
   if (firstNumber == 0 || sum == 0 || secondNumber == 0) {
-    return "You can't divided by 0";
+    return "Sike";
   } else {
     return firstNumber / secondNumber || sum / secondNumber;
   }
