@@ -294,7 +294,7 @@ function displayTextContent(id, code) {
       divideTextContent();
     } else if (operator != "") {
       operatorsNotEqual();
-      divideTextContent;
+      divideTextContent();
     }
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
