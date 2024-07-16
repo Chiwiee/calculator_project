@@ -187,7 +187,7 @@ function displayTextContent(id, code) {
       textContent += `${sumValue}`;
     }
   }
-  // Piece of Shit Convert not working with zero
+
   function convertToNumber() {
     if (id == "one" || code == "Numpad1" || code == "Digit1") {
       return 1;
