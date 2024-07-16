@@ -115,6 +115,41 @@ function clearContent() {
   }
 }
 
+// Operators Text Content Function
+function plusTextContent() {
+  const plus = document.createElement("span");
+  plus.textContent = " + ";
+  plus.classList = `num${numberTotal}`;
+  content.appendChild(plus);
+  operator = "plus";
+  textContent += " + ";
+}
+function minusTextContent() {
+  const minus = document.createElement("span");
+  minus.textContent = " - ";
+  minus.classList = `num${numberTotal}`;
+  content.appendChild(minus);
+  operator = "minus";
+  textContent += " - ";
+}
+function timesTextContent() {
+  const times = document.createElement("span");
+  times.textContent = " x ";
+  times.classList = `num${numberTotal}`;
+  content.appendChild(times);
+  operator = "times";
+  textContent += " × ";
+}
+function divideTextContent() {
+  const divide = document.createElement("span");
+  divide.textContent = " ÷ ";
+  divide.classList = `num${numberTotal}`;
+  content.appendChild(divide);
+  operator = "divide";
+  textContent += " ÷ ";
+}
+
+//
 function displayTextContent(id, code) {
   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
   let numberTotal = lengthTotal(firstNumber, secondNumber, operator);
@@ -353,39 +388,6 @@ function displayTextContent(id, code) {
         }
       }
     }
-  }
-  // Operators Text Content Function
-  function plusTextContent() {
-    const plus = document.createElement("span");
-    plus.textContent = " + ";
-    plus.classList = `num${numberTotal}`;
-    content.appendChild(plus);
-    operator = "plus";
-    textContent += " + ";
-  }
-  function minusTextContent() {
-    const minus = document.createElement("span");
-    minus.textContent = " - ";
-    minus.classList = `num${numberTotal}`;
-    content.appendChild(minus);
-    operator = "minus";
-    textContent += " - ";
-  }
-  function timesTextContent() {
-    const times = document.createElement("span");
-    times.textContent = " x ";
-    times.classList = `num${numberTotal}`;
-    content.appendChild(times);
-    operator = "times";
-    textContent += " × ";
-  }
-  function divideTextContent() {
-    const divide = document.createElement("span");
-    divide.textContent = " ÷ ";
-    divide.classList = `num${numberTotal}`;
-    content.appendChild(divide);
-    operator = "divide";
-    textContent += " ÷ ";
   }
 
   // Operator Statements
