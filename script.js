@@ -254,7 +254,7 @@ function displayTextContent(id, code) {
           textContent += ".";
           content.appendChild(dot);
         }
-      } else if (operator != "" && secondNumber.length != "0") {
+      } else if (operator != "" && Boolean(calculatedValue[0]) == false) {
         if (secondDot == true) {
           secondNumber.push(".");
           textContent += ".";
