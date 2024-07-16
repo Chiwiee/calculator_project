@@ -264,6 +264,7 @@ function displayTextContent(id, code) {
   }
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
     if (Boolean(sumValue != undefined && sumValue != NaN) === true) {
+      calcCOntent(numberIncrement);
       if (
         firstNumber.includes(".") ||
         secondNumber.includes(".") ||
@@ -272,17 +273,16 @@ function displayTextContent(id, code) {
         result.textContent = `${sumValue.toFixed(3)}`;
         content.textContent = `${sumValue.toFixed(3)}`;
         calculatedValue.push(sumValue.toFixed(3));
+        textContent = "";
         textContent += `${sumValue.toFixed(3)}`;
       } else {
         result.textContent = `${sumValue}`;
         content.textContent = `${sumValue}`;
         calculatedValue.push(sumValue);
+        textContent = "";
         textContent += `${sumValue}`;
       }
-      textContent = "";
-
       operator = "";
-      calcCOntent(numberIncrement);
       firstNumber.splice(0, firstNumber.length);
       secondNumber.splice(0, secondNumber.length);
       calculatedValue.splice(0, calculatedValue.length - 1);
@@ -347,6 +347,8 @@ function displayTextContent(id, code) {
       document.querySelector(".previous").children[0]
     )}`
   );
+  console.log(code);
+
   // Function Call
   removeFirstChild();
   limitResultText();
