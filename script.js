@@ -18,9 +18,8 @@ function multiply(firstNumber, sum, secondNumber) {
 }
 function divide(firstNumber, sum, secondNumber) {
   if (firstNumber == 0 || sum == 0 || secondNumber == 0) {
-    return "You can't divide by 0";
-  }
-  {
+    return "You can't divided by 0";
+  } else {
     return firstNumber / secondNumber || sum / secondNumber;
   }
 }
@@ -393,7 +392,6 @@ function buttonEvents() {
   }
   keyboardEvents();
 }
-
 buttonEvents();
 
 // create new variable for sum value then create new function to calculate the sum value to the new number
