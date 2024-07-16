@@ -105,11 +105,11 @@ function clearContent() {
   document.querySelector(".text").textContent = "";
 
   const calculationContent = document.querySelector(".text");
-  if (calculationContent.hasChildNodes()) {
+  while (calculationContent.hasChildNodes()) {
     calculationContent.removeChild(calculationContent.children[0]);
   }
   const previousList = document.querySelector(".previous");
-  if (previousList.hasChildNodes()) {
+  while (previousList.hasChildNodes()) {
     previousList.removeChild(previousList.children[0]);
   }
 }
