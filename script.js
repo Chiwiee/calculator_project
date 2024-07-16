@@ -363,9 +363,9 @@ function displayTextContent(id, code) {
   console.log(text);
   console.log("");
   //Boolean
+  console.log("Boolean");
   console.log(Boolean(secondNumber[0]) == false);
   console.log(`Check sumValue: ${sumValue}`);
-  console.log("Boolean");
   console.log(
     `QuerySelector Check: ${Boolean(
       document.querySelector(".previous").children[0]
