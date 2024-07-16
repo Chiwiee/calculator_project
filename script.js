@@ -192,6 +192,7 @@ function displayTextContent(id, code) {
     }
   }
 
+  // Operator, Equal, Clear, Backspace, Decimal
   if (id == "dot" || code == "NumpadDecimal") {
     if (firstNumber.length != "0") {
       const dot = document.createElement("span");
@@ -212,8 +213,6 @@ function displayTextContent(id, code) {
       }
     }
   }
-
-  // Operator, Equal, Clear and Backspace
 
   if (id == "plus" || code == "NumpadAdd") {
     if (operator == "") {
