@@ -116,6 +116,7 @@ function clearContent() {
 }
 
 // Operators Text Content Function
+let numberTotal = operate(firstNumber, calculatedValue, operator, secondNumber);
 function plusTextContent() {
   const plus = document.createElement("span");
   plus.textContent = " + ";
