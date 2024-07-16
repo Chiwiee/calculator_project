@@ -244,28 +244,6 @@ function displayTextContent(id, code) {
     }
   }
 
-  // Operator, Equal, Clear, Backspace, Decimal
-  if (id == "dot" || code == "NumpadDecimal" || code == "Period") {
-    if (firstNumber.length != "0") {
-      const dot = document.createElement("span");
-      dot.textContent = ".";
-      dot.classList = `num${numberTotal}`;
-      if (operator == "") {
-        if (firstDot == true) {
-          firstNumber.push(".");
-          textContent += ".";
-          content.appendChild(dot);
-        }
-      } else if (operator != "" && Boolean(calculatedValue[0]) == false) {
-        if (secondDot == true) {
-          secondNumber.push(".");
-          textContent += ".";
-          content.appendChild(dot);
-        }
-      }
-    }
-  }
-
   // Operator Statements
   if (id == "plus" || code == "NumpadAdd") {
     if (operator == "") {
@@ -299,6 +277,28 @@ function displayTextContent(id, code) {
       operatorsTextContent();
     }
   }
+  // Decimal, Equal, Clear and Backspace Statements
+  if (id == "dot" || code == "NumpadDecimal" || code == "Period") {
+    if (firstNumber.length != "0") {
+      const dot = document.createElement("span");
+      dot.textContent = ".";
+      dot.classList = `num${numberTotal}`;
+      if (operator == "") {
+        if (firstDot == true) {
+          firstNumber.push(".");
+          textContent += ".";
+          content.appendChild(dot);
+        }
+      } else if (operator != "" && Boolean(calculatedValue[0]) == false) {
+        if (secondDot == true) {
+          secondNumber.push(".");
+          textContent += ".";
+          content.appendChild(dot);
+        }
+      }
+    }
+  }
+
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
     if (Boolean(sumValue != undefined && sumValue != NaN) === true) {
       calcCOntent(numberIncrement);
@@ -351,6 +351,7 @@ function displayTextContent(id, code) {
       secondNumber.splice(secondNumber.length - 1, 1);
     }
   }
+
   // FirstNumber, Operator, SecondNumber and CalculatedValue
   console.log("");
   console.log("");
@@ -395,7 +396,7 @@ function displayTextContent(id, code) {
   limitResultText();
 }
 
-// Functions andEvent Listeners that Calls the displayTextContent with button.id and event.code
+// Functions and Event Listeners that Calls the displayTextContent with button.id and event.code
 function buttonEvents() {
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
