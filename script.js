@@ -41,6 +41,21 @@ function operate() {
 function combinedString() {
   return `${firstNumber}` + ` ${operator} ` + `${secondNumber}`;
 }
+
+function calcAfterClick() {
+  forLength += `${operate()}`;
+  if (forLength.length <= 20) {
+    resultDisplay.textContent = `${forLength.slice(0, 20)}`;
+    resultDisplay.setAttribute("style", "font-size: 28px;");
+  } else if (forLength.length > 20) {
+    resultDisplay.textContent = `${forLength.slice(0, 20)}` + "...";
+    resultDisplay.setAttribute("style", "font-size: 25px; overflow: hidden;");
+  }
+  firstNumber = `${operate()}`;
+  secondNumber = "";
+  operator = "";
+}
+
 // function removeFirstChild() {
 //   if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
 //     let parent = document.querySelector(".text");
