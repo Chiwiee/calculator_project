@@ -102,7 +102,7 @@ button {
   font-size: 40px;
   border: none;
   border-radius: 25px;
-  background-color: rgb(171, 0, 250);
+  background-image: linear-gradient(rgb(255, 72, 0), rgb(171, 0, 250));
 }
 button {
   font-size: 22px;
