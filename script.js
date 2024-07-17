@@ -140,14 +140,13 @@ function displayTextContent(id) {
     }
   }
 
+  // Number Creator
   if (id == "zero") {
     if (operator == "") {
       firstNumber += 0;
     } else if (operator != "") {
       secondNumber += 0;
     }
-
-    // Number Creator
   } else if (id == id && convertToNumber() != "") {
     if (operator == "") {
       firstNumber += convertToNumber();
