@@ -22,7 +22,11 @@ function multiply() {
   return parseFloat(firstNumber) * parseFloat(secondNumber);
 }
 function divide() {
-  return parseFloat(firstNumber) / parseFloat(secondNumber);
+  if (firstNumber == 0 || secondNumber == 0) {
+    return "SIKE";
+  } else {
+    return parseFloat(firstNumber) / parseFloat(secondNumber);
+  }
 }
 
 // Operate Function that Converts and Calls Functions to Calculate
@@ -203,6 +207,9 @@ function displayTextContent(id, code) {
       isNaN(operate()) === false
     ) {
       calcAfterClick();
+    } else if (operate() == "SIKE") {
+      resultDisplay.textContent = "SIKE";
+      resultDisplay.style.fontSize = "70px";
     }
   }
   if (id == "clear") {
