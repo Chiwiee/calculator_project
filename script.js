@@ -89,7 +89,7 @@ function lengthTotal(firstNumber, secondNumber, operator) {
   }
 }
 // Show your calculation history like = 1 + 1 or 100*3218, etc, etc.
-function calcCOntent(num) {
+function calcContent(num) {
   const previous = document.querySelector(".previous");
   const children = document.querySelector(".previous").children[0];
   const list = document.createElement("li");
@@ -168,7 +168,7 @@ function displayTextContent(id, code) {
 
   function operatorsNotEqual() {
     operator = "";
-    calcCOntent(numberIncrement);
+    calcContent(numberIncrement);
     calculatedValue.push(sumValue);
     firstNumber.splice(0, firstNumber.length);
     secondNumber.splice(0, secondNumber.length);
@@ -301,7 +301,7 @@ function displayTextContent(id, code) {
 
   if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
     if (Boolean(sumValue != undefined && sumValue != NaN) === true) {
-      calcCOntent(numberIncrement);
+      calcContent(numberIncrement);
       if (
         firstNumber.includes(".") ||
         secondNumber.includes(".") ||
