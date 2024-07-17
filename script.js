@@ -7,23 +7,19 @@
 // let textContent = "";
 // let numberIncrement = 0;
 
-// // Function that Calculate the Values from Operate Function
-// function add(firstNumber, sum, secondNumber) {
-//   return firstNumber + secondNumber || sum + secondNumber;
-// }
-// function subtract(firstNumber, sum, secondNumber) {
-//   return firstNumber - secondNumber || sum - secondNumber;
-// }
-// function multiply(firstNumber, sum, secondNumber) {
-//   return firstNumber * secondNumber || sum * secondNumber;
-// }
-// function divide(firstNumber, sum, secondNumber) {
-//   if (firstNumber == 0 || sum == 0 || secondNumber == 0) {
-//     return "Sike";
-//   } else {
-//     return firstNumber / secondNumber || sum / secondNumber;
-//   }
-// }
+// Function that Calculate the Values from Operate Function
+function add() {
+  return parseFloat(firstNumber) + parseFloat(secondNumber);
+}
+function subtract() {
+  return parseFloat(firstNumber) - parseFloat(secondNumber);
+}
+function multiply() {
+  return parseFloat(firstNumber) * parseFloat(secondNumber);
+}
+function divide() {
+  return parseFloat(firstNumber) / parseFloat(secondNumber);
+}
 // // Operate Function that Converts and Calls Functions to Calculate
 // function operate(num1, sum, operator, num2) {
 //   function reduceNum1(num) {
