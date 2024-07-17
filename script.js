@@ -183,25 +183,14 @@ function displayTextContent(id, code) {
     } else if (firstNumber != "" && operator != "" && secondNumber == "") {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
+    } else if (operate() != undefined) {
+      calcAfterClick();
     }
   }
 
   if (id == "equal") {
     if (firstNumber != "" && operator != "" && secondNumber != "") {
-      forLength += `${operate()}`;
-      if (forLength.length <= 20) {
-        resultDisplay.textContent = `${forLength.slice(0, 20)}`;
-        resultDisplay.setAttribute("style", "font-size: 28px;");
-      } else if (forLength.length > 20) {
-        resultDisplay.textContent = `${forLength.slice(0, 20)}` + "...";
-        resultDisplay.setAttribute(
-          "style",
-          "font-size: 25px; overflow: hidden;"
-        );
-      }
-      firstNumber = `${operate()}`;
-      secondNumber = "";
-      operator = "";
+      calcAfterClick();
     }
   }
 
