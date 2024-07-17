@@ -43,6 +43,11 @@ function combinedString() {
 }
 
 function calcAfterClick() {
+  if (firstNumber.includes(".") || secondNumber.includes(".")) {
+    result = `${operate().toFixed(5)}`;
+  } else {
+    result = `${operate()}`;
+  }
   result = `${operate()}`;
   if (result.length <= 20) {
     resultDisplay.textContent = `${result.slice(0, 20)}`;
