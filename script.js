@@ -170,6 +170,7 @@ function displayTextContent(id, code) {
       secondNumber += convertToSymbol();
     }
   }
+
   if (id == "equal") {
     if (firstNumber != "" && operator != "" && secondNumber != "") {
       forLength += `${operate()}`;
@@ -182,7 +183,6 @@ function displayTextContent(id, code) {
           "style",
           "font-size: 25px; overflow: hidden;"
         );
-      } else {
       }
       firstNumber = `${operate()}`;
       secondNumber = "";
