@@ -125,6 +125,19 @@ function displayTextContent(id) {
       return "";
     }
   }
+  function convertToSymbol() {
+    if (id == "plus") {
+      return "+";
+    } else if (id == "minus") {
+      return "-";
+    } else if (id == "times") {
+      return "×";
+    } else if (id == "divide") {
+      return "÷";
+    } else {
+      return "";
+    }
+  }
 
   if (id == "zero") {
     // const zero = document.createElement("span");
