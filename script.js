@@ -1,4 +1,5 @@
 const textDisplay = document.querySelector(".text");
+const resultDisplay = document.querySelector(".result");
 
 // // Store Values
 let firstNumber = "";
@@ -168,6 +169,9 @@ function displayTextContent(id) {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
     }
+  }
+
+  if (id == "equal") {
   }
   // Temporary Function
   function temporaryTextDisplay() {
