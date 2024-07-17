@@ -106,7 +106,7 @@ console.log(`Calculated Value: ${operate()}`);
 // const content = document.querySelector(".text");
 
 // //
-function displayTextContent(id) {
+function displayTextContent(id, code) {
   function convertToNumber() {
     if (id == "one") {
       return 1;
@@ -124,7 +124,7 @@ function displayTextContent(id) {
       return 7;
     } else if (id == "eight") {
       return 8;
-    } else if (id == "nine") {
+    } else if (id == "nine" || code == "Digit9") {
       return 9;
     } else {
       return "";
@@ -173,7 +173,14 @@ function displayTextContent(id) {
   }
   if (id == "equal") {
     forLength += `${operate()}`;
-    resultDisplay.textContent = `${operate()}`;
+    if (forLength.length <= 20) {
+      resultDisplay.textContent = `${forLength.slice(0, 20)}`;
+      resultDisplay.setAttribute("style", "font-size: 28px;");
+    } else if (forLength.length > 20) {
+      resultDisplay.textContent = `${forLength.slice(0, 20)}` + "...";
+      resultDisplay.setAttribute("style", "font-size: 25px; overflow: hidden;");
+    } else {
+    }
     firstNumber = `${operate()}`;
     secondNumber = "";
     operator = "";
@@ -426,12 +433,12 @@ function buttonEvents() {
     });
   }
   mouseEvents();
-  //   function keyboardEvents() {
-  //     window.addEventListener("keydown", (event) => {
-  //       displayTextContent((id = ""), event.code);
-  //     });
-  //   }
-  //   keyboardEvents();
+  function keyboardEvents() {
+    window.addEventListener("keydown", (event) => {
+      displayTextContent((id = ""), event.code);
+    });
+  }
+  keyboardEvents();
 }
 buttonEvents();
 
