@@ -1,11 +1,13 @@
 const textDisplay = document.querySelector(".text");
 const resultDisplay = document.querySelector(".result");
+const historyDisplay = document.querySelector(".previous");
 
 // // Store Values
 let firstNumber = "";
 let operator = "";
 let secondNumber = "";
 let result = "";
+let incrementNumber = 0;
 // const calculatedValue = [];
 // let operatorText = "";
 // let textContent = "";
@@ -47,6 +49,7 @@ function combinedString() {
 }
 
 function calcAfterClick() {
+  displayCalcHistory();
   if (firstNumber.includes(".") || secondNumber.includes(".")) {
     result = `${operate().toFixed(5)}`;
   } else {
@@ -63,8 +66,19 @@ function calcAfterClick() {
   firstNumber = `${operate()}`;
   secondNumber = "";
   operator = "";
+  incrementNumber++;
 }
 
+function displayCalcHistory() {
+  const list = document.createElement("li");
+  list.textContent = `${combinedString()}`;
+  list.classList = `num${incrementNumber}`;
+  historyDisplay.appendChild(list);
+
+  if (Boolean(historyDisplay.children[7]) == true) {
+    historyDisplay.removeChild(historyDisplay.children[0]);
+  }
+}
 // function removeFirstChild() {
 //   if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
 //     let parent = document.querySelector(".text");
@@ -245,6 +259,7 @@ function displayTextContent(id, code) {
     textDisplay.textContent = `${combinedString()}`;
   }
   temporaryTextDisplay();
+  console.log(`IncrementNumber: ${incrementNumber}`);
   console.log(`ID:${id}`);
   console.log(`Code: ${code}`);
   console.log(`firstNumber: ${firstNumber}`);
@@ -258,6 +273,14 @@ function displayTextContent(id, code) {
   console.log(`is Sum Value NaN?: ${isNaN(operate())}`);
   console.log(`Slice1: ${firstNumber.slice(0, -1)}`);
   console.log(`Slice2: ${secondNumber.slice(0, -1)}`);
+
+  // querySelector
+  console.log(textDisplay);
+  console.log(resultDisplay);
+  console.log(historyDisplay);
+
+  // Boolean
+  console.log(Boolean(historyDisplay.children[6]) == true);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
