@@ -28,14 +28,14 @@ console.log(`Divide: ${divide()}`);
 // Operate Function that Converts and Calls Functions to Calculate
 function operate() {
   switch (operator) {
-    case "plus":
-      return add(firstNumber, sumValue, secondNumber);
-    case "minus":
-      return subtract(firstNumber, sumValue, secondNumber);
-    case "times":
-      return multiply(firstNumber, sumValue, secondNumber);
-    case "divide":
-      return divide(firstNumber, sumValue, secondNumber);
+    case "+":
+      return add();
+    case "-":
+      return subtract();
+    case "*":
+      return multiply();
+    case "/":
+      return divide();
   }
 }
 
