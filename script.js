@@ -43,7 +43,7 @@ function combinedString() {
 }
 
 function calcAfterClick() {
-  forLength += `${operate()}`;
+  forLength = `${operate()}`;
   if (forLength.length <= 20) {
     resultDisplay.textContent = `${forLength.slice(0, 20)}`;
     resultDisplay.setAttribute("style", "font-size: 28px;");
@@ -186,6 +186,7 @@ function displayTextContent(id, code) {
     } else if (operate() != undefined) {
       // Acts like Equal ex. +1 + -1 = sum
       calcAfterClick();
+      operator += convertToSymbol();
     }
   }
 
