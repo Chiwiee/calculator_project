@@ -1,3 +1,5 @@
+const textDisplay = document.querySelector(".text");
+
 // // Store Values
 let firstNumber = "";
 let operator = "";
@@ -167,11 +169,17 @@ function displayTextContent(id) {
       secondNumber += convertToSymbol();
     }
   }
+  // Temporary Function
+  function temporaryTextDisplay() {
+    textDisplay.textContent = `${combinedString()}`;
+  }
+  temporaryTextDisplay();
   console.log(id);
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
   console.log(`operator: ${operator}`);
   console.log(`CombinedString: ${combinedString()}`);
+  console.log(`Sum Value: ${operate()}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
