@@ -2,6 +2,7 @@
 let firstNumber = "";
 let operator = "";
 let secondNumber = "";
+let combinedString = firstNumber + ` ${operator} ` + secondNumber;
 // const calculatedValue = [];
 // let operatorText = "";
 // let textContent = "";
