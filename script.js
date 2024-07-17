@@ -1,7 +1,7 @@
 // // Store Values
-const firstNumber = prompt("Add number");
+let firstNumber = prompt("Add number");
 let operator = prompt("Add operator");
-const secondNumber = prompt("Add number");
+let secondNumber = prompt("Add number");
 // const calculatedValue = [];
 // let operatorText = "";
 // let textContent = "";
