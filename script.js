@@ -373,25 +373,25 @@ console.log(`Calculated Value: ${operate()}`);
 //   limitResultText();
 // }
 
-// // Functions and Event Listeners that Calls the displayTextContent with button.id and event.code
-// function buttonEvents() {
-//   function mouseEvents() {
-//     let buttons = document.querySelectorAll("button");
-//     buttons.forEach((button) => {
-//       button.addEventListener("click", () => {
-//         displayTextContent(button.id);
-//       });
-//     });
-//   }
-//   mouseEvents();
-//   function keyboardEvents() {
-//     window.addEventListener("keydown", (event) => {
-//       displayTextContent((id = ""), event.code);
-//     });
-//   }
-//   keyboardEvents();
-// }
-// buttonEvents();
+// Functions and Event Listeners that Calls the displayTextContent with button.id and event.code
+function buttonEvents() {
+  function mouseEvents() {
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        displayTextContent(button.id);
+      });
+    });
+  }
+  mouseEvents();
+  //   function keyboardEvents() {
+  //     window.addEventListener("keydown", (event) => {
+  //       displayTextContent((id = ""), event.code);
+  //     });
+  //   }
+  //   keyboardEvents();
+}
+buttonEvents();
 
 // // create new variable for sum value then create new function to calculate the sum value to the new number
 // // add splice + if statement show => "..." in show content to only show latest number
