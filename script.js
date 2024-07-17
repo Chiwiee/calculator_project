@@ -41,7 +41,6 @@ function operate() {
 function combinedString() {
   return `${firstNumber}` + ` ${operator} ` + `${secondNumber}`;
 }
-console.log(`Calculated Value: ${operate()}`);
 // function removeFirstChild() {
 //   if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
 //     let parent = document.querySelector(".text");
