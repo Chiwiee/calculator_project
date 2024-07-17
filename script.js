@@ -188,7 +188,7 @@ function displayTextContent(id, code) {
     } else if (firstNumber != "" && operator != "" && secondNumber == "") {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
-    } else if (operate() != undefined) {
+    } else if (operate() != undefined && isNaN(operate()) === false) {
       // Acts like Equal ex. +1 + -1 = sum
       calcAfterClick();
       operator += convertToSymbol();
@@ -196,7 +196,12 @@ function displayTextContent(id, code) {
   }
 
   if (id == "equal") {
-    if (firstNumber != "" && operator != "" && secondNumber != "") {
+    if (
+      firstNumber != "" &&
+      operator != "" &&
+      secondNumber != "" &&
+      isNaN(operate()) === false
+    ) {
       calcAfterClick();
     }
   }
