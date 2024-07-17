@@ -154,13 +154,13 @@ function displayTextContent(id, code) {
     }
   }
   function convertToSymbol() {
-    if (id == "plus") {
+    if (id == "plus" || code == "NumpadAdd") {
       return "+";
-    } else if (id == "minus") {
+    } else if (id == "minus" || code == "NumpadSubtract") {
       return "-";
-    } else if (id == "times") {
+    } else if (id == "times" || code == "NumpadMultiply") {
       return "×";
-    } else if (id == "divide") {
+    } else if (id == "divide" || code == "NumpadDivide") {
       return "÷";
     } else {
       return "";
