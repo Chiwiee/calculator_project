@@ -20,10 +20,6 @@ function multiply() {
 function divide() {
   return parseFloat(firstNumber) / parseFloat(secondNumber);
 }
-console.log(`Add: ${add()}`);
-console.log(`Subtract: ${subtract()}`);
-console.log(`Multiply: ${multiply()}`);
-console.log(`Divide: ${divide()}`);
 
 // Operate Function that Converts and Calls Functions to Calculate
 function operate() {
