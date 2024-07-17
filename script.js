@@ -37,7 +37,7 @@ function operate() {
   }
 }
 function combinedString() {
-  return firstNumber + ` ${operator} ` + secondNumber;
+  return `${firstNumber}` + ` ${operator} ` + `${secondNumber}`;
 }
 console.log(`Calculated Value: ${operate()}`);
 // function removeFirstChild() {
@@ -179,6 +179,7 @@ function displayTextContent(id) {
   console.log(`secondNumber: ${secondNumber}`);
   console.log(`operator: ${operator}`);
   console.log(`CombinedString: ${combinedString()}`);
+  console.log(`Combined Length: ${combinedString().length - 2}`);
   console.log(`Sum Value: ${operate()}`);
 }
 //   // Variables
