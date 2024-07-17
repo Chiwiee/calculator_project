@@ -102,6 +102,55 @@ console.log(`Calculated Value: ${operate()}`);
 
 // //
 function displayTextContent(id) {
+  function convertToNumber() {
+    if (id == "one") {
+      return 1;
+    } else if (id == "two") {
+      return 2;
+    } else if (id == "three") {
+      return 3;
+    } else if (id == "four") {
+      return 4;
+    } else if (id == "five") {
+      return 5;
+    } else if (id == "six") {
+      return 6;
+    } else if (id == "seven") {
+      return 7;
+    } else if (id == "eight") {
+      return 8;
+    } else if (id == "nine") {
+      return 9;
+    } else {
+      return "";
+    }
+  }
+
+  if (id == "zero") {
+    const zero = document.createElement("span");
+    zero.textContent = "0";
+    zero.classList = `num${numberTotal}`;
+    content.appendChild(zero);
+    if (operator == "") {
+      // firstNumber.push(0);
+      // textContent += 0;
+    } else if (operator != "") {
+      // secondNumber.push(0);
+      // textContent += 0;
+    }
+  } else if ((id = id) && convertToNumber() != "") {
+    const contentX = document.createElement("span");
+    contentX.textContent = `${convertToNumber()}`;
+    contentX.classList = `num${numberTotal}`;
+    content.appendChild(contentX);
+    if (operator == "") {
+      // firstNumber.push(convertToNumber());
+      // textContent += convertToNumber();
+    } else if (operator != "") {
+      // secondNumber.push(convertToNumber());
+      // textContent += convertToNumber();
+    }
+  }
   console.log(id);
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
@@ -176,57 +225,9 @@ function displayTextContent(id) {
 //     }
 //   }
 
-function convertToNumber() {
-  if (id == "one") {
-    return 1;
-  } else if (id == "two") {
-    return 2;
-  } else if (id == "three") {
-    return 3;
-  } else if (id == "four") {
-    return 4;
-  } else if (id == "five") {
-    return 5;
-  } else if (id == "six") {
-    return 6;
-  } else if (id == "seven") {
-    return 7;
-  } else if (id == "eight") {
-    return 8;
-  } else if (id == "nine") {
-    return 9;
-  } else {
-    return "";
-  }
-}
 //   // If Statements
 
 //   // Need to add zero because it returns undefined in convert
-if (id == "zero") {
-  const zero = document.createElement("span");
-  zero.textContent = "0";
-  zero.classList = `num${numberTotal}`;
-  content.appendChild(zero);
-  if (operator == "") {
-    // firstNumber.push(0);
-    // textContent += 0;
-  } else if (operator != "") {
-    // secondNumber.push(0);
-    // textContent += 0;
-  }
-} else if ((id = id) && convertToNumber() != "") {
-  const contentX = document.createElement("span");
-  contentX.textContent = `${convertToNumber()}`;
-  contentX.classList = `num${numberTotal}`;
-  content.appendChild(contentX);
-  if (operator == "") {
-    // firstNumber.push(convertToNumber());
-    // textContent += convertToNumber();
-  } else if (operator != "") {
-    // secondNumber.push(convertToNumber());
-    // textContent += convertToNumber();
-  }
-}
 
 //   // Operator Statements
 //   if (id == "plus" || code == "NumpadAdd") {
