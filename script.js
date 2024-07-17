@@ -5,7 +5,7 @@ const resultDisplay = document.querySelector(".result");
 let firstNumber = "";
 let operator = "";
 let secondNumber = "";
-let forLength = "";
+let result = "";
 // const calculatedValue = [];
 // let operatorText = "";
 // let textContent = "";
@@ -43,12 +43,12 @@ function combinedString() {
 }
 
 function calcAfterClick() {
-  forLength = `${operate()}`;
-  if (forLength.length <= 20) {
-    resultDisplay.textContent = `${forLength.slice(0, 20)}`;
+  result = `${operate()}`;
+  if (result.length <= 20) {
+    resultDisplay.textContent = `${result.slice(0, 20)}`;
     resultDisplay.setAttribute("style", "font-size: 28px;");
-  } else if (forLength.length > 20) {
-    resultDisplay.textContent = `${forLength.slice(0, 20)}` + "...";
+  } else if (result.length > 20) {
+    resultDisplay.textContent = `${result.slice(0, 20)}` + "...";
     resultDisplay.setAttribute("style", "font-size: 25px; overflow: hidden;");
   }
   firstNumber = `${operate()}`;
