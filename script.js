@@ -229,12 +229,23 @@ function displayTextContent(id, code) {
     resultDisplay.textContent = "0";
     resultDisplay.style.fontSize = "55px";
   }
+  if (id == "backspace") {
+    if (operator == "" && secondNumber == "") {
+      let backspace1 = firstNumber.slice(0, -1);
+      firstNumber = backspace1;
+    } else if (operator != "" && secondNumber == "") {
+      operator = "";
+    } else if (operator != "" && firstNumber != "") {
+      let backspace2 = secondNumber.slice(0, -1);
+      secondNumber = backspace2;
+    }
+  }
   // Temporary Function
   function temporaryTextDisplay() {
     textDisplay.textContent = `${combinedString()}`;
   }
   temporaryTextDisplay();
-  console.log(id);
+  console.log(`ID:${id}`);
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
   console.log(`operator: ${operator}`);
@@ -244,6 +255,8 @@ function displayTextContent(id, code) {
   console.log(`result: ${result}`);
   console.log(`result Length: ${result.length}`);
   console.log(`is Sum Value NaN?: ${isNaN(operate())}`);
+  console.log(`Slice1: ${firstNumber.slice(0, -1)}`);
+  console.log(`Slice2: ${secondNumber.slice(0, -1)}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
