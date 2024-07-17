@@ -79,7 +79,7 @@ function showTextDisplay() {
 }
 
 //
-function displayTextContent(id, code) {
+function createBtnAndOpr(id, code) {
   function convertToNumber() {
     if (id == "one" || code == "Numpad1" || code == "Digit1") {
       return 1;
@@ -223,20 +223,20 @@ function displayTextContent(id, code) {
   showTextDisplay();
 }
 
-// Functions and Event Listeners that Calls the displayTextContent with button.id and event.code
+// Functions and Event Listeners that Calls the createBtnAndOpr with button.id and event.code arguments
 function buttonEvents() {
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
-        displayTextContent(button.id);
+        createBtnAndOpr(button.id);
       });
     });
   }
   mouseEvents();
   function keyboardEvents() {
     window.addEventListener("keydown", (event) => {
-      displayTextContent((id = ""), event.code);
+      createBtnAndOpr((id = ""), event.code);
     });
   }
   keyboardEvents();
