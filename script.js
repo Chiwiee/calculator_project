@@ -2,7 +2,6 @@
 let firstNumber = "";
 let operator = "";
 let secondNumber = "";
-let combinedString = firstNumber + ` ${operator} ` + secondNumber;
 // const calculatedValue = [];
 // let operatorText = "";
 // let textContent = "";
@@ -35,7 +34,9 @@ function operate() {
       return divide();
   }
 }
-
+function combinedString() {
+  return firstNumber + ` ${operator} ` + secondNumber;
+}
 console.log(`Calculated Value: ${operate()}`);
 // function removeFirstChild() {
 //   if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
