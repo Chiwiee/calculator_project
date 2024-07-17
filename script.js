@@ -127,10 +127,10 @@ function displayTextContent(id) {
   }
 
   if (id == "zero") {
-    const zero = document.createElement("span");
-    zero.textContent = "0";
-    zero.classList = `num${numberTotal}`;
-    content.appendChild(zero);
+    // const zero = document.createElement("span");
+    // zero.textContent = "0";
+    // zero.classList = `num${numberTotal}`;
+    // content.appendChild(zero);
     if (operator == "") {
       // firstNumber.push(0);
       // textContent += 0;
@@ -139,10 +139,10 @@ function displayTextContent(id) {
       // textContent += 0;
     }
   } else if ((id = id) && convertToNumber() != "") {
-    const contentX = document.createElement("span");
-    contentX.textContent = `${convertToNumber()}`;
-    contentX.classList = `num${numberTotal}`;
-    content.appendChild(contentX);
+    // const contentX = document.createElement("span");
+    // contentX.textContent = `${convertToNumber()}`;
+    // contentX.classList = `num${numberTotal}`;
+    // content.appendChild(contentX);
     if (operator == "") {
       // firstNumber.push(convertToNumber());
       // textContent += convertToNumber();
