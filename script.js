@@ -26,7 +26,7 @@ console.log(`Multiply: ${multiply()}`);
 console.log(`Divide: ${divide()}`);
 
 // Operate Function that Converts and Calls Functions to Calculate
-function operate(num1, sum, operator, num2) {
+function operate() {
   switch (operator) {
     case "plus":
       return add(firstNumber, sumValue, secondNumber);
