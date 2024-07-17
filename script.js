@@ -166,7 +166,7 @@ function displayTextContent(id, code) {
     } else if (firstNumber != "" && operator == "") {
       // Add operator like +1 +
       operator += convertToSymbol();
-    } else if (firstNumber != "" && operator != "") {
+    } else if (firstNumber != "" && operator != "" && secondNumber == "") {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
     }
