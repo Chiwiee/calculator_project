@@ -192,7 +192,6 @@ function displayTextContent(id, code) {
     }
   }
 
-  showTextDisplay();
   console.log(`IncrementNumber: ${incrementNumber}`);
   console.log(`ID:${id}`);
   console.log(`Code: ${code}`);
@@ -215,6 +214,9 @@ function displayTextContent(id, code) {
 
   // Boolean
   console.log(Boolean(historyDisplay.children[6]) == true);
+
+  // Function Call
+  showTextDisplay();
 }
 
 // Functions and Event Listeners that Calls the displayTextContent with button.id and event.code
