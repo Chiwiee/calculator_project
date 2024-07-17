@@ -215,6 +215,7 @@ function displayTextContent(id, code) {
   console.log(`Sum Value: ${operate()}`);
   console.log(`result: ${result}`);
   console.log(`result Length: ${result.length}`);
+  console.log(`is Sum Value NaN?: ${isNaN(operate())}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
