@@ -176,9 +176,14 @@ function displayTextContent(id, code) {
     secondNumber = "";
     operator = "";
     result = "";
+    incrementNumber = 0;
     textDisplay.textContent = "";
     resultDisplay.textContent = "0";
     resultDisplay.style.fontSize = "55px";
+
+    while (historyDisplay.hasChildNodes()) {
+      historyDisplay.removeChild(historyDisplay.children[0]);
+    }
   }
   if (id == "backspace" || code == "Backspace") {
     if (operator == "" && secondNumber == "") {
