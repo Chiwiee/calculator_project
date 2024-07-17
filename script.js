@@ -199,7 +199,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "dot") {
+  if (id == "dot" || code == "Period") {
     if (operator == "" && firstNumber.slice(-1) != ".") {
       firstNumber += ".";
     } else if (operator != "" && secondNumber.slice(-1) != ".") {
