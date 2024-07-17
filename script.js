@@ -103,6 +103,10 @@ console.log(`Calculated Value: ${operate()}`);
 // //
 function displayTextContent(id) {
   console.log(id);
+  console.log(`firstNumber: ${firstNumber}`);
+  console.log(`secondNumber: ${secondNumber}`);
+  console.log(`operator: ${operator}`);
+  console.log(`CombinedString: ${combinedString}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
@@ -339,10 +343,8 @@ if (id == "zero") {
 //   console.log("");
 //   console.log("");
 //   console.log("Numbers and Operators");
-//   console.log(`firstNumber: ${firstNumber}`);
-//   console.log(`secondNumber: ${secondNumber}`);
+
 //   console.log(`calculatedValue ${calculatedValue}`);
-//   console.log(`operator: ${operator}`);
 //   console.log(`Check sumValue: ${sumValue}`);
 //   console.log("");
 //   // Text Content
