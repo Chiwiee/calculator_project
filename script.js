@@ -220,7 +220,7 @@ function displayTextContent(id, code) {
       resultDisplay.style.fontSize = "70px";
     }
   }
-  if (id == "clear") {
+  if (id == "clear" || code == "Escape") {
     firstNumber = "";
     secondNumber = "";
     operator = "";
