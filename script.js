@@ -32,9 +32,9 @@ function operate() {
       return add();
     case "-":
       return subtract();
-    case "*":
+    case "×":
       return multiply();
-    case "/":
+    case "÷":
       return divide();
   }
 }
@@ -191,6 +191,7 @@ function displayTextContent(id) {
   console.log(`Combined Length: ${combinedString().length - 2}`);
   console.log(`Sum Value: ${operate()}`);
   console.log(`forLength: ${forLength}`);
+  console.log(`forLength Length: ${forLength.length}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
