@@ -208,8 +208,8 @@ function displayTextContent(id, code) {
   console.log(`CombinedString: ${combinedString()}`);
   console.log(`Combined Length: ${combinedString().length - 2}`);
   console.log(`Sum Value: ${operate()}`);
-  console.log(`forLength: ${forLength}`);
-  console.log(`forLength Length: ${forLength.length}`);
+  console.log(`result: ${result}`);
+  console.log(`result Length: ${result.length}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
