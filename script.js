@@ -184,6 +184,7 @@ function displayTextContent(id, code) {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
     } else if (operate() != undefined) {
+      // Acts like Equal ex. +1 + -1 = sum
       calcAfterClick();
     }
   }
