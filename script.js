@@ -171,29 +171,29 @@ function displayTextContent(id) {
 //     }
 //   }
 
-//   function convertToNumber() {
-//     if (id == "one" || code == "Numpad1" || code == "Digit1") {
-//       return 1;
-//     } else if (id == "two" || code == "Numpad2" || code == "Digit2") {
-//       return 2;
-//     } else if (id == "three" || code == "Numpad3" || code == "Digit3") {
-//       return 3;
-//     } else if (id == "four" || code == "Numpad4" || code == "Digit4") {
-//       return 4;
-//     } else if (id == "five" || code == "Numpad5" || code == "Digit5") {
-//       return 5;
-//     } else if (id == "six" || code == "Numpad6" || code == "Digit6") {
-//       return 6;
-//     } else if (id == "seven" || code == "Numpad7" || code == "Digit7") {
-//       return 7;
-//     } else if (id == "eight" || code == "Numpad8" || code == "Digit8") {
-//       return 8;
-//     } else if (id == "nine" || code == "Numpad9" || code == "Digit9") {
-//       return 9;
-//     } else {
-//       return "";
-//     }
-//   }
+function convertToNumber() {
+  if (id == "one") {
+    return 1;
+  } else if (id == "two") {
+    return 2;
+  } else if (id == "three") {
+    return 3;
+  } else if (id == "four") {
+    return 4;
+  } else if (id == "five") {
+    return 5;
+  } else if (id == "six") {
+    return 6;
+  } else if (id == "seven") {
+    return 7;
+  } else if (id == "eight") {
+    return 8;
+  } else if (id == "nine") {
+    return 9;
+  } else {
+    return "";
+  }
+}
 //   // If Statements
 
 //   // Need to add zero because it returns undefined in convert
