@@ -74,6 +74,10 @@ function displayCalcHistory() {
     historyDisplay.removeChild(historyDisplay.children[0]);
   }
 }
+// Temporary Function - Well it's working pretty fine so it's temporary anymore XD.
+function showTextDisplay() {
+  textDisplay.textContent = `${combinedString()}`;
+}
 
 //
 function displayTextContent(id, code) {
@@ -187,11 +191,8 @@ function displayTextContent(id, code) {
       secondNumber = backspace2;
     }
   }
-  // Temporary Function
-  function temporaryTextDisplay() {
-    textDisplay.textContent = `${combinedString()}`;
-  }
-  temporaryTextDisplay();
+
+  showTextDisplay();
   console.log(`IncrementNumber: ${incrementNumber}`);
   console.log(`ID:${id}`);
   console.log(`Code: ${code}`);
