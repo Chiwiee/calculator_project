@@ -50,7 +50,6 @@ function calcAfterClick() {
   } else {
     result = `${operate()}`;
   }
-  result = `${operate()}`;
   if (result.length <= 20) {
     resultDisplay.textContent = `${result.slice(0, 20)}`;
     resultDisplay.setAttribute("style", "font-size: 28px;");
