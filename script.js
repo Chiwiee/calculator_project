@@ -100,7 +100,9 @@ console.log(`Calculated Value: ${operate()}`);
 // const content = document.querySelector(".text");
 
 // //
-// function displayTextContent(id, code) {
+function displayTextContent(id) {
+  console.log(id);
+}
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
 //   let numberTotal = lengthTotal(firstNumber, secondNumber, operator);
