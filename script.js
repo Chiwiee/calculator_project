@@ -39,6 +39,7 @@ function operate() {
   }
 }
 
+console.log(`Calculated Value: ${operate()}`);
 // function removeFirstChild() {
 //   if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
 //     let parent = document.querySelector(".text");
