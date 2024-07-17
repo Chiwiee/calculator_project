@@ -131,23 +131,23 @@ function calcAfterClick() {
 // //
 function displayTextContent(id, code) {
   function convertToNumber() {
-    if (id == "one") {
+    if (id == "one" || code == "Numpad1" || code == "Digit1") {
       return 1;
-    } else if (id == "two") {
+    } else if (id == "two" || code == "Numpad2" || code == "Digit2") {
       return 2;
-    } else if (id == "three") {
+    } else if (id == "three" || code == "Numpad3" || code == "Digit3") {
       return 3;
-    } else if (id == "four") {
+    } else if (id == "four" || code == "Numpad4" || code == "Digit4") {
       return 4;
-    } else if (id == "five") {
+    } else if (id == "five" || code == "Numpad5" || code == "Digit5") {
       return 5;
-    } else if (id == "six") {
+    } else if (id == "six" || code == "Numpad6" || code == "Digit6") {
       return 6;
-    } else if (id == "seven") {
+    } else if (id == "seven" || code == "Numpad7" || code == "Digit7") {
       return 7;
-    } else if (id == "eight") {
+    } else if (id == "eight" || code == "Numpad8" || code == "Digit8") {
       return 8;
-    } else if (id == "nine" || code == "Digit9") {
+    } else if (id == "nine" || code == "Numpad9" || code == "Digit9") {
       return 9;
     } else {
       return "";
