@@ -25,38 +25,19 @@ console.log(`Subtract: ${subtract()}`);
 console.log(`Multiply: ${multiply()}`);
 console.log(`Divide: ${divide()}`);
 
-// // Operate Function that Converts and Calls Functions to Calculate
-// function operate(num1, sum, operator, num2) {
-//   function reduceNum1(num) {
-//     return num.reduce((acc, current) => {
-//       return acc + current;
-//     }, "");
-//   }
-//   function reduceNum2(num) {
-//     return num.reduce((acc, current) => {
-//       return acc + current;
-//     }, "");
-//   }
-//   function reduceSum(sum) {
-//     return sum.reduce((acc, current) => {
-//       return acc + current;
-//     }, "");
-//   }
-//   let firstNumber = parseFloat(reduceNum1(num1));
-//   let secondNumber = parseFloat(reduceNum2(num2));
-//   let sumValue = parseFloat(reduceSum(sum));
-
-//   switch (operator) {
-//     case "plus":
-//       return add(firstNumber, sumValue, secondNumber);
-//     case "minus":
-//       return subtract(firstNumber, sumValue, secondNumber);
-//     case "times":
-//       return multiply(firstNumber, sumValue, secondNumber);
-//     case "divide":
-//       return divide(firstNumber, sumValue, secondNumber);
-//   }
-// }
+// Operate Function that Converts and Calls Functions to Calculate
+function operate(num1, sum, operator, num2) {
+  switch (operator) {
+    case "plus":
+      return add(firstNumber, sumValue, secondNumber);
+    case "minus":
+      return subtract(firstNumber, sumValue, secondNumber);
+    case "times":
+      return multiply(firstNumber, sumValue, secondNumber);
+    case "divide":
+      return divide(firstNumber, sumValue, secondNumber);
+  }
+}
 
 // function removeFirstChild() {
 //   if (lengthTotal(firstNumber, secondNumber, operator) > 22) {
