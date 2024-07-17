@@ -207,7 +207,7 @@ function displayTextContent(id, code) {
     }
   }
 
-  if (id == "equal") {
+  if (id == "equal" || code == "Enter" || code == "NumpadEnter") {
     if (
       firstNumber != "" &&
       operator != "" &&
