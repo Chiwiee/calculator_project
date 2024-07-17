@@ -132,9 +132,11 @@ function displayTextContent(id) {
     // zero.classList = `num${numberTotal}`;
     // content.appendChild(zero);
     if (operator == "") {
+      firstNumber += 0;
       // firstNumber.push(0);
       // textContent += 0;
     } else if (operator != "") {
+      secondNumber += 0;
       // secondNumber.push(0);
       // textContent += 0;
     }
@@ -144,9 +146,11 @@ function displayTextContent(id) {
     // contentX.classList = `num${numberTotal}`;
     // content.appendChild(contentX);
     if (operator == "") {
+      firstNumber += convertToNumber();
       // firstNumber.push(convertToNumber());
       // textContent += convertToNumber();
     } else if (operator != "") {
+      secondNumber += convertToNumber();
       // secondNumber.push(convertToNumber());
       // textContent += convertToNumber();
     }
