@@ -5,6 +5,7 @@ const resultDisplay = document.querySelector(".result");
 let firstNumber = "";
 let operator = "";
 let secondNumber = "";
+let forLength = "";
 // const calculatedValue = [];
 // let operatorText = "";
 // let textContent = "";
@@ -171,6 +172,7 @@ function displayTextContent(id) {
     }
   }
   if (id == "equal") {
+    forLength += `${operate()}`;
     resultDisplay.textContent = `${operate()}`;
     firstNumber = `${operate()}`;
     secondNumber = "";
@@ -188,6 +190,7 @@ function displayTextContent(id) {
   console.log(`CombinedString: ${combinedString()}`);
   console.log(`Combined Length: ${combinedString().length - 2}`);
   console.log(`Sum Value: ${operate()}`);
+  console.log(`forLength: ${forLength}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
