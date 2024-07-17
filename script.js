@@ -146,11 +146,26 @@ function displayTextContent(id) {
     } else if (operator != "") {
       secondNumber += 0;
     }
-  } else if ((id = id) && convertToNumber() != "") {
+
+    // Number Creator
+  } else if (id == id && convertToNumber() != "") {
     if (operator == "") {
       firstNumber += convertToNumber();
     } else if (operator != "") {
       secondNumber += convertToNumber();
+    }
+  }
+  // Operator Creator
+  if (id == id && convertToSymbol() != "") {
+    if (firstNumber == "" && operator == "") {
+      // Add operator like +1
+      firstNumber += convertToSymbol();
+    } else if (firstNumber != "" && operator == "") {
+      // Add operator like +1 +
+      operator += convertToSymbol();
+    } else if (firstNumber != "" && operator != "") {
+      // Add operator like +1 + -1
+      secondNumber += convertToSymbol();
     }
   }
   console.log(id);
