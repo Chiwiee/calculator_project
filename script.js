@@ -172,7 +172,7 @@ function displayTextContent(id) {
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
   console.log(`operator: ${operator}`);
-  console.log(`CombinedString: ${combinedString}`);
+  console.log(`CombinedString: ${combinedString()}`);
 }
 //   // Variables
 //   let sumValue = operate(firstNumber, calculatedValue, operator, secondNumber);
