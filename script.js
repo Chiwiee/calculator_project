@@ -173,6 +173,9 @@ function displayTextContent(id) {
 
   if (id == "equal") {
     resultDisplay.textContent = `${operate()}`;
+    firstNumber = `${operate()}`;
+    secondNumber = "";
+    operator = "";
   }
   // Temporary Function
   function temporaryTextDisplay() {
