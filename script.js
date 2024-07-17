@@ -1,6 +1,6 @@
 // // Store Values
-// const firstNumber = [];
-// const secondNumber = [];
+const firstNumber = "";
+const secondNumber = "";
 // const calculatedValue = [];
 // let operator = "";
 // let operatorText = "";
