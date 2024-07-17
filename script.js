@@ -172,6 +172,7 @@ function displayTextContent(id) {
   }
 
   if (id == "equal") {
+    resultDisplay.textContent = `${operate()}`;
   }
   // Temporary Function
   function temporaryTextDisplay() {
