@@ -170,7 +170,6 @@ function displayTextContent(id) {
       secondNumber += convertToSymbol();
     }
   }
-
   if (id == "equal") {
     resultDisplay.textContent = `${operate()}`;
     firstNumber = `${operate()}`;
