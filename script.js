@@ -189,7 +189,7 @@ function displayTextContent(id, code) {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
     } else if (operate() != undefined && isNaN(operate()) === false) {
-      // Acts like Equal ex. +1 + -1 = sum
+      // Acts like Equal ex. +1 + -1 = sum // also you can't spam operator like +1 - +1 - + x +
       calcAfterClick();
       operator += convertToSymbol();
     }
@@ -205,7 +205,15 @@ function displayTextContent(id, code) {
       calcAfterClick();
     }
   }
-
+  if (id == "clear") {
+    firstNumber = "";
+    secondNumber = "";
+    operator = "";
+    result = "";
+    textDisplay.textContent = "";
+    resultDisplay.textContent = "0";
+    resultDisplay.style.fontSize = "55px";
+  }
   // Temporary Function
   function temporaryTextDisplay() {
     textDisplay.textContent = `${combinedString()}`;
