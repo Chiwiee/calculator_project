@@ -171,19 +171,25 @@ function displayTextContent(id, code) {
     }
   }
   if (id == "equal") {
-    forLength += `${operate()}`;
-    if (forLength.length <= 20) {
-      resultDisplay.textContent = `${forLength.slice(0, 20)}`;
-      resultDisplay.setAttribute("style", "font-size: 28px;");
-    } else if (forLength.length > 20) {
-      resultDisplay.textContent = `${forLength.slice(0, 20)}` + "...";
-      resultDisplay.setAttribute("style", "font-size: 25px; overflow: hidden;");
-    } else {
+    if (firstNumber != "" && operator != "" && secondNumber != "") {
+      forLength += `${operate()}`;
+      if (forLength.length <= 20) {
+        resultDisplay.textContent = `${forLength.slice(0, 20)}`;
+        resultDisplay.setAttribute("style", "font-size: 28px;");
+      } else if (forLength.length > 20) {
+        resultDisplay.textContent = `${forLength.slice(0, 20)}` + "...";
+        resultDisplay.setAttribute(
+          "style",
+          "font-size: 25px; overflow: hidden;"
+        );
+      } else {
+      }
+      firstNumber = `${operate()}`;
+      secondNumber = "";
+      operator = "";
     }
-    firstNumber = `${operate()}`;
-    secondNumber = "";
-    operator = "";
   }
+
   // Temporary Function
   function temporaryTextDisplay() {
     textDisplay.textContent = `${combinedString()}`;
