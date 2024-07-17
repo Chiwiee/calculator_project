@@ -229,18 +229,16 @@ function displayTextContent(id, code) {
       textContent += 0;
     }
   } else if ((id = id || code == code) && convertToNumber() != "") {
-    if (convertToNumber() != "") {
-      const contentX = document.createElement("span");
-      contentX.textContent = `${convertToNumber()}`;
-      contentX.classList = `num${numberTotal}`;
-      content.appendChild(contentX);
-      if (operator == "") {
-        firstNumber.push(convertToNumber());
-        textContent += convertToNumber();
-      } else if (operator != "") {
-        secondNumber.push(convertToNumber());
-        textContent += convertToNumber();
-      }
+    const contentX = document.createElement("span");
+    contentX.textContent = `${convertToNumber()}`;
+    contentX.classList = `num${numberTotal}`;
+    content.appendChild(contentX);
+    if (operator == "") {
+      firstNumber.push(convertToNumber());
+      textContent += convertToNumber();
+    } else if (operator != "") {
+      secondNumber.push(convertToNumber());
+      textContent += convertToNumber();
     }
   }
 
