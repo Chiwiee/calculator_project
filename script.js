@@ -229,7 +229,7 @@ function displayTextContent(id, code) {
     resultDisplay.textContent = "0";
     resultDisplay.style.fontSize = "55px";
   }
-  if (id == "backspace") {
+  if (id == "backspace" || code == "Backspace") {
     if (operator == "" && secondNumber == "") {
       let backspace1 = firstNumber.slice(0, -1);
       firstNumber = backspace1;
@@ -246,6 +246,7 @@ function displayTextContent(id, code) {
   }
   temporaryTextDisplay();
   console.log(`ID:${id}`);
+  console.log(`Code: ${code}`);
   console.log(`firstNumber: ${firstNumber}`);
   console.log(`secondNumber: ${secondNumber}`);
   console.log(`operator: ${operator}`);
