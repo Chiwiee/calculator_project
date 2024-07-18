@@ -216,7 +216,7 @@ function createBtnAndOpr(id, code) {
       disableBtn();
     }
   }
-  if (id == "clear" || code == "Escape") {
+  if (id == "clear" || id == "disabledClear" || code == "Escape") {
     firstNumber = "";
     secondNumber = "";
     operator = "";
