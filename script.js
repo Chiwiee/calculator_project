@@ -90,12 +90,10 @@ function disableBtn() {
   secondNumber = "";
   operator = "";
 
-  let btn = document.querySelectorAll("button");
-  btn.forEach((button) => {
-    button.disabled = true;
-    button.style.color = "grey";
+  btn.forEach((buttons) => {
+    buttons.disabled = true;
+    buttons.style.color = "grey";
   });
-  const clear = document.querySelector("#clear");
   clear.style.color = "red";
   clear.style.fontSize = "35px";
   clear.disabled = false;

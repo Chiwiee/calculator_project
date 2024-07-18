@@ -108,3 +108,6 @@ button {
   font-size: 22px;
   color: white;
 }
+.disabledBtn {
+  color: grey;
+}
