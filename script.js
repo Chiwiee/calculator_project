@@ -78,10 +78,10 @@ function displayCalcHistory() {
 }
 
 function showTextDisplay() {
-  if (Boolean(combinedString().slice(-20)) == true) {
-    textDisplay.textContent = `${combinedString().slice(-20)}` + "...";
+  if (combinedString().length - 2 >= 22) {
+    textDisplay.textContent = `${combinedString().slice(-22)}` + "...";
   } else {
-    textDisplay.textContent = `${combinedString().slice(-20)}`;
+    textDisplay.textContent = `${combinedString().slice(-22)}`;
   }
 }
 
