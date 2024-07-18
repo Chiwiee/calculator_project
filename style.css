@@ -111,6 +111,13 @@ button {
   background-color: transparent;
   flex: 2 1 50%;
 }
+#disabedClear {
+  color: white;
+  font: 35px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(250, 0, 0, 0.863);
+}
 button {
   font-size: 22px;
   color: white;

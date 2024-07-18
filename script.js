@@ -113,7 +113,6 @@ function enableBtn() {
     button.removeAttribute("style");
   });
   clear.removeAttribute("style");
-  clear.removeAttribute("style");
 }
 //
 function createBtnAndOpr(id, code) {
