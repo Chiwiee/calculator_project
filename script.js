@@ -166,13 +166,24 @@ function createBtnAndOpr(id, code) {
   }
   // Operator Creator
   if (id == id && convertToSymbol() != "") {
-    if (firstNumber == "" && operator == "") {
+    if (
+      firstNumber == "" &&
+      operator == "" &&
+      convertToSymbol() != "÷" &&
+      convertToSymbol() != "×"
+    ) {
       // Add operator like +1
       firstNumber += convertToSymbol();
     } else if (firstNumber != "" && operator == "") {
       // Add operator like +1 +
       operator += convertToSymbol();
-    } else if (firstNumber != "" && operator != "" && secondNumber == "") {
+    } else if (
+      firstNumber != "" &&
+      operator != "" &&
+      secondNumber == "" &&
+      convertToSymbol() != "÷" &&
+      convertToSymbol() != "×"
+    ) {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
     } else if (operate() != undefined && isNaN(operate()) === false) {
