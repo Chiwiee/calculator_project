@@ -99,6 +99,7 @@ function disableBtn() {
     buttons.style.color = "grey";
   });
   clear.id = "disabledClear";
+  clear.style.color = "white";
   clear.disabled = false;
 
   document.querySelector("#equal").id = "disabledEqual";
