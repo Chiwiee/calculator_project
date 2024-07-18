@@ -2,6 +2,7 @@ const textDisplay = document.querySelector(".text");
 const resultDisplay = document.querySelector(".result");
 const historyDisplay = document.querySelector(".previous");
 const buttonContainer = document.querySelector("#button-container");
+const equal = document.querySelector("#equal");
 //
 const list = document.createElement("li");
 //
@@ -101,8 +102,7 @@ function disableBtn() {
   clear.id = "disabledClear";
   clear.style.color = "white";
   clear.disabled = false;
-
-  document.querySelector("#equal").id = "disabledEqual";
+  equal.id = "disabledEqual";
 }
 function enableBtn() {
   resultDisplay.textContent = "0";
@@ -113,6 +113,8 @@ function enableBtn() {
     button.removeAttribute("style");
   });
   clear.removeAttribute("style");
+  clear.id = "clear";
+  equal.id = "equal";
 }
 //
 function createBtnAndOpr(id, code) {
