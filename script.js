@@ -82,6 +82,12 @@ function showTextDisplay() {
 }
 
 function disableBtn() {
+  resultDisplay.textContent = "SIKE";
+  resultDisplay.style.fontSize = "70px";
+  firstNumber = "";
+  secondNumber = "";
+  operator = "";
+
   let btn = document.querySelectorAll("button");
   btn.forEach((button) => {
     button.disabled = true;
