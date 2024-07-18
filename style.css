@@ -112,7 +112,6 @@ button {
   flex: 2 1 50%;
 }
 #disabledClear {
-  color: white;
   font: 35px;
   border: none;
   border-radius: 25px;
