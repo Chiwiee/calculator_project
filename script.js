@@ -98,8 +98,7 @@ function disableBtn() {
     buttons.disabled = true;
     buttons.style.color = "grey";
   });
-  clear.style.color = "red";
-  clear.style.fontSize = "35px";
+  clear.id = "disabledClear";
   clear.disabled = false;
 
   document.querySelector("#equal").id = "disabledEqual";
