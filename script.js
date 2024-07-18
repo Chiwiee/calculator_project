@@ -4,8 +4,6 @@ const historyDisplay = document.querySelector(".previous");
 const buttonContainer = document.querySelector("#button-container");
 const clear = document.querySelector("#clear");
 let btn = document.querySelectorAll("button");
-let num = document.querySelectorAll(".num");
-let opr = document.querySelectorAll(".opr");
 
 let firstNumber = "";
 let operator = "";
