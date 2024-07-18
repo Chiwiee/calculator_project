@@ -98,6 +98,17 @@ function disableBtn() {
   clear.style.fontSize = "35px";
   clear.disabled = false;
 }
+function enableBtn() {
+  resultDisplay.textContent = "0";
+  resultDisplay.removeAttribute("style");
+
+  btn.forEach((button) => {
+    button.disabled = false;
+    button.removeAttribute("style");
+  });
+  clear.removeAttribute("style");
+  clear.removeAttribute("style");
+}
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
@@ -202,6 +213,8 @@ function createBtnAndOpr(id, code) {
     while (historyDisplay.hasChildNodes()) {
       historyDisplay.removeChild(historyDisplay.children[0]);
     }
+
+    enableBtn();
   }
   if (id == "backspace" || code == "Backspace") {
     if (operator == "" && secondNumber == "") {
