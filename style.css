@@ -104,6 +104,13 @@ button {
   border-radius: 25px;
   background-image: linear-gradient(rgb(255, 72, 0), rgb(171, 0, 250));
 }
+#disabledEqual {
+  font-size: 40px;
+  border: none;
+  border-radius: 25px;
+  background-color: transparent;
+  flex: 2 1 50%;
+}
 button {
   font-size: 22px;
   color: white;

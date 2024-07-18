@@ -101,6 +101,8 @@ function disableBtn() {
   clear.style.color = "red";
   clear.style.fontSize = "35px";
   clear.disabled = false;
+
+  document.querySelector("#equal").id = "disabledEqual";
 }
 function enableBtn() {
   resultDisplay.textContent = "0";
