@@ -1,6 +1,9 @@
 const textDisplay = document.querySelector(".text");
 const resultDisplay = document.querySelector(".result");
 const historyDisplay = document.querySelector(".previous");
+const buttonContainer = document.querySelector("#button-container");
+const clear = document.querySelector("#clear");
+let btn = document.querySelectorAll("button");
 
 let firstNumber = "";
 let operator = "";
@@ -177,8 +180,6 @@ function createBtnAndOpr(id, code) {
     ) {
       calcAfterClick();
     } else if (operate() == "SIKE") {
-      resultDisplay.textContent = "SIKE";
-      resultDisplay.style.fontSize = "70px";
       disableBtn();
     }
   }
@@ -227,9 +228,11 @@ function createBtnAndOpr(id, code) {
   console.log(textDisplay);
   console.log(resultDisplay);
   console.log(historyDisplay);
+  console.log(buttonContainer);
 
   // Boolean
   console.log(Boolean(historyDisplay.children[6]) == true);
+  console.log();
 
   // Function Call
   showTextDisplay();
