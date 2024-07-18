@@ -72,7 +72,7 @@ function displayCalcHistory() {
   list.classList = `num${incrementNumber}`;
   historyDisplay.appendChild(list);
 
-  if (Boolean(historyDisplay.children[7]) == true) {
+  if (Boolean(historyDisplay.children[4]) == true) {
     historyDisplay.removeChild(historyDisplay.children[0]);
   }
 }
