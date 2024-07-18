@@ -111,7 +111,7 @@ button {
   background-color: transparent;
   flex: 2 1 50%;
 }
-#disabedClear {
+#disabledClear {
   color: white;
   font: 35px;
   border: none;
