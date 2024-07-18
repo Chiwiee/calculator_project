@@ -78,6 +78,17 @@ function showTextDisplay() {
   textDisplay.textContent = `${combinedString()}`;
 }
 
+function disableBtn() {
+  let btn = document.querySelectorAll("button");
+  btn.forEach((button) => {
+    button.disabled = true;
+    button.style.color = "grey";
+  });
+  const clear = document.querySelector("#clear");
+  clear.style.color = "red";
+  clear.style.fontSize = "35px";
+  clear.disabled = false;
+}
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
@@ -168,6 +179,7 @@ function createBtnAndOpr(id, code) {
     } else if (operate() == "SIKE") {
       resultDisplay.textContent = "SIKE";
       resultDisplay.style.fontSize = "70px";
+      disableBtn();
     }
   }
   if (id == "clear" || code == "Escape") {
