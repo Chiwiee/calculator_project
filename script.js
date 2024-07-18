@@ -78,7 +78,11 @@ function displayCalcHistory() {
 }
 
 function showTextDisplay() {
-  textDisplay.textContent = `${combinedString()}`;
+  if (Boolean(combinedString().slice(-20)) == true) {
+    textDisplay.textContent = `${combinedString().slice(-20)}` + "...";
+  } else {
+    textDisplay.textContent = `${combinedString().slice(-20)}`;
+  }
 }
 
 function disableBtn() {
