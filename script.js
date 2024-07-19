@@ -175,7 +175,8 @@ function createBtnAndOpr(id, code) {
       firstNumber == "" &&
       operator == "" &&
       convertToSymbol() != "÷" &&
-      convertToSymbol() != "×"
+      convertToSymbol() != "×" &&
+      convertToSymbol() != "+"
     ) {
       // Add operator like +1
       firstNumber += convertToSymbol();
@@ -187,7 +188,8 @@ function createBtnAndOpr(id, code) {
       operator != "" &&
       secondNumber == "" &&
       convertToSymbol() != "÷" &&
-      convertToSymbol() != "×"
+      convertToSymbol() != "×" &&
+      convertToSymbol() != "+"
     ) {
       // Add operator like +1 + -1
       secondNumber += convertToSymbol();
