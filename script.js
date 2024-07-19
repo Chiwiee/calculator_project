@@ -4,7 +4,6 @@ const historyDisplay = document.querySelector(".previous");
 const buttonContainer = document.querySelector("#button-container");
 const equal = document.querySelector("#equal");
 //
-const list = document.createElement("li");
 //
 const clear = document.querySelector("#clear");
 let btn = document.querySelectorAll("button");
@@ -71,6 +70,7 @@ function calcAfterClick() {
 }
 
 function displayCalcHistory() {
+  const list = document.createElement("li");
   list.textContent = `${combinedString()}`;
   list.classList = `num${incrementNumber}`;
   historyDisplay.appendChild(list);
