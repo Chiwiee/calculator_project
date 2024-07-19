@@ -156,7 +156,7 @@ function createBtnAndOpr(id, code) {
   }
 
   // Number Creator
-  if (id == "zero") {
+  if (id == "zero" || code == "Numpad0" || code == "Digit0") {
     if (operator == "") {
       firstNumber += 0;
     } else if (operator != "") {
