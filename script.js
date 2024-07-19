@@ -232,7 +232,7 @@ function createBtnAndOpr(id, code) {
     enableBtn();
   }
   if (id == "backspace" || code == "Backspace") {
-    if (operator == "" && secondNumber == "") {
+    if (operator == "" && secondNumber == "" && result == "") {
       let backspace1 = firstNumber.slice(0, -1);
       firstNumber = backspace1;
     } else if (operator != "" && secondNumber == "") {
