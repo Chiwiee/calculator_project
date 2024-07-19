@@ -3,8 +3,6 @@ const resultDisplay = document.querySelector(".result");
 const historyDisplay = document.querySelector(".previous");
 const buttonContainer = document.querySelector("#button-container");
 const equal = document.querySelector("#equal");
-//
-//
 const clear = document.querySelector("#clear");
 let btn = document.querySelectorAll("button");
 
@@ -14,7 +12,6 @@ let secondNumber = "";
 let result = "";
 let incrementNumber = 0;
 
-// Function that Calculate the Values from Operate Function
 function add() {
   return parseFloat(firstNumber) + parseFloat(secondNumber);
 }
@@ -32,7 +29,6 @@ function divide() {
   }
 }
 
-// Calls Functions to Calculate
 function operate() {
   switch (operator) {
     case "+":
@@ -173,6 +169,7 @@ function createBtnAndOpr(id, code) {
       secondNumber += convertToNumber();
     }
   }
+
   // Operator Creator
   if (id == id && convertToSymbol() != "") {
     if (
@@ -182,10 +179,8 @@ function createBtnAndOpr(id, code) {
       convertToSymbol() != "×" &&
       convertToSymbol() != "+"
     ) {
-      // Add operator like +1
       firstNumber += convertToSymbol();
     } else if (firstNumber != "" && operator == "") {
-      // Add operator like +1 +
       operator += convertToSymbol();
     } else if (
       firstNumber != "" &&
@@ -195,10 +190,8 @@ function createBtnAndOpr(id, code) {
       convertToSymbol() != "×" &&
       convertToSymbol() != "+"
     ) {
-      // Add operator like +1 + -1
       secondNumber += convertToSymbol();
     } else if (operate() != undefined && isNaN(operate()) === false) {
-      // Acts like Equal ex. +1 + -1 = sum // also you can't spam operator like +1 - +1 - + x +
       calcAfterClick();
       operator += convertToSymbol();
     }
@@ -262,7 +255,6 @@ function createBtnAndOpr(id, code) {
   showTextDisplay();
 }
 
-// Functions and Event Listeners that Calls the createBtnAndOpr with button.id and event.code arguments
 function buttonEvents() {
   function mouseEvents() {
     let buttons = document.querySelectorAll("button");
