@@ -172,13 +172,7 @@ function createBtnAndOpr(id, code) {
 
   // Operator Creator
   if (id == id && convertToSymbol() != "") {
-    if (
-      firstNumber == "" &&
-      operator == "" &&
-      convertToSymbol() != "÷" &&
-      convertToSymbol() != "×" &&
-      convertToSymbol() != "+"
-    ) {
+    if (firstNumber == "" && operator == "" && convertToSymbol() == "-") {
       firstNumber += convertToSymbol();
     } else if (firstNumber != "" && operator == "") {
       operator += convertToSymbol();
@@ -186,9 +180,7 @@ function createBtnAndOpr(id, code) {
       firstNumber != "" &&
       operator != "" &&
       secondNumber == "" &&
-      convertToSymbol() != "÷" &&
-      convertToSymbol() != "×" &&
-      convertToSymbol() != "+"
+      convertToSymbol() == "-"
     ) {
       secondNumber += convertToSymbol();
     } else if (operate() != undefined && isNaN(operate()) === false) {
