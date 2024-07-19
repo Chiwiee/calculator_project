@@ -214,6 +214,7 @@ function createBtnAndOpr(id, code) {
       isNaN(operate()) === false
     ) {
       calcAfterClick();
+      firstNumber = "";
     } else if (operate() == "SIKE") {
       disableBtn();
     }
