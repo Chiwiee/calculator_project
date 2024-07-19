@@ -163,7 +163,11 @@ function createBtnAndOpr(id, code) {
       secondNumber += 0;
     }
   } else if (id == id && convertToNumber() != "") {
-    if (operator == "") {
+    if (operator == "" && result == "") {
+      firstNumber += convertToNumber();
+    } else if (operator == "" && result != "") {
+      firstNumber = "";
+      result = "";
       firstNumber += convertToNumber();
     } else if (operator != "") {
       secondNumber += convertToNumber();
