@@ -258,31 +258,6 @@ function createBtnAndOpr(id, code) {
     }
   }
 
-  console.log(`IncrementNumber: ${incrementNumber}`);
-  console.log(`ID:${id}`);
-  console.log(`Code: ${code}`);
-  console.log(`firstNumber: ${firstNumber}`);
-  console.log(`secondNumber: ${secondNumber}`);
-  console.log(`operator: ${operator}`);
-  console.log(`CombinedString: ${combinedString()}`);
-  console.log(`Combined Length: ${combinedString().length - 2}`);
-  console.log(`Sum Value: ${operate()}`);
-  console.log(`result: ${result}`);
-  console.log(`result Length: ${result.length}`);
-  console.log(`is Sum Value NaN?: ${isNaN(operate())}`);
-  console.log(`Slice1: ${firstNumber.slice(0, -1)}`);
-  console.log(`Slice2: ${secondNumber.slice(0, -1)}`);
-
-  // querySelector
-  console.log(textDisplay);
-  console.log(resultDisplay);
-  console.log(historyDisplay);
-  console.log(buttonContainer);
-
-  // Boolean
-  console.log(Boolean(historyDisplay.children[6]) == true);
-  console.log();
-
   // Function Call
   showTextDisplay();
 }
