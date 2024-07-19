@@ -199,9 +199,15 @@ function createBtnAndOpr(id, code) {
   }
 
   if (id == "dot" || code == "Period" || code == "NumpadDecimal") {
-    if (operator == "" && firstNumber.slice(-1) != ".") {
+    if (
+      operator == "" &&
+      !firstNumber.slice(0, firstNumber.length).includes(".")
+    ) {
       firstNumber += ".";
-    } else if (operator != "" && secondNumber.slice(-1) != ".") {
+    } else if (
+      operator != "" &&
+      !secondNumber.slice(0, secondNumber.length).includes(".")
+    ) {
       secondNumber += ".";
     }
   }
