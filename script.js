@@ -7,6 +7,7 @@ const equal = document.querySelector("#equal");
 const clear = document.querySelector("#clear");
 let btn = document.querySelectorAll("button");
 let opr = document.querySelectorAll(".opr");
+let num = document.querySelectorAll(".num");
 
 let firstNumber = "";
 let operator = "";
