@@ -289,6 +289,13 @@ function createBtnAndOpr(id, code) {
     }
   }
   if (id == "clear" || id == "disabledClear" || code == "Escape") {
+    if (colorMode == "light") {
+      clearData();
+      lightMode();
+    } else if (colorMode == "dark") {
+      clearData();
+      darkMode();
+    }
   }
   if (id == "backspace" || code == "Backspace") {
     if (operator == "" && secondNumber == "" && result == "") {
