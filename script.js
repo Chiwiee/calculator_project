@@ -246,7 +246,12 @@ function createBtnAndOpr(id, code) {
       secondNumber = backspace2;
     }
   }
-
+  if (id == "mode") {
+    if (colorMode == "dark") {
+      lightMode();
+      colorMode = "light";
+    }
+  }
   // Function Call
   showTextDisplay();
 }
