@@ -270,6 +270,14 @@ function createBtnAndOpr(id, code) {
     textDisplay.textContent = "";
     resultDisplay.textContent = "0";
     resultDisplay.style.fontSize = "55px";
+    btn.forEach((button) => {
+      button.removeAttribute("style");
+    });
+    textDisplay.removeAttribute("style");
+    historyDisplay.removeAttribute("style");
+    resultDisplay.removeAttribute("style");
+    document.querySelector("#mode").textContent = "M";
+    document.querySelector("#mode").style.color = "#ffff";
 
     while (historyDisplay.hasChildNodes()) {
       historyDisplay.removeChild(historyDisplay.children[0]);
