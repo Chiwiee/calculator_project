@@ -137,6 +137,27 @@ function lightMode() {
   document.querySelector("#mode").textContent = "L";
   document.querySelector("#mode").style.color = "rgb(171, 0, 250)";
 }
+function darkMode() {
+  opr.forEach((operators) => {
+    operators.style.color = "rgb(171, 0, 250)";
+  });
+  num.forEach((numbers) => {
+    numbers.style.color = "white";
+  });
+  mainContainer.setAttribute(
+    "style",
+    " background-image: linear-gradient(rgb(88, 0, 88), rgb(0, 0, 0));"
+  );
+  equal.setAttribute(
+    "style",
+    "background-image: linear-gradient(rgb(255, 72, 0), rgb(171, 0, 250));"
+  );
+  textDisplay.style.color = "#ffff";
+  historyDisplay.style.color = "#ffff";
+
+  document.querySelector("#mode").textContent = "L";
+  document.querySelector("#mode").style.color = "rgb(171, 0, 250)";
+}
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
@@ -271,6 +292,9 @@ function createBtnAndOpr(id, code) {
     if (colorMode == "dark") {
       lightMode();
       colorMode = "light";
+    } else if (colorMode == "light") {
+      darkMode();
+      colorMode = "dark";
     }
   }
   // Function Call
