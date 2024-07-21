@@ -2,6 +2,7 @@ const textDisplay = document.querySelector(".text");
 const resultDisplay = document.querySelector(".result");
 const historyDisplay = document.querySelector(".previous");
 const buttonContainer = document.querySelector("#button-container");
+const mainContainer = document.querySelector("#main-container");
 const equal = document.querySelector("#equal");
 const clear = document.querySelector("#clear");
 let btn = document.querySelectorAll("button");
