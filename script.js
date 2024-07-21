@@ -3,6 +3,7 @@ const resultDisplay = document.querySelector(".result");
 const historyDisplay = document.querySelector(".previous");
 const buttonContainer = document.querySelector("#button-container");
 const mainContainer = document.querySelector("#main-container");
+const resultContainer = document.querySelector("#result-content");
 const equal = document.querySelector("#equal");
 const clear = document.querySelector("#clear");
 let btn = document.querySelectorAll("button");
@@ -133,6 +134,7 @@ function lightMode() {
   );
   textDisplay.style.color = "black";
   historyDisplay.style.color = "black";
+  resultContainer.style.color = "black";
 
   document.querySelector("#mode").textContent = "L";
   document.querySelector("#mode").style.color = "rgb(171, 0, 250)";
@@ -154,6 +156,7 @@ function darkMode() {
   );
   textDisplay.style.color = "#ffff";
   historyDisplay.style.color = "#ffff";
+  resultContainer.style.color = "#ffff";
 
   document.querySelector("#mode").textContent = "D";
   document.querySelector("#mode").style.color = "rgb(126, 209, 248)";
@@ -277,6 +280,7 @@ function createBtnAndOpr(id, code) {
     textDisplay.removeAttribute("style");
     historyDisplay.removeAttribute("style");
     resultDisplay.removeAttribute("style");
+    resultContainer.removeAttribute("style");
     document.querySelector("#mode").textContent = "M";
     document.querySelector("#mode").style.color = "#ffff";
 
