@@ -136,7 +136,7 @@ function lightMode() {
   historyDisplay.style.color = "black";
   resultContainer.style.color = "black";
 
-  document.querySelector("#mode").textContent = "L";
+  document.querySelector("#mode").textContent = "D";
   document.querySelector("#mode").style.color = "rgb(171, 0, 250)";
 }
 function darkMode() {
@@ -158,7 +158,7 @@ function darkMode() {
   historyDisplay.style.color = "#ffff";
   resultContainer.style.color = "#ffff";
 
-  document.querySelector("#mode").textContent = "D";
+  document.querySelector("#mode").textContent = "L";
   document.querySelector("#mode").style.color = "rgb(126, 209, 248)";
 }
 //
