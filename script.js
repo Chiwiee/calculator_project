@@ -5,6 +5,7 @@ const buttonContainer = document.querySelector("#button-container");
 const equal = document.querySelector("#equal");
 const clear = document.querySelector("#clear");
 let btn = document.querySelectorAll("button");
+let opr = document.querySelectorAll(".opr");
 
 let firstNumber = "";
 let operator = "";
@@ -113,6 +114,7 @@ function enableBtn() {
   clear.id = "clear";
   equal.id = "equal";
 }
+
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
