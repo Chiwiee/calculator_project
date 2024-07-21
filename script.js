@@ -14,7 +14,7 @@ let operator = "";
 let secondNumber = "";
 let result = "";
 let incrementNumber = 0;
-let colorMode = "dark";
+let colorMode = "default";
 
 function add() {
   return parseFloat(firstNumber) + parseFloat(secondNumber);
