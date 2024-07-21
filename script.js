@@ -11,6 +11,7 @@ let operator = "";
 let secondNumber = "";
 let result = "";
 let incrementNumber = 0;
+let colorMode = "dark";
 
 function add() {
   return parseFloat(firstNumber) + parseFloat(secondNumber);
@@ -112,6 +113,7 @@ function enableBtn() {
   clear.id = "clear";
   equal.id = "equal";
 }
+
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
