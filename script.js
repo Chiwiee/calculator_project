@@ -116,7 +116,27 @@ function enableBtn() {
   clear.id = "clear";
   equal.id = "equal";
 }
+function lightMode() {
+  opr.forEach((operators) => {
+    operators.style.color = "rgb(255, 72, 0)";
+  });
+  num.forEach((numbers) => {
+    numbers.style.color = "black";
+  });
+  mainContainer.setAttribute(
+    "style",
+    "background-image: linear-gradient(rgb(126, 209, 248), #ffff);"
+  );
+  equal.setAttribute(
+    "style",
+    "background-image: linear-gradient(rgb(171, 0, 250), black)"
+  );
+  textDisplay.style.color = "black";
+  historyDisplay.style.color = "black";
 
+  document.querySelector("#mode").textContent = "L";
+  document.querySelector("#mode").style.color = "rgb(171, 0, 250)";
+}
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
