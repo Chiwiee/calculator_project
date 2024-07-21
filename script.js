@@ -273,6 +273,7 @@ function createBtnAndOpr(id, code) {
     btn.forEach((button) => {
       button.removeAttribute("style");
     });
+    mainContainer.removeAttribute("style");
     textDisplay.removeAttribute("style");
     historyDisplay.removeAttribute("style");
     resultDisplay.removeAttribute("style");
