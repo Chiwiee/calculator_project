@@ -113,7 +113,6 @@ function enableBtn() {
   clear.id = "clear";
   equal.id = "equal";
 }
-
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
