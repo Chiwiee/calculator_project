@@ -161,6 +161,30 @@ function darkMode() {
   document.querySelector("#mode").textContent = "L";
   document.querySelector("#mode").style.color = "rgb(126, 209, 248)";
 }
+function clearData() {
+  firstNumber = "";
+  secondNumber = "";
+  operator = "";
+  result = "";
+  incrementNumber = 0;
+  textDisplay.textContent = "";
+  resultDisplay.textContent = "0";
+  resultDisplay.style.fontSize = "55px";
+  btn.forEach((button) => {
+    button.removeAttribute("style");
+  });
+  mainContainer.removeAttribute("style");
+  textDisplay.removeAttribute("style");
+  historyDisplay.removeAttribute("style");
+  resultDisplay.removeAttribute("style");
+  resultContainer.removeAttribute("style");
+  document.querySelector("#mode").textContent = "M";
+  document.querySelector("#mode").style.color = "#ffff";
+  enableBtn();
+  while (historyDisplay.hasChildNodes()) {
+    historyDisplay.removeChild(historyDisplay.children[0]);
+  }
+}
 //
 function createBtnAndOpr(id, code) {
   function convertToNumber() {
@@ -265,30 +289,6 @@ function createBtnAndOpr(id, code) {
     }
   }
   if (id == "clear" || id == "disabledClear" || code == "Escape") {
-    firstNumber = "";
-    secondNumber = "";
-    operator = "";
-    result = "";
-    incrementNumber = 0;
-    textDisplay.textContent = "";
-    resultDisplay.textContent = "0";
-    resultDisplay.style.fontSize = "55px";
-    btn.forEach((button) => {
-      button.removeAttribute("style");
-    });
-    mainContainer.removeAttribute("style");
-    textDisplay.removeAttribute("style");
-    historyDisplay.removeAttribute("style");
-    resultDisplay.removeAttribute("style");
-    resultContainer.removeAttribute("style");
-    document.querySelector("#mode").textContent = "M";
-    document.querySelector("#mode").style.color = "#ffff";
-
-    while (historyDisplay.hasChildNodes()) {
-      historyDisplay.removeChild(historyDisplay.children[0]);
-    }
-
-    enableBtn();
   }
   if (id == "backspace" || code == "Backspace") {
     if (operator == "" && secondNumber == "" && result == "") {
