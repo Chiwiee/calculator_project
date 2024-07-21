@@ -155,8 +155,8 @@ function darkMode() {
   textDisplay.style.color = "#ffff";
   historyDisplay.style.color = "#ffff";
 
-  document.querySelector("#mode").textContent = "L";
-  document.querySelector("#mode").style.color = "rgb(171, 0, 250)";
+  document.querySelector("#mode").textContent = "D";
+  document.querySelector("#mode").style.color = "rgb(126, 209, 248)";
 }
 //
 function createBtnAndOpr(id, code) {
