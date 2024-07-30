@@ -1,7 +1,6 @@
 const textDisplay = document.querySelector(".text");
 const resultDisplay = document.querySelector(".result");
 const historyDisplay = document.querySelector(".previous");
-const buttonContainer = document.querySelector("#button-container");
 const mainContainer = document.querySelector("#main-container");
 const resultContainer = document.querySelector("#result-content");
 const equal = document.querySelector("#equal");
@@ -333,7 +332,7 @@ function buttonEvents() {
   mouseEvents();
   function keyboardEvents() {
     window.addEventListener("keydown", (event) => {
-      createBtnAndOpr((id = ""), event.code);
+      createBtnAndOpr(null, event.code);
     });
   }
   keyboardEvents();
